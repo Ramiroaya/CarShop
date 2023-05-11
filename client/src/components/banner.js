@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import bannerImage from '../images/bannerlogogrande.png';
+import '../css/banner.css'
 
 const Banner = () => {
   return (
     <div>
-      <img src="../images/bannerlogogrande.png" alt="CAR SHOP"></img>
+      <img src={bannerImage} alt="CAR SHOP" className='banner-style' />
     </div>
   )
 }
