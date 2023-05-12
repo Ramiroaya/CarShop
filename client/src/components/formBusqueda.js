@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/form.css'
 
-const formBusqueda = () => {
+const FormBusqueda = () => {
   return (
     <div>
       <form class="formBusqueda">
@@ -26,7 +26,7 @@ const formBusqueda = () => {
         <input type="text" class="inputForm" id="inputModelo" placeholder="Modelo" />
 
         <label class="labelForm">Año</label>
-        <input type="text" class="inputForm" id="inputanio" placeholder="Año" />
+        <input type="number" class="inputForm" id="inputanio" placeholder="Año" />
 
         <button type="button" class="btn" id="btnBuscar">Buscar</button>
 
