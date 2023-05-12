@@ -4,8 +4,8 @@ import '../css/banner.css'
 
 const Banner = () => {
   return (
-    <div>
-      <img src={bannerImage} alt="CAR SHOP" className='banner-style' />
+    <div className='banner-style' >
+      <img src={bannerImage} alt="CAR SHOP" className='banner-image'/>
     </div>
   )
 }
