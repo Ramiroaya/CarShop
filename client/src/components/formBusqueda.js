@@ -6,9 +6,8 @@ const FormBusqueda = () => {
     <div>
       <form class="formBusqueda">
 
-        <label class="labelForm">Tipo de vehículo</label>
-        <input type="text" class="inputForm" Placeholder="Elegí categoría"/>  
-        <select name="Categoria" size="7">  
+        <input type="text" class="inputForm" Placeholder="Tipo de vehículo"/>  
+        <select name="Categoria" size="1">  
           <option value="Auto"> Auto </option>  
           <option value="Camioneta"> Camioneta </option>  
           <option value="Camion"> Camión </option>  
@@ -18,14 +17,10 @@ const FormBusqueda = () => {
           <option value="Remloque"> Remloque o trailer </option>  
         </select>  
 
-        <label class="labelForm">Marca</label>
-        <input type="text" class="inputForm" id="inputMarca"
-        placeholder="Marca" />
+        <input type="text" class="inputForm" id="inputMarca" placeholder="Marca" />
 
-        <label class="labelForm">Modelo</label>
         <input type="text" class="inputForm" id="inputModelo" placeholder="Modelo" />
 
-        <label class="labelForm">Año</label>
         <input type="number" class="inputForm" id="inputanio" placeholder="Año" />
 
         <button type="button" class="btn" id="btnBuscar">Buscar</button>
