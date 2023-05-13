@@ -1,12 +1,10 @@
 import React from 'react';
-import '../css/form.css'
+import '../css/form.css';
 
 const FormBusqueda = () => {
   return (
     <div>
-      <form class="formBusqueda">
-
-        <input type="text" class="inputForm" Placeholder="Tipo de vehículo"/>  
+      <form class="form">
         <select name="Categoria" size="1">  
           <option value="Auto"> Auto </option>  
           <option value="Camioneta"> Camioneta </option>  
@@ -30,4 +28,4 @@ const FormBusqueda = () => {
   )
 }
 
-export default FormBusqueda
+export default FormBusqueda;
