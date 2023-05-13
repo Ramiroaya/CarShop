@@ -5,7 +5,7 @@ const FormBusqueda = () => {
   return (
     <div>
       <form class="form">
-        <select name="Categoria" size="1">  
+        <select name="Categoria" size="1" class="selectForm">  
           <option value="Auto"> Auto </option>  
           <option value="Camioneta"> Camioneta </option>  
           <option value="Camion"> Camión </option>  
@@ -21,7 +21,7 @@ const FormBusqueda = () => {
 
         <input type="number" class="inputForm" id="inputanio" placeholder="Año" />
 
-        <button type="button" class="btn" id="btnBuscar">Buscar</button>
+        <button type="button" class="buttonForm" id="btnBuscar">Buscar</button>
 
       </form>
     </div>

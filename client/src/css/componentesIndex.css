@@ -1,4 +1,6 @@
 .componentes-index{
   display: flex;
-  justify-content: center;
+  align-self: center;
+  max-width: 1200px;
+  border: solid black 1px;
 }
