@@ -32,7 +32,7 @@ const FormBusqueda = () => {
               </Form.Group>
             </Row>
 
-            <Row className="mb-3">
+            <Row className="mb-0">
               
               <Form.Group className="mb-3" as={Col} controlId="formGridModelo">
                 <Form.Control type="text" placeholder="Modelo" />
