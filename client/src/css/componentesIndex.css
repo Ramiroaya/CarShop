@@ -3,7 +3,7 @@
   align-self: center;
   max-width: 1200px;
   border: solid black 1px;
-} */
+} 
 
 .container {
   display: flex;
@@ -14,6 +14,7 @@
 
 .componentesIndex {
   max-width: 600px;
-  /* margin: 0 auto; */
+   margin: 0 auto; 
   width: 70vh;
 }
+*/

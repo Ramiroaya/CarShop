@@ -1,0 +1,13 @@
+.bloques,
+.bloques-cerrado{
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  padding-top: 3vh; 
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.bloques-cerrado{
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
