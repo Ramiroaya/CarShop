@@ -1,13 +1,12 @@
 .componentes-index{
   display: flex;
   align-self: center;
-  max-width: 50%;
-  max-height: 1000px;
-  border: solid rgb(50, 170, 68) 1px;
-  gap: 20px
-  ;
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: 1500px;
+  max-height: 500px;
+ 
+  border: solid rgb(29, 144, 46) 1px;
+  gap: 50px;
+ 
 } 
 
 .container {
