@@ -1,11 +1,12 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Index from './pages/index';
+import Index from './pages/Index';
 
 function App() {
   return (
-    <div className="App">
-      <Index />
-    </div>
+      <div className="App">
+        <Index />
+      </div>
   );
 }
 

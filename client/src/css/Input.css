@@ -1,0 +1,23 @@
+.input-container {
+    width: 50%;
+}
+
+.regular-style {
+    width: 60%;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    padding: 0 10px 0 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 10px;
+    outline: none;
+    color:cadetblue;
+
+}
+
+.regular-style::placeholder {
+    font-size: 14px;
+    color: grey;
+    opacity: 0.8;
+}
