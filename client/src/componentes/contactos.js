@@ -1,5 +1,6 @@
 import React from 'react'
-import "../css/contactos.css"
+
+import "../css/componentesIndex.css"
 
 function contactos({nombre="nombre",telefono="telefono",mail="mail",ciudad="ciudad"}) {
   return (

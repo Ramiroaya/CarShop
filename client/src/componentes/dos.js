@@ -1,9 +1,12 @@
 import React from 'react'
+
 import muestraImagen from '../images/fordFiesta.imgs.full.high.webp';
+
+import  "../css/componentesIndex.css"
 
 function dos() {
   return (
-    <div className='dos-stylos'>
+    <div className='dos'>
       
       <img src={muestraImagen} alt="CAR SHOP" className='muestra-imagen' />  
       
@@ -12,3 +15,4 @@ function dos() {
 }
 
 export default dos;
+ 

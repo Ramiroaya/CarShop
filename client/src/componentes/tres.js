@@ -1,10 +1,10 @@
 import React from 'react'
-import "../css/descripcion.css";
+import "../css/componentesIndex.css";
 
 
 function tres({vehiculo="vehiculo",marca="marca",precio="precio" }) {
   return (
-    <div className='descripcion'>
+    <div className='tres'>
         <h2>{vehiculo}</h2>
         <p>{marca}</p>
         <p>{precio}</p>
@@ -12,4 +12,4 @@ function tres({vehiculo="vehiculo",marca="marca",precio="precio" }) {
   );
 }
 
-export default tres;
+export default tres; 

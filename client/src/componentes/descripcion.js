@@ -1,5 +1,6 @@
 import React from 'react'
-import "../css/descripcion.css";
+
+import "../css/componentesIndex.css";
 
 
 function descripcion({vehiculo="vehiculo",marca="marca",modelo="modelo",anio="anio",version="version",motor="motor",combustible="combustible" }) {
@@ -14,6 +15,6 @@ function descripcion({vehiculo="vehiculo",marca="marca",modelo="modelo",anio="an
         <p>{combustible}</p>
     </div>
   );
-}
+  }
 
 export default descripcion;
