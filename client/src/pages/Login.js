@@ -56,7 +56,7 @@ const Login = () => {
           </label>
         }
         <Label text='Usuario'/>
-        <Input
+        <Input className="input-login"
           atributo={{
             id: 'usuario',
             name: ' usuario',
@@ -66,7 +66,7 @@ const Login = () => {
           handleChange={handleChange}
         />
         <Label text='Contraseña'/>
-        <Input 
+        <Input className="input-login"
           atributo={{
             id: 'contraseña',
             name: ' contraseña',
