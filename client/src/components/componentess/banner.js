@@ -1,8 +1,8 @@
 import React from 'react';
 
-import bannerImage from '../images/bannerlogogrande.png';
+import bannerImage from '../../images/bannerlogogrande.png';
 
-import '../css/banner.css'
+import 'css/banner.css'
 
 const Banner = () => {
   return (

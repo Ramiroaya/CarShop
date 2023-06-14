@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "../css/autosIndex.css"
+import "../../css/autosIndex.css"
 
 function contactos({nombre="nombre",telefono="telefono",mail="mail",ciudad="ciudad"}) {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import creditoimg from '../images/creditoimg.jpg';
-import seguroimg from '../images/seguroimg.jpg';
+import creditoimg from '../../images/creditoimg.jpg';
+import seguroimg from '../../images/seguroimg.jpg';
 
-import '../css/autosIndex.css';
+import '../../css/autosIndex.css';
 
 function Segurosyfinanciacion() {
   return (

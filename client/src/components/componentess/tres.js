@@ -1,5 +1,5 @@
 import React from 'react'
-import "../css/autosIndex.css";
+import "../../css/autosIndex.css";
 
 
 function tres({vehiculo="vehiculo",marca="marca",precio="precio" }) {

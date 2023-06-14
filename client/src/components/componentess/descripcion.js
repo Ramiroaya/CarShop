@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "../css/autosIndex.css";
+import "../../css/autosIndex.css";
 
 
 function descripcion({vehiculo="vehiculo",marca="marca",modelo="modelo",anio="anio",version="version",motor="motor",combustible="combustible" }) {
