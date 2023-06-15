@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 import FormBusqueda   from './index-formBusqueda';
@@ -20,13 +20,17 @@ const ComponentesIndex = () => {
       <Button variant="outline-danger" size="lg">
         VENDÉ TU AUTO
       </Button>
+     
+
     </div>
+    
       
       <FormBusqueda />
       <Tiposvehiculos />
       <Marcas />
       <Segurosyfinanciacion />
     </div>
+    
   )
 }
 
