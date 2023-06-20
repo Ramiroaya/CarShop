@@ -1,27 +1,42 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Ofertas from './components/Ofertas';
 import Nosotros from './components/Nosotros';
 import Login from './pages/Login';
 import Contacto from './components/Contacto';
 import NavBarHeader from './components/navBarHeader/NavBarHeader';
-
+import Index from './pages/index';
+ import Layout from './pages/layout';
+import Vistas from './pages/vistas'; 
 
 function App() {
-  return ( 
-    <BrowserRouter>   
-        <Routes>
-          <Route path="/" element={<NavBarHeader/> } >
-            <Route index element={<Home />} />
-            <Route path="ofertas" element={<Ofertas />} />
-            <Route path="usuario" element={<Login />} />
-            <Route path="nosotros" element={<Nosotros />} />
-            <Route path="contacto" element={<Contacto />} />
-          </Route>
-      </Routes> 
-    </BrowserRouter>     
+  return (
+    <>
+      <div>
+        <BrowserRouter>      
+          <Routes>
+            <Route path="/" element={<NavBarHeader/> } >
+              <Route index element={<Home />} />
+              <Route path="ofertas" element={<Ofertas />} />
+              <Route path="usuario" element={<Login />} />
+              <Route path="nosotros" element={<Nosotros />} />
+              <Route path="contacto" element={<Contacto />} />
+             </Route>
+          </Routes> 
+      </BrowserRouter> 
+         <Router>
+          <Routes>
+           <Route path="/" element={<Index />}/> 
+           <Route path="/vistas" element={<Vistas/>}/>
+           <Route path="/layout" element={<Layout />}/>
+          </Routes>
+        </Router>
+        
+      </div>
+      </>
   );
 }
 
