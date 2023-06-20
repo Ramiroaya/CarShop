@@ -8,7 +8,6 @@ import Nosotros from './components/Nosotros';
 import Login from './pages/Login';
 import Contacto from './components/Contacto';
 import NavBarHeader from './components/navBarHeader/NavBarHeader';
-import Index from './pages/index';
  import Layout from './pages/layout';
 import Vistas from './pages/vistas'; 
 
@@ -16,7 +15,7 @@ function App() {
   return (
     <>
       <div>
-        <BrowserRouter>      
+        <Router>      
           <Routes>
             <Route path="/" element={<NavBarHeader/> } >
               <Route index element={<Home />} />
@@ -25,16 +24,12 @@ function App() {
               <Route path="nosotros" element={<Nosotros />} />
               <Route path="contacto" element={<Contacto />} />
              </Route>
-          </Routes> 
-      </BrowserRouter> 
-         <Router>
-          <Routes>
-           <Route path="/" element={<Index />}/> 
+          </Routes>          
+          <Routes>            
            <Route path="/vistas" element={<Vistas/>}/>
            <Route path="/layout" element={<Layout />}/>
           </Routes>
         </Router>
-        
       </div>
       </>
   );

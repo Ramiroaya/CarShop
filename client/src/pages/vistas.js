@@ -2,18 +2,18 @@ import React from 'react';
 import '../css/autosIndex.css';
 import Banner from '../components/banner';
 import AutosIndex from '../components/componentess/autosIndex';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import NavBarHeader from '../components/navBarHeader/NavBarHeader';
+import NavBarFooter from '../components/navBarFooter/NavBarFooter';
 
 
 
 const Vistas = () => {
     return (
       <div className='vistas' >
-        <Header/>
+        <NavBarHeader/>
         <Banner />
         <AutosIndex />
-        <Footer/>
+        <NavBarFooter/>
   
       </div>
     )
