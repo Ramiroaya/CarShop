@@ -2,6 +2,7 @@ import React from "react";
 import NavBarFooter from './NavBarFooter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import './Footer.css';
 
 const Footer = () =>{
     return(

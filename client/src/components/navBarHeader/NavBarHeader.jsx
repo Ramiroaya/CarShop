@@ -1,16 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import Contacto from './Contacto';
+import {  NavLink, Outlet } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import Login from '../pages/Login';
-import Ofertas from './Ofertas';
-import Nosotros from './Nosotros';
-import index from '../index';
+import Home from '../../pages/Home';
+
 
 
 const NavBarHeader = () => {
   return (
-    <BrowserRouter>
+    <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <button
@@ -27,29 +24,29 @@ const NavBarHeader = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+                <NavLink exact to="/" className="nav-link">
                   Inicio
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link to="/ofertas" className="nav-link">
+                <NavLink exact to="/ofertas" className="nav-link">
                   Ofertas
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link to="/usuario" className="nav-link">
+                <NavLink exact to="/usuario" className="nav-link">
                   Usuario
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link to="/nosotros" className="nav-link">
+                <NavLink exact to="/nosotros" className="nav-link">
                   Nosotros
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link to="/contacto" className="nav-link">
+                <NavLink exact to="/contacto" className="nav-link">
                   Contacto
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <form className="d-flex" role="search">
@@ -66,17 +63,9 @@ const NavBarHeader = () => {
           </div>
         </div>
       </nav>
-      <Routes>
-        <Route path="/" element={<index/> } />
-        <Route path="/ofertas" element={<Ofertas />} />
-        <Route path="/usuario" element={<Login />} />
-        <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/contacto" element={<Contacto />} />
-      </Routes>
-    </BrowserRouter>
+      <Outlet/>
+    </>
   )
 };
 
 export default NavBarHeader;
-
-
