@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import Title from '../components/Title';
-import Label from '../components/Label';
-import Input from '../components/Input';
-import '../css/Login.css';
+import Title from '../components/login/Title';
+import Label from '../components/login/Label';
+import Input from '../components/login/Input';
+import '../components/login/Login.css';
+
+
 
 
 const Login = () => {
@@ -46,41 +48,45 @@ const Login = () => {
   };
 
   return (
-    <div className='login-container'>
-      <div className='login-content'>
-        <Title text='Bienvenido' />
-        { hasError &&
-          <label className='label-alert'>
-            Su contraseña o usuario son incorrectos,
-            o no existen en nuestra plataforma.
-          </label>
-        }
-        <Label text='Usuario'/>
-        <Input className="input-login"
-          atributo={{
-            id: 'usuario',
-            name: ' usuario',
-            type:'text',
-            placeholder: 'Ingrese su Usuario'
-          }}
-          handleChange={handleChange}
-        />
-        <Label text='Contraseña'/>
-        <Input className="input-login"
-          atributo={{
-            id: 'contraseña',
-            name: ' contraseña',
-            type:'password',
-            placeholder: 'Ingrese su Contraseña'
-          }}
-          handleChange={handleChange}
-        />
-        <div className="submit-button-container">
-          <button className="submit-button" onClick={handleSubmit}>
-            Ingresar
-          </button>
-        </div>
-       </div> 
+    <div className='contenedor-index-login'>
+      <div className='login-container'>
+        <div className='login-content'>
+          <Title text='CAR SHOP' />
+          { hasError &&
+            <label className='label-alert'>
+              Su contraseña o usuario son incorrectos,
+              o inexistentes en nuestra plataforma.
+            </label>
+          }
+          <Label text='Usuario'/>
+          <Input className='input-login'
+            atributo={{
+              id: 'usuario',
+              name: ' usuario',
+              type:'text',
+              placeholder: 'Ingrese su Usuario'
+            }}
+            handleChange={handleChange}
+          />
+          <Label text='Contraseña'/>
+          <Input className="input-login"
+            atributo={{
+              id: 'contraseña',
+              name: ' contraseña',
+              type:'password',
+              placeholder: 'Ingrese su Contraseña'
+            }}
+            handleChange={handleChange}
+          />
+          <div className="submit-button-container">
+            <button className="submit-button" onClick={handleSubmit}>
+              Ingresar
+            </button>
+          </div>          
+        </div> 
+        
+      </div>
+      
     </div>
   )
 }

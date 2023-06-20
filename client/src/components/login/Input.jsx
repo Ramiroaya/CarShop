@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Input.css';
+import './Input.css';
 
 const Input = ({ atributo, handleChange, param }) => {
   return (
