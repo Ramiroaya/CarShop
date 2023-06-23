@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -26,7 +26,9 @@ const Tiposvehiculos = () => {
       <Row>
         
         <Col xs={3} md={3}>
-          <Image src={coche} className='icon-button'/>
+          <Link  to="/vistas">
+            <Image src={coche} className='icon-button'/>
+          </Link>
         </Col>
         <Col xs={3} md={3}>
           <Image src={motocicleta} className='icon-button'/>

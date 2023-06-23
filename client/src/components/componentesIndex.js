@@ -17,14 +17,10 @@ const ComponentesIndex = () => {
   return (
     <div class='bloques'>
       <div className="d-grid gap-2">
-      <Button variant="outline-danger" size="lg">
+      <Button variant="outline-danger" size="lm">
         VENDÉ TU AUTO
       </Button>
-     
-
-    </div>
-    
-      
+    </div>      
       <FormBusqueda />
       <Tiposvehiculos />
       <Marcas />
