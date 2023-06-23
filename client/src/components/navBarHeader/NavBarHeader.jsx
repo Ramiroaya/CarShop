@@ -1,14 +1,10 @@
 import React from 'react';
-import {  NavLink, Outlet } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Home from '../../pages/Home';
-
-
+import { NavLink, Outlet } from 'react-router-dom';
 
 const NavBarHeader = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary justify-content-center">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -21,45 +17,34 @@ const NavBarHeader = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink exact to="/" className="nav-link">
-                  Inicio
+                  <span className="fs-5 me-4">Inicio</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink exact to="/ofertas" className="nav-link">
-                  Ofertas
+                  <span className="fs-5 me-4">Ofertas</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink exact to="/usuario" className="nav-link">
-                  Usuario
+                  <span className="fs-5 me-4">Usuario</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink exact to="/nosotros" className="nav-link">
-                  Nosotros
+                  <span className="fs-5 me-4">Nosotros</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink exact to="/contacto" className="nav-link">
-                  Contacto
+                  <span className="fs-5 me-4">Contacto</span>
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Busca Tu Vehiculo"
-                aria-label="Busca Tu Vehiculo"
-              />
-              <Button className="btn-outline-success" type="submit">
-                Click
-              </Button>
-            </form>
           </div>
         </div>
       </nav>

@@ -1,75 +1,113 @@
-.contenedor-index-login{
+.contenedor-index-login {
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(../../images/imagef.jpg);
-    padding: 5px;    
-    width: 98%;
+    padding: 5px;
+    max-width: 98%;
     margin: auto;
-}
-.logo-fondo{
-   
-}
-.login-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;    
-    width:30vw;
-    height:60vh;
+    border-radius: 10px;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    height: 50vh;
     margin-top: 5px;
-    background: rgba(185, 200, 209, 0.76);
+    background: rgba(235, 242, 246, 0.7);
     border-radius: 35px;
-}
-
-.login-content {
+  }
+  
+  .login-content {
     width: 85vw;
+    max-width: 90%;
     height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
-    
-    
-
-}
-.input-login{
+  }
+  
+  .input-login {
     padding: 10px;
     width: 70%;
+    max-width: 300px;
     box-shadow: 5px;
-}
-
-.submit-button-container{
-    display:flex;
+    text-align: center;
+  }
+  
+  .submit-button-container {
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     margin-top: 20px;
-}
-
-.submit-button{
+  }
+  
+  .submit-button {
     width: 90px;
     height: 40px;
     border-radius: 25px;
-    background: rgb(7,69, 71);
+    background: rgb(7, 69, 71);
     color: white;
     font-size: 14px;
     font-weight: bold;
-}
-
-.submit-button:hover{
+  }
+  
+  .submit-button:hover {
     opacity: 0.6;
-    
-}
-
-.label-alert{
+  }
+  
+  .label-alert {
     font-size: 12px;
     color: red;
-    background:rgb(244, 204, 204);
+    background: rgb(244, 204, 204);
     width: fit-content;
     padding: 5px;
     border-radius: 5px;
     height: fit-content;
     box-sizing: border-box;
     margin-bottom: 10px;
-}
+  }
+  
+  .text-registro {
+    text-align: left !important;
+    color: brown;
+  }
+  
+  .registro {
+    text-decoration: none;
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 768px) {
+    /* Estilos específicos para dispositivos móviles */
+    .login-container {
+      height: auto;
+    }
+  
+    .input-login {
+      width: 100%;
+      max-width: none;
+    }
+  
+    /* Agrega más estilos específicos para dispositivos móviles si es necesario */
+  }
+  
+  @media screen and (min-width: 1200px) {
+    /* Estilos específicos para pantallas grandes */
+    .contenedor-index-login {
+      padding: 10px;
+    }
+  
+    .login-container {
+      height: 70vh;
+    }
+  
+    /* Agrega más estilos específicos para pantallas grandes si es necesario */
+  }
+  

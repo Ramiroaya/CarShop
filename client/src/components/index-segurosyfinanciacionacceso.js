@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import '../css/bloques.css';
 import creditoimg from '../images/creditoimg.jpg';
 import seguroimg from '../images/seguroimg.jpg';
+import IndexCredito from '../pages/IndexCredito';
 
 const Segurosyfinanciacion = () => {
   return (
@@ -23,7 +24,9 @@ const Segurosyfinanciacion = () => {
           </Col>
           <Col style={{ padding: '3vw' }}>
             <Card >
-              <Card.Img variant="top" src={creditoimg}/>
+              <a href={IndexCredito} >
+                <Card.Img variant="top" src={creditoimg}/>
+              </a>
                 <Card.Body>
                   <Card.Title>SIMULÁ TU CRÉDITO</Card.Title>
                 </Card.Body>
