@@ -15,6 +15,7 @@ function autosIndex  ()  {
     <div class='autosIndex'>
       <div class='prueba' >
         <Uno/>
+        <Dos/>
         <Tres/>
       </div>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import muestraImagen from '../../images/image.jpg';
+import muestraImagen from '../../images/fiestaImag/images2.jpg';
 
 import  '../../css/autosIndex.css';
 
