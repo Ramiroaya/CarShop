@@ -12,6 +12,7 @@ import Vistas from './pages/vistas';
 import FeedbackForm from './components/FeedBack';
 import NoPage from './components/NoPage';
 import Registro from './pages/Registro';
+import Credito from './components/credito/Credito';
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<NavBarHeader/> } >
               <Route index element={<Home />} />
+              <Route path="/home/credito" element={<Credito />} />
               <Route path="ofertas" element={<Ofertas />} />
               <Route path="usuario" element={<Login />} />
               <Route path="/usuario/registro" element={<Registro />} />
