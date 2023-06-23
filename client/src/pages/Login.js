@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Title from '../components/login/Title';
 import Label from '../components/login/Label';
 import Input from '../components/login/Input';
@@ -82,7 +83,10 @@ const Login = () => {
             <button className="submit-button" onClick={handleSubmit}>
               Ingresar
             </button>
-          </div>          
+          </div> 
+          <NavLink exact to='./registro' className='registro'>
+            <h3 className="text-registro">Crear Cuenta</h3>  
+          </NavLink>    
         </div> 
         
       </div>
