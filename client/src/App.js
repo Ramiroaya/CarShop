@@ -24,7 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<NavBarHeader/> } >
               <Route index element={<Home />} />
-              <Route path="/home/credito" element={<Credito />} />
+              <Route path="credito" element={<Credito />} />
               <Route path="ofertas" element={<Ofertas />} />
               <Route path="usuario" element={<Login />} />
               <Route path="/usuario/registro" element={<Registro />} />
