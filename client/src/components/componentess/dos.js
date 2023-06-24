@@ -1,6 +1,8 @@
 import React from 'react'
 
-import muestraImagen from '../../images/fiestaImag/images2.jpg';
+
+import muestraImagen from '../../images/fordFiesta.imgs.full.high.webp';
+
 
 import  '../../css/autosIndex.css';
 

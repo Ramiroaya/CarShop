@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 import Banner from '../banner';
 import Descripcion from './descripcion';
 import Tres from './tres';

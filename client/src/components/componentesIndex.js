@@ -8,7 +8,7 @@ import Segurosyfinanciacion  from './index-segurosyfinanciacionacceso';
 import Marcas  from './index-marcas';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/componentesIndex.css';
+
 import '../css/bloques.css';
 
 
