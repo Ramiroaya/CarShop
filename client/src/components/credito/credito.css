@@ -1,0 +1,51 @@
+.contenedor-credito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    height: 90vh;
+    flex-direction: column;
+    background-image: url(../../images/creditoimg.webp);
+    background-size: cover;
+    padding: 6rem;
+  }
+
+  h1{
+    color: gray;
+    
+  }
+  
+  .ingreso-credito {
+    display: flex;
+    width: 40%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(191, 204, 204, 0.8);
+    border-radius:  20px;
+  }
+  
+  .ingreso-credito input,
+  .ingreso-credito button {
+    margin: 40px;
+  }
+  .boton-credito{
+   background-color:rgb(170, 138, 138);
+   border-radius: 25px;
+   width: 20%;
+   height: 20%;
+  }
+  .resultado-credito{
+    background-color:rgba(191, 204, 204, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+
+  }
+  
