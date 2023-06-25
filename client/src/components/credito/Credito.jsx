@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
-import Title from '../login/Title';
+
+import './credito.css';
+import {imageCredito} from '../../images/creditoimg.jpg';
 
 const Credito = () => {
   const [monto, setMonto] = useState('');
   const [cuotas, setCuotas] = useState('');
-  const [resultado, setResultado] =useState('');
+  const [resultado, setResultado] = useState('');
 
   const handleChange = (e) => {
     e.preventDefault();
-    const calcular = ()=> {
-      let interes= monto * 5 / cuotas;
-    }
+    const calcular = () => {
+      const interes = (parseFloat(monto) * 3 * cuotas) / 100;
+      const valorCuota = (parseFloat(monto) + interes) / cuotas;
+      setResultado(valorCuota.toFixed(2));
+    };
+    calcular();
   };
 
   const handleMontoChange = (e) => {
@@ -23,14 +28,14 @@ const Credito = () => {
 
   return (
     <div className="contenedor-credito">
-      <Title text="Simula tu Prestamo en Pesos" />
+      <h1>Simula tu Préstamo en Pesos</h1>
       <form className="ingreso-credito" onSubmit={handleChange}>
         <input
           type="number"
           className="input-credito"
           value={monto}
           onChange={handleMontoChange}
-          placeholder="Monto del Prestamo"
+          placeholder="Monto del Préstamo"
         />
         <label htmlFor="cuotas">Cuotas</label>
         <select name="Cuotas" id="cuotas" value={cuotas} onChange={handleCuotasChange}>
@@ -45,8 +50,14 @@ const Credito = () => {
           Simular
         </button>
       </form>
+      <div className="resultado-credito">
+        <p>Valor de cuota mensual: $ {resultado}</p>
+      </div>
     </div>
   );
 };
 
 export default Credito;
+
+
+
