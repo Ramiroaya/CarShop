@@ -3,9 +3,9 @@ import React from 'react'
 import "../../css/autosIndex.css";
 
 
-function descripcion({vehiculo="vehiculo",marca="marca",modelo="modelo",anio="anio",version="version",motor="motor",combustible="combustible" }) {
+function Descripcion({vehiculo="vehiculo",marca="marca",modelo="modelo",anio="anio",version="version",motor="motor",combustible="combustible" }) {
   return (
-    <div className='descripcion'>
+    <div className='Descripcion'>
         <h2>{vehiculo}</h2>
         <p>{marca}</p>
         <p>{modelo}</p>
@@ -17,4 +17,4 @@ function descripcion({vehiculo="vehiculo",marca="marca",modelo="modelo",anio="an
   );
   }
 
-export default descripcion;
+export default Descripcion;
