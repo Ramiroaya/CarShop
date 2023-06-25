@@ -71,8 +71,7 @@ img {
   }
 
   
-  box-shadow: 2px 2px 5px #3333;
-  background-color: #d2d2cd;
+  
     
 
 
@@ -82,14 +81,7 @@ font-size: 14px;
 margin-bottom: 2px;
 }
 
-    box-shadow: 2px 2px 5px #3333;
-    background-color: #d2d2cd;
-      
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-  
-  }
+   
   .descripcion {
     min-width: 60vh;
     min-height: 60vh;

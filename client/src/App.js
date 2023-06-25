@@ -5,14 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Ofertas from './components/Ofertas';
 import Nosotros from './components/Nosotros';
-import Login from './pages/Login';
+import IndexLogin from './pages/IndexLogin';
 import NavBarHeader from './components/navBarHeader/NavBarHeader';
- import Layout from './pages/layout';
 import Vistas from './pages/vistas'; 
-import FeedbackForm from './components/FeedBack';
+import ContactoIndex from './pages/ContactoIndex';
 import NoPage from './components/NoPage';
-import Registro from './pages/Registro';
-import Credito from './components/credito/Credito';
+import IndexRegistro from './pages/IndexRegistro';
+import IndexCredito from './pages/IndexCredito';
+import Legales from './components/navBarFooter/Legales';
 
 
 
@@ -24,19 +24,17 @@ function App() {
           <Routes>
             <Route path="/" element={<NavBarHeader/> } >
               <Route index element={<Home />} />
-              <Route path="credito" element={<Credito />} />
+              <Route path="credito" element={<IndexCredito />} />
               <Route path="ofertas" element={<Ofertas />} />
-              <Route path="usuario" element={<Login />} />
-              <Route path="/usuario/registro" element={<Registro />} />
+              <Route path="usuario" element={<IndexLogin />} />
+              <Route path="/usuario/registro" element={<IndexRegistro />} />
               <Route path="nosotros" element={<Nosotros />} />
-              <Route path="contacto" element={<FeedbackForm />} />              
+              <Route path="contacto" element={<ContactoIndex />} /> 
+              <Route path="vistas" element={<Vistas/>}/>  
+              <Route path="/legales" element={<Legales/>}/>           
               <Route path="*" element={<NoPage />} />
              </Route>
           </Routes>          
-          <Routes>            
-           <Route path="/vistas" element={<Vistas/>}/>
-           <Route path="/layout" element={<Layout />}/>
-          </Routes>
         </Router>
       </div>
       </>

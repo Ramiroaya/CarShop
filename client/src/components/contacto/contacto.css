@@ -1,0 +1,21 @@
+.contenedor-contacto{
+    width: 60%;
+    padding:10px ;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: auto;
+  }
+
+  .contenedor-input{
+    background:#d9e2e6;
+     padding:2px;
+     width: 80%;
+     height: 60%;
+     display: flex;
+     margin-top: 30px;
+     align-items: center;
+     flex-direction: column;
+
+}
+ 
