@@ -6,9 +6,9 @@ import muestraImagen1 from '../../images/fiestaImag/images1.jpg';
 import muestraImagen2 from '../../images/fiestaImag/images2.jpg';
 import muestraImagen3 from '../../images/fiestaImag/images3.jpg';
 
-function uno() {
+function ImagenesDiferentes() {
   return (
-    <div className='uno'>
+    <div className='ImagenesDiferentes'>
 
       <button type="button">
        <img src={muestraImagen1} alt="CAR SHOP" width="280" height="220"/>
@@ -23,6 +23,6 @@ function uno() {
   );
 }
 
-export default uno;
+export default ImagenesDiferentes;
 
  
