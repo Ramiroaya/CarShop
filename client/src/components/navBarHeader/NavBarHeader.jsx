@@ -1,7 +1,23 @@
+import { useEffect } from 'react';
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
+import './Header.css';
+
 const NavBarHeader = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector('.navbar');
+      const isTop = window.scrollY < 100;
+      if (navbar) {
+        isTop ? navbar.classList.remove('scrolled') : navbar.classList.add('scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary justify-content-center">

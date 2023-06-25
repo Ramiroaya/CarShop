@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Title from '../components/login/Title';
-import Label from '../components/login/Label';
-import Input from '../components/login/Input';
-import '../components/login/Login.css';
+import Title from './Title';
+import Label from './Label';
+import Input from './Input';
+import './Login.css';
 
 
 

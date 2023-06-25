@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 
-import '../css/registro.css';
-import Title from '../components/login/Title';
+import './registro.css';
+import Title from '../login/Title';
 
 
 const Registro = () => {
