@@ -5,9 +5,9 @@ import muestraImagen from '../../images/fordFiesta.imgs.full.high.webp';
 
 import  '../../css/autosIndex.css';
 
-function dos() {
+function ImagenPrincipal() {
   return (
-    <div className='dos'>
+    <div className='ImagenPrincipal'>
       
       <img src={muestraImagen} alt="CAR SHOP" className='muestra-imagen' />  
       
@@ -15,5 +15,6 @@ function dos() {
   );
 }
 
-export default dos;
+export default ImagenPrincipal;
  
+

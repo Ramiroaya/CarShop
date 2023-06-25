@@ -2,9 +2,9 @@ import React from 'react'
 import "../../css/autosIndex.css";
 
 
-function tres({vehiculo="vehiculo",marca="marca",precio="precio" }) {
+function DatosDeAutos({vehiculo="vehiculo",marca="marca",precio="precio" }) {
   return (
-    <div className='tres'>
+    <div className='DatosDeAutos'>
         <h2>{vehiculo}</h2>
         <p>{marca}</p>
         <p>{precio}</p>
@@ -12,4 +12,4 @@ function tres({vehiculo="vehiculo",marca="marca",precio="precio" }) {
   );
 }
 
-export default tres; 
+export default DatosDeAutos; 
