@@ -29,7 +29,7 @@ function App() {
               <Route path="nosotros" element={<Nosotros />} />
               <Route path="contacto" element={<FeedbackForm />} />              
               <Route path="*" element={<NoPage />} />
-             </Route>
+            </Route>
           </Routes>          
           <Routes>            
            <Route path="/vistas" element={<Vistas/>}/>
