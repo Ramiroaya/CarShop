@@ -1,0 +1,22 @@
+.nav-footer {
+    width: 60vw;
+    height: 5vh;
+    margin: 5px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(49, 46, 46);
+    list-style-type: none;
+  }
+  
+  .item-footer {
+    margin: 0 10px;
+    color: #333;
+  }
+  
+  .nav-footer .item-footer a {
+    text-decoration: none;
+  }
+  

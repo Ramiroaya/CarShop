@@ -43,15 +43,15 @@ const Contacto = () => {
                         {errors.email?.type === 'pattern' && <p>El email ingresado no es valido</p>}
                     </div>
                     <div>
-                        <label>Consulta</label>
-                        <input type="text" {...register('consulta', {
+                        <h3>Consulta</h3>
+                        <input className="input-consulta" type="text" {...register('consulta', {
                             require: true,
                             maxLength:{
                                 value :150, 
                                 message:'La consulta no puede tener más de 150 caracteres',}
                         })} />
                     </div>
-                    <input type="submit" value="Enviar"/>
+                    <input className="boton-submit" type="submit" value="Enviar"/>
                 </form>
             </div>
         </div>

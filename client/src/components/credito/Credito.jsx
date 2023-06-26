@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import './credito.css';
-import {imageCredito} from '../../images/creditoimg.jpg';
+
 
 const Credito = () => {
   const [monto, setMonto] = useState('');
@@ -13,7 +13,7 @@ const Credito = () => {
     const calcular = () => {
       const interes = (parseFloat(monto) * 3 * cuotas) / 100;
       const valorCuota = (parseFloat(monto) + interes) / cuotas;
-      setResultado(valorCuota.toFixed(2));
+      setResultado(valorCuota.toLocaleString());
     };
     calcular();
   };

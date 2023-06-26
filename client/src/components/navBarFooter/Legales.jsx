@@ -1,12 +1,14 @@
-import React from 'react'
-import text from '../../Txt/legalText.txt';
+import React from 'react';
+import { legalText } from '../../Data/legalText.js';
 
 const Legales = () => {
+  const texto = legalText;
+
   return (
     <div>
-        <p>{text}</p>
+      <p>{texto.text}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Legales
+export default Legales;
