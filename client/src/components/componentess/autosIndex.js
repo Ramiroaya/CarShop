@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Banner from '../banner';
-import Descripcion from './Descripcion';
+import Descripcion from './descripcion';
 import DatosDeAutos from './DatosDeAutos';
 import ImagenPrincipal from './ImagenPrincipal';
 import ImagenesDiferentes from './ImagenesDiferentes';
-import Contactos from './Contactos';
-import Segurosyfinanciacion from './Segurosyfinanciaciones';
+import Contactos from './contactos';
+import Segurosyfinanciacion from './segurosyfinanciaciones';
 
 import '../../css/autosIndex.css';
 
