@@ -1,12 +1,14 @@
-import React from 'react'
-import NavBarHeader from '../components/navBarHeader/NavBarHeader';
-import Contacto from '../components/Contacto';
+import React from 'react';
+import Contacto from '../components/contacto/Contacto';
+import Banner from '../components/banner';
+import Footer from '../components/navBarFooter/Footer';
 
 const ContactoIndex = () => {
   return (
     <div>
-        <NavBarHeader/>
+        <Banner/>
         <Contacto/>
+        <Footer />
     </div>
   )
 }

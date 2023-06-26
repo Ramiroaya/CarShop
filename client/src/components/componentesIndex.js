@@ -8,23 +8,19 @@ import Segurosyfinanciacion  from './index-segurosyfinanciacionacceso';
 import Marcas  from './index-marcas';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/componentesIndex.css';
+
 import '../css/bloques.css';
 
 
 
 const ComponentesIndex = () => {
   return (
-    <div class='bloques'>
+    <div className='bloques'>
       <div className="d-grid gap-2">
-      <Button variant="outline-danger" size="lg">
+      <Button variant="outline-danger" size="lm">
         VENDÉ TU AUTO
       </Button>
-     
-
-    </div>
-    
-      
+    </div>      
       <FormBusqueda />
       <Tiposvehiculos />
       <Marcas />

@@ -1,22 +1,27 @@
 import React from 'react'
 
+import Banner from '../banner';
+import Descripcion from './Descripcion';
+import DatosDeAutos from './DatosDeAutos';
+import ImagenPrincipal from './ImagenPrincipal';
+import ImagenesDiferentes from './ImagenesDiferentes';
+import Contactos from './Contactos';
+import Segurosyfinanciacion from './Segurosyfinanciaciones';
 
-import Descripcion from './descripcion';
-import Tres from './tres';
-import Dos from './dos';
-import Uno from './uno';
-import Contactos from './contactos';
-import Segurosyfinanciacion from './segurosyfinanciaciones';
+import '../../css/autosIndex.css';
 
 
 
-function autosIndex  ()  {
+function AutosIndex  ()  {
   return (
     <div class='autosIndex'>
+
+        <Banner/>
+
       <div class='prueba' >
-        <Uno/>
-        <Dos/>
-        <Tres/>
+        <ImagenesDiferentes/>
+        <ImagenPrincipal/>
+        <DatosDeAutos/>
       </div>
 
       <div class='prueba2'>
@@ -32,4 +37,4 @@ function autosIndex  ()  {
   )
 }
 
-export default autosIndex;
+export default AutosIndex;

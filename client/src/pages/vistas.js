@@ -1,21 +1,13 @@
 import React from 'react';
 import '../css/autosIndex.css';
-import Banner from '../components/banner';
+
 import AutosIndex from '../components/componentess/autosIndex';
-import NavBarHeader from '../components/navBarHeader/NavBarHeader';
-import NavBarFooter from '../components/navBarFooter/NavBarFooter';
 
-
-
-const Vistas = () => {
+const vistas = () => {
     return (
-      <div className='vistas' >
-        <NavBarHeader/>
-        <Banner />
-        <AutosIndex />
-        <NavBarFooter/>
-  
+      <div className='vistas' >       
+        <AutosIndex />  
       </div>
     )
   }
-  export default Vistas
+  export default vistas
