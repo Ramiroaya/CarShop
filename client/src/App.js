@@ -4,7 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Ofertas from './components/oferta/Ofertas';
-import Nosotros from './components/Nosotros';
+import Nosotros from './components/nosotros/Nosotros';
 import IndexLogin from './pages/IndexLogin';
 import NavBarHeader from './components/navBarHeader/NavBarHeader';
 import Vistas from './pages/vistas'; 

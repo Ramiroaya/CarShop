@@ -1,0 +1,21 @@
+.parrafo{
+    text-align: left;
+    font-family: Poppins,sans-serif;
+    line-height: 1.8;
+    font-size: 14px;
+    color: #cccccc;
+    padding: 1%;
+}
+.titulo{
+    color: #fafafa;
+    padding: 1%;
+}
+.body{
+    padding-top: 4vh;
+    padding-bottom: 25vh;
+    background-image: linear-gradient(rgba(181, 187, 202, 0.75), rgba(5, 7, 12, 0.75)), url(../../images/imagef.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
