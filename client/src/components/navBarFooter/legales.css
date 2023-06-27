@@ -1,0 +1,13 @@
+.contenedor-legal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 70%;
+    margin: auto;
+    
+
+}
+.texto {
+    color: gray;
+}

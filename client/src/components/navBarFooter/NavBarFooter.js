@@ -10,7 +10,7 @@ const NavBarFooter = () => {
         <div className="container-navBar">
             <ul className="nav-footer">
                 <li className="item-footer"><Link to='/nosotros'>Nosotros</Link></li>
-                <li className="item-footer"><Link to='/legales'>Legales</Link></li>
+                <li className="item-footer"><Link to='/legales'>Terminos y Condiciones</Link></li>
                 <li className="item-footer"><Link to='/contacto'>Contacto</Link></li>                
             </ul>
         </div>

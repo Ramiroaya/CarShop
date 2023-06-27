@@ -12,8 +12,8 @@
   .contenedor-form {
     width: 90%;
     max-width: 400px;
-    height: 70vh;
-    margin: 5px;
+    height: auto;
+    margin-top: 35px;
     background-color: rgba(191, 204, 204, 0.8);
     display: flex;
     flex-direction: column;
@@ -23,6 +23,7 @@
   }
   
   .contenedor-input {
+    height: 8vh;
     border-radius: 20px;
     text-align: center;
   }
