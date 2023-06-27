@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 import FormBusqueda   from './index-formBusqueda';
 import Tiposvehiculos from './index-tiposvehiculos';
 import Segurosyfinanciacion  from './index-segurosyfinanciacionacceso';
 import Marcas  from './index-marcas';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,12 +15,13 @@ import '../css/bloques.css';
 
 const ComponentesIndex = () => {
   return (
+
     <div className='bloques'>
       <div className="d-grid gap-2">
       <Button variant="outline-danger" size="lm">
         VENDÉ TU AUTO
       </Button>
-    </div>      
+      </div>     
       <FormBusqueda />
       <Tiposvehiculos />
       <Marcas />

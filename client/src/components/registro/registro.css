@@ -1,4 +1,4 @@
-.contenedor {
+.contenedor-registro {
     display: flex;
     width: 98%;
     align-items: center;
@@ -9,7 +9,7 @@
    
   }
   
-  .contenedor-form {
+  .contenedor-form-registro {
     width: 90%;
     max-width: 400px;
     height: auto;
@@ -22,7 +22,7 @@
     border-radius: 20px;
   }
   
-  .contenedor-input {
+  .contenedor-input-registro {
     height: 8vh;
     border-radius: 20px;
     text-align: center;
@@ -61,11 +61,11 @@
   
   @media screen and (min-width: 1200px) {
     /* Estilos específicos para pantallas grandes */
-    .contenedor {
+    .contenedor-registro {
       padding: 10px;
     }
   
-    .contenedor-form {
+    .contenedor-form-registro {
       height: 80vh;
     }
   
