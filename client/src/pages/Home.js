@@ -9,6 +9,7 @@ import Footer from '../components/navBarFooter/Footer';
 
 
 
+
 const Home = () => {
   return (
     

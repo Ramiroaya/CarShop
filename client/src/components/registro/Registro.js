@@ -14,14 +14,14 @@ const Registro = () => {
     
 
   return (
-    <div className="contenedor">
-        <form className='contenedor-form'
+    <div className="contenedor-registro">
+        <form className='contenedor-form-registro'
             onSubmit={ev => {
                 ev.preventDefault()
                 registrarUsuario(nombre, apellido, email, password);
             }}>
             <Title text='Registro'/>
-            <input className='contenedor-input'
+            <input className='contenedor-input-registro'
                 type='text'
                 name='nombre'
                 placeholder='Nombre'
@@ -29,7 +29,7 @@ const Registro = () => {
                 value={nombre}
                 onChange={ev => setNombre(ev.target.value)} 
             ></input>
-            <input className='contenedor-input'
+            <input className='contenedor-input-registro'
                 type='text'
                 name='apellido'
                 placeholder='Apellido'
@@ -37,7 +37,7 @@ const Registro = () => {
                 value={apellido}
                 onChange={ev => setApellido(ev.target.value)} 
             ></input>
-            <input className='contenedor-input'
+            <input className='contenedor-input-registro'
                 type='text'
                 name='email'
                 placeholder='Email'
@@ -45,7 +45,7 @@ const Registro = () => {
                 value={email}
                 onChange={ev => setEmail(ev.target.value)} 
             ></input>
-            <input className='contenedor-input'
+            <input className='contenedor-input-registro'
                 type='password'
                 name='password'
                 placeholder='Contraseña'
@@ -54,7 +54,7 @@ const Registro = () => {
                 onChange={ev => setPassword(ev.target.value)} 
             ></input>
             
-            <div className='contenedor-boton'>
+            <div className='contenedor-boton-registro'>
                 <button  className='boton-registro'type='submit' disabled={errorMessage}>
                     Registrar
                 </button>

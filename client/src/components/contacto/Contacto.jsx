@@ -14,9 +14,9 @@ const Contacto = () => {
   
     return (
         <div className="contenedor-contacto" >
-            <div className="contenedor-input">
+            <div className="contenedor-input-contacto">
                 <h2>Formulario de Contacto</h2>
-                <form className="contenedor-form" onSubmit={handleSubmit(onSubmit)}>
+                <form className="contenedor-form-contacto" onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <input type="text" placeholder="Nombre" {...register('nombre', {
                             required: true,
