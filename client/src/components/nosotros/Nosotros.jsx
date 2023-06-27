@@ -10,7 +10,7 @@ const Nosotros = () => {
   return (
     <body className='body'>
       <h1 className='titulo'>Acerca de Car Shop</h1>
-      <div>
+      <div className='contenedorNosotros'>
         <p className="parrafo" > 
           Se trata de una tienda online de compra-venta de autos, camionetas, camiones y motos, tanto nuevos como usados. Los usuarios podrán ingresar a la tienda y ver los rodados exhibidos, su información y todo lo que tenga que ver con los vehículos, que son publicados dia a dia por los mismos usuarios de la página y hacer contacto con ellos.
           La tienda, además, será capaz de:
@@ -20,7 +20,7 @@ const Nosotros = () => {
           Ayudar a cotizar tu vehículo para venderlo:Mediante una tabla de cotización le ofrecemos al usuario el valor de mercado de su vehículo.
           Página de Contacto: Contactar con los administradores del sitio en caso de algún problema, para su posterior resolución.
         </p>
-        <Image src={portada} className='rounded-circle' style={{ width: '50%', height: 'auto', aspectRatio: '1/1' }} />
+        <Image src={portada} className='rounded-circle' style={{ width: '15%', height: 'auto', aspectRatio: '1/1' }} />
       </div>
     </body>
   )

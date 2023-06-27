@@ -10,6 +10,12 @@
     color: #fafafa;
     padding: 1%;
 }
+.contenedorNosotros{
+    display: flex;
+    width: 98%;
+    align-items: center;
+    justify-content: center;
+}
 .body{
     padding-top: 4vh;
     padding-bottom: 25vh;
