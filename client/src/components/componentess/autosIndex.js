@@ -14,17 +14,17 @@ import '../../css/autosIndex.css';
 
 function AutosIndex  ()  {
   return (
-    <div class='autosIndex'>
+    <div className='autosIndex'>
 
         <Banner/>
 
-      <div class='prueba' >
+      <div className='prueba' >
         <ImagenesDiferentes/>
         <ImagenPrincipal/>
         <DatosDeAutos/>
       </div>
 
-      <div class='prueba2'>
+      <div className='prueba2'>
         <Descripcion/>
         <Segurosyfinanciacion/>
       </div>
