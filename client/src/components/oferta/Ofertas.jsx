@@ -1,8 +1,11 @@
 import React from 'react'
+import './oferta.css';
 
 const Ofertas = () => {
   return (
-    <div>Ofertas</div>
+    <div>
+      
+    </div>
   )
 }
 
