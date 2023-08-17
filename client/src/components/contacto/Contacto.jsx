@@ -44,7 +44,7 @@ const Contacto = () => {
                     </div>
                     <div>
                         <h3>Consulta</h3>
-                        <input className="input-consulta" type="text" {...register('consulta', {
+                        <textarea className="input-consulta" type="text" {...register('consulta', {
                             require: true,
                             maxLength:{
                                 value :150, 
