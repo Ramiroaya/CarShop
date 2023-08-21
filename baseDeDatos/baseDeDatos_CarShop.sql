@@ -48,7 +48,21 @@ alter table usuarios
 
 alter table usuarios
 	modify administrador boolean;
+    
+alter table usuarios
+	rename to usuario;
+alter table vehiculos
+	rename to vehiculo;
 
+
+ALTER TABLE usuario
+MODIFY COLUMN administrador BOOLEAN AFTER direccion;
+
+alter table vehiculo
+	change idPublicacion idVehiculo int;
+
+alter table vehiculo
+	modify idVehiculo int auto_increment;
 
 
 
