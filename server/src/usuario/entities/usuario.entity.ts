@@ -5,19 +5,19 @@ import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "t
 export class Usuario {
     @PrimaryGeneratedColumn()
     idUsuario: number;
-    @Column("varchar",{ length :15 ,unique:true})
+    @Column("varchar",{ length :15 })
     nombre: string;
-    @Column("varchar",{ length :15 ,unique:true})
+    @Column("varchar",{ length :15 })
     apellido: string;
     @Column("varchar",{ length :25 ,unique:true})
     email:string ;
-    @Column("varchar",{ length :20 ,unique:true})
+    @Column("varchar",{ length :20 })
     telefono: string;
-    @Column("varchar",{ length :20 ,unique:true})
+    @Column("varchar",{ length :20 })
     provincia: string;
-    @Column("varchar",{ length :20 ,unique:true})
+    @Column("varchar",{ length :20 })
     localidad: string;
-    @Column("varchar",{ length :30 ,unique:true})
+    @Column("varchar",{ length :30 })
     direccion: string;
     @Column({ unique:true })
     administrador: boolean;
