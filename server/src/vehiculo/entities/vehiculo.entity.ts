@@ -5,21 +5,21 @@ import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "t
 export class Vehiculo {
     @PrimaryGeneratedColumn()
     idVehiculo: number;
-    @Column("varchar",{ length :10 ,unique:true})
+    @Column("varchar",{ length :10 ,unique:true })
     dominio: string;
-    @Column("varchar",{ length :10 ,unique:true})
+    @Column("varchar",{ length :10 })
     marca: string;
-    @Column("varchar",{ length :10 ,unique:true})
+    @Column("varchar",{ length :10 })
     modelo: string ;
-    @Column("varchar",{ length :10 ,unique:true})
+    @Column("varchar",{ length :10 } )
     version: string;
     @Column({type:"number"})
     año: number;
     @Column({type:"number"})
     kilometros: number;
-    @Column("varchar",{ length :10 ,unique:true})
+    @Column("varchar",{ length :10 })
     tipoVehiculo: string;
-    @Column("varchar",{ length :10 ,unique:true})
+    @Column("varchar",{ length :10 })
     transmision: string;
     @Column({type:"number"})
     precio: number;
