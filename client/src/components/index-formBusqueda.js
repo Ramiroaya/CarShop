@@ -20,10 +20,7 @@ const FormBusqueda = () => {
                   <option value="Auto"> Auto </option>
                   <option value="Camioneta"> Camioneta </option>
                   <option value="Camion"> Camión </option>
-                  <option value="Colectivo"> Colectivo </option>
-                  <option value="Maquinaria"> Maquinaria </option>
                   <option value="Moto"> Moto </option>
-                  <option value="Remloque"> Remloque o trailer </option>
                 </Form.Select>
               </Form.Group>
 
@@ -43,7 +40,7 @@ const FormBusqueda = () => {
               </Form.Group>
             
               <Form.Group className="mb-3" as={Col} id="formGridButton">
-                <Button type="button" className="button" variant="danger">BUSCAR</Button>
+                <Button type="button" className="button" variant="info">BUSCAR</Button>
               </Form.Group>
             
             </Row>
