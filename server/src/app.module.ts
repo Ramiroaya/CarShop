@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsuarioModule } from './usuario/usuario.module';
 import { VehiculoModule } from './vehiculo/vehiculo.module';
+import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot(
@@ -17,7 +19,7 @@ import { VehiculoModule } from './vehiculo/vehiculo.module';
       entities: ['dist/**/**.entity{.ts,.js}'],
       synchronize: true,
     }
-  ), UsuarioModule, VehiculoModule ],
+  ), UsuarioModule, VehiculoModule, UserModule, AuthModule ],
   controllers: [AppController],
   providers: [AppService],
 })
