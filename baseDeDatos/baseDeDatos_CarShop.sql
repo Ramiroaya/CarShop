@@ -64,5 +64,62 @@ alter table vehiculo
 alter table vehiculo
 	modify idVehiculo int auto_increment;
 
+ALTER TABLE vehiculo
+ADD CONSTRAINT usuario_id
+FOREIGN KEY (usuario_id) REFERENCES usuario (idUsuario);
 
+use carshopl;
 
+alter table usuario
+drop column localidad;
+
+alter table usuario
+drop column direccion;
+
+alter table usuario
+add password  varchar(255) not null unique;
+
+alter table vehiculo
+drop column dominio;
+
+alter table vehiculo
+drop column marca;
+
+alter table vehiculo
+drop column modelo;
+
+create table provincia (
+	idProvincia int primary key auto_increment not null,
+    nombre varchar(45) not null);
+
+create table version (
+	idVersion int primary key auto_increment not null,
+    nombre varchar(255) not null );
+    
+create table modelo (
+	idModelo int primary key auto_increment not null,
+    nombre varchar(255) not null,
+    version_id int);
+    
+alter table modelo
+	add constraint version_id
+    foreign key (version_id) references version(idVersion);
+    
+create table marca (
+	idMarca int primary key auto_increment not null,
+    nombre varchar(255),
+    modelo_id int);
+    
+alter table marca
+	add constraint modelo_id
+    foreign key (modelo_id) references modelo(idModelo);
+    
+alter table vehiculo
+add column version_id int;
+    
+alter table vehiculo
+	add constraint version_id
+    foreign key (version_id) references version(idVersion);
+
+alter table vehiculo
+change version version_id int;
