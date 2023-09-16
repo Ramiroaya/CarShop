@@ -1,13 +1,21 @@
 import React from 'react';
-import bannerImage from '../images/logogrande.png';
-import '../css/banner.css'
+import '../css/banner.css';
+import esquina from '../images/trafic.mp4';
 
 const Banner = () => {
   return (
-    <div className='banner-style' >
-      <img src={bannerImage} alt="CAR SHOP" className='banner-image'/>
+    <div className='banner-container'>
+      <div className='banner-style'>
+        <video autoPlay muted loop playsInline className="banner-video">
+          <source src={esquina} type="video/mp4" />
+          Tu navegador no admite la reproducción de videos.
+        </video>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;
+
+
+

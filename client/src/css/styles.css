@@ -1,0 +1,46 @@
+/* styles.css */
+.marcas-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en varias líneas */
+    margin: -10px; /* Compensar el margen negativo de los elementos hijos */
+  }
+  
+  .marcas-column {
+    flex-basis: calc(33.33% - 20px); /* Ajusta el tamaño de las columnas para tres columnas en una fila */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Espaciado entre las columnas */
+  }
+  
+  .icon-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 70px; /* Espaciado entre las imágenes dentro de cada columna */
+    margin-right: 20px;
+    transition: transform 0.2s, color 0.2s, background-color 0.2s; /* Agrega una transición suave */
+  }
+  
+  .icon-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: transform 0.2s, background-color 0.2s; /* Agrega una transición suave */
+  }
+ 
+  /* Efecto al pasar el mouse por encima */
+  .icon-button:hover {
+    background-color: #0281ba; /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.1); /* Agranda la imagen al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar el mouse */
+  }
+ 
+  /* Cambio de color al pasar el mouse por encima */
+  .icon-button:hover img {
+    filter: brightness(1.3); /* Aumenta el brillo de la imagen al pasar el mouse */
+  }
+  

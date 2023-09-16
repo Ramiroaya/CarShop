@@ -1,52 +1,40 @@
 import React from 'react';
-
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Card from 'react-bootstrap/Card';
-
 import '../css/bloques.css';
 
 const FormBusqueda = () => {
   return (
     <>
-      <Card className='bloques-cerrado'>
-        <Card.Body>
-          <Form>
-            <Row className="mb-3">
-              <Form.Group as={Col} controlId="formGridTipoVehiculo">
-                <Form.Select defaultValue="Auto">
+      <div className='bloques-cerrado'>
+        <div className="card-body">
+          <form>
+            <div className="mb-3 row">
+              <div className="col">
+                <select className="form-select" defaultValue="Auto">
                   <option value="Auto"> Auto </option>
                   <option value="Camioneta"> Camioneta </option>
                   <option value="Camion"> Camión </option>
                   <option value="Moto"> Moto </option>
-                </Form.Select>
-              </Form.Group>
+                </select>
+              </div>
+              <div className="col">
+                <input type="text" className="form-control" placeholder="Marca" />
+              </div>
+            </div>
 
-              <Form.Group as={Col} controlId="formGridMarca">
-                <Form.Control type="text" placeholder="Marca" />
-              </Form.Group>
-            </Row>
-
-            <Row className="mb-0">
-              
-              <Form.Group className="mb-3" as={Col} controlId="formGridModelo">
-                <Form.Control type="text" placeholder="Modelo" />
-              </Form.Group>
-              
-              <Form.Group className="mb-3" as={Col} controlId="formGridAnio">
-                <Form.Control type="number" placeholder="Año" />
-              </Form.Group>
-            
-              <Form.Group className="mb-3" as={Col} id="formGridButton">
-                <Button type="button" className="button" variant="info">BUSCAR</Button>
-              </Form.Group>
-            
-            </Row>
-          </Form>
-        </Card.Body>
-      </Card>
+            <div className="mb-0 row">
+              <div className="col">
+                <input type="text" className="form-control" placeholder="Modelo" />
+              </div>
+              <div className="col">
+                <input type="number" className="form-control" placeholder="Año" />
+              </div>
+              <div className="col">
+                <button type="button" className="button btn btn-info">BUSCAR</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </>
   );
 }

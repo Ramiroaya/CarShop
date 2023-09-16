@@ -1,25 +1,73 @@
-.bloques,
-.bloques-cerrado{
-  width: 98%;
-  margin:auto;
-  padding-top: 1vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
+/* En tu archivo bloques.css */
+
+/* Estilo para el contenedor principal */
+.bloques {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-.bloques-cerrado{
-  background-color: #ffffff;
-  border-radius: 5px;
-  
+/* Estilo para la fila personalizada */
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.icon-button{
-  background-color: #FFFFFF;
-  border-radius: 50px;
-  padding: 0.5vw;
-  content: icon;
+/* Estilo para las columnas personalizadas */
+.custom-col {
+  flex: 1;
+  padding: 3vw;
+  max-width: calc(50% - 20px);
+  box-sizing: border-box;
 }
 
-.button{
-  width: 70%;
+/* Estilo para las tarjetas personalizadas */
+.custom-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las imágenes en las tarjetas */
+.custom-card-img-top {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Estilo para el título en las tarjetas */
+.custom-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilo para el cuerpo en las tarjetas */
+.custom-card-body {
+  padding: 10px;
+}
+/* styles.css (o cualquier otro nombre que elijas) */
+.marcas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button {
+  width: 100px; /* Ajusta el ancho según tus necesidades */
+  height: 100px; /* Ajusta la altura según tus necesidades */
+  margin: 10px; /* Espacio entre las imágenes de las marcas */
+  border: 1px solid #0281ba; /* Borde opcional */
+  border-radius: 50%; /* Hace que las imágenes sean circulares */
+}
+
+.icon-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }

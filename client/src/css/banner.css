@@ -1,12 +1,29 @@
-.banner-style {
-  background-color: #0281ba;
-  width: 98vw;
-  height: 25vh;
-  max-height: 25vw;
-  margin: auto;
+body {
+  margin: 0;
+  padding: 0;
+ 
 }
 
-.banner-image {
-  max-height:100%;
-  max-width: 100vw;
+.banner-container {
+  width: 100vw; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
+  height: 55vh; /* Establece la altura del contenedor al 50% de la altura de la ventana */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 5vh; /* Esto ajusta la posición vertical del video */
+}
+
+.banner-style {
+  position: relative;
+}
+
+.banner-video {
+  width: 100vw; /* Establece el ancho del video al 100% del ancho de la ventana */
+  height: 50vh; /* Establece la altura del video al 50% de la altura de la ventana */
+  object-fit: cover;
+}
+.scrollable-content {
+  overflow: auto; /* Habilitar el scroll en este contenedor */
 }

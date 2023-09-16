@@ -1,39 +1,33 @@
 import React from 'react';
-
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/esm/Row';
-import Col from 'react-bootstrap/Col';
-
 import '../css/bloques.css';
-import creditoimg from '../images/creditoimg.jpg';
-import seguroimg from '../images/seguroimg.jpg';
+import creditoimg from '../images/credito1.jpg';
+import seguroimg from '../images/seguro1.jpg';
 import { Link } from 'react-router-dom';
 
 const Segurosyfinanciacion = () => {
   return (
     <>
       <div className='bloques'>
-        <Row xs={2} md={2} className="g-4">
-          <Col style={{ padding: '3vw' }}>
-            <Card>
-              <Card.Img variant="top" src={seguroimg} />
-                <Card.Body>
-                  <Card.Title>ASEGURÁ TU AUTO</Card.Title>
-                </Card.Body>
-            </Card>
-          </Col>
-          <Col style={{ padding: '3vw' }}>           
-             <Card >   
-                <Link  to="/credito" >           
-                  <Card.Img variant="top" src={creditoimg}/>
-                </Link>
-                <Card.Body>
-                  <Card.Title>SIMULÁ TU CRÉDITO</Card.Title>
-                </Card.Body>                
-              </Card>
-            
-          </Col>
-        </Row>
+        <div className="custom-row">
+          <div className="custom-col" style={{ padding: '3vw' }}>
+            <div className="custom-card">
+              <img src={seguroimg} className="custom-card-img-top" alt="Asegura tu auto" />
+              <div className="custom-card-body">
+                <h5 className="custom-card-title">ASEGURÁ TU AUTO</h5>
+              </div>
+            </div>
+          </div>
+          <div className="custom-col" style={{ padding: '3vw' }}>
+            <div className="custom-card">
+              <Link to="/credito">
+                <img src={creditoimg} className="custom-card-img-top" alt="Simulá tu crédito" />
+              </Link>
+              <div className="custom-card-body">
+                <h5 className="custom-card-title">SIMULÁ TU CRÉDITO</h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

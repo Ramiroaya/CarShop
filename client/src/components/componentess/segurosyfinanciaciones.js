@@ -1,7 +1,7 @@
 import React from 'react';
 
-import creditoimg from '../../images/creditoimg.jpg';
-import seguroimg from '../../images/seguroimg.jpg';
+import creditoimg from '../../images/credito1.jpg';
+import seguroimg from '../../images/seguro1.jpg';
 
 import '../../css/autosIndex.css';
 import { Link } from 'react-router-dom';
