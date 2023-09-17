@@ -38,7 +38,11 @@
     border-color: aliceblue;
     background-color: rgb(219, 81, 81);
 }
-
-
+.logo-image {
+    width: 300px; /* Ancho deseado */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 20px; /* Espacio entre la imagen y los enlaces de navegación */
+  }
+ 
 
 
