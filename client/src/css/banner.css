@@ -6,13 +6,13 @@ body {
 
 .banner-container {
   width: 100vw; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
-  height: 55vh; /* Establece la altura del contenedor al 50% de la altura de la ventana */
+  height: 60vh; /* Establece la altura del contenedor al 50% de la altura de la ventana */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 5vh; /* Esto ajusta la posición vertical del video */
+  padding-top: 17vh; /* Esto ajusta la posición vertical del video */
 }
 
 .banner-style {
