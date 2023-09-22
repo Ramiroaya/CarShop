@@ -3,11 +3,12 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 import './Header.css';
+import logoImage from '../../images/logo-carshop.jpg';
 
 const NavBarHeader = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = document.querySelector('.navbar');
+      const navbar = document.querySelector('.custom-navbar');
       const isTop = window.scrollY < 100;
       if (navbar) {
         isTop ? navbar.classList.remove('scrolled') : navbar.classList.add('scrolled');
@@ -20,21 +21,13 @@ const NavBarHeader = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary justify-content-center">
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <ul className="navbar-nav mb-2 mb-lg-0">
+      <nav className="custom-navbar">
+        <div className="container">
+          <div className="logo-container">
+            <img src={logoImage} alt="Logo" className="logo-image" />
+          </div>
+          <div className="navbar-nav">
+            <ul className="list-unstyled d-flex">
               <li className="nav-item">
                 <NavLink exact to="/" className="nav-link">
                   <span className="fs-5 me-4">Inicio</span>
@@ -64,9 +57,9 @@ const NavBarHeader = () => {
           </div>
         </div>
       </nav>
-      <Outlet/>
+      <Outlet />
     </>
-  )
+  );
 };
 
 export default NavBarHeader;
