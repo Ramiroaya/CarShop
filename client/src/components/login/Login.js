@@ -14,6 +14,13 @@ const Login = () => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(false);
+  
+// Después (usar la variable)
+if (isLogin) {
+  // Hacer algo si el usuario está logueado
+} else {
+  // Hacer algo si el usuario no está logueado
+}
   const [hasError, setHasError] = useState(false);
 
 
