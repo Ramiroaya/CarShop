@@ -1,18 +1,22 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
  
-}
+}*/
 
 .banner-container {
   width: 100vw; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
-  height: 60vh; /* Establece la altura del contenedor al 50% de la altura de la ventana */
+
+  height: 85vh; /* Establece la altura del contenedor al 70% de la altura de la ventana */
+
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 17vh; /* Esto ajusta la posición vertical del video */
+
+  padding-top: 20vh; /* Esto ajusta la posición vertical del video */
+
 }
 
 .banner-style {
@@ -21,7 +25,7 @@ body {
 
 .banner-video {
   width: 100vw; /* Establece el ancho del video al 100% del ancho de la ventana */
-  height: 50vh; /* Establece la altura del video al 50% de la altura de la ventana */
+  height: 70vh; /* Establece la altura del video al 70% de la altura de la ventana */
   object-fit: cover;
 }
 .scrollable-content {

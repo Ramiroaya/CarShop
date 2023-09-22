@@ -3,7 +3,9 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 import './Header.css';
-import logoImage from '../../images/logogrande.png';
+
+import logoImage from '../../images/logo-carshop.jpg';
+
 
 const NavBarHeader = () => {
   useEffect(() => {

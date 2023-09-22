@@ -1,9 +1,12 @@
 .contenedor-registro {
     display: flex;
-    width: 98%;
+    width: 80%;
+    height: 60%;
     align-items: center;
     justify-content: center;
-    background-image: url(../../images/imaged.jpg);
+    background-image: url(../../images/5008_1.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: auto;
     border-radius: 10px;
    
@@ -13,7 +16,7 @@
     width: 90%;
     max-width: 400px;
     height: auto;
-    margin-top: 35px;
+    margin-top: 20vh;
     background-color: rgba(191, 204, 204, 0.8);
     display: flex;
     flex-direction: column;
@@ -39,14 +42,14 @@
     width: 90px;
     height: 40px;
     border-radius: 25px;
-    background: rgb(7, 69, 71);
+    background: rgb(133, 139, 139);
     color: white;
     font-size: 14px;
     font-weight: bold;
   }
   
   .boton-registro:hover {
-    opacity: 0.6;
+    transform: scale(1.1);
   }
   
   /* Media queries */
