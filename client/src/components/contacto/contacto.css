@@ -1,7 +1,7 @@
 
 .contenedor-contacto {
-    width: 50%;
-    height: auto;
+    width: 90%;
+    height: 200vh;
     padding: 10px ;
     display: flex;
     justify-content: center;
