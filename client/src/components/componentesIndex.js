@@ -13,6 +13,7 @@ import '../css/bloques.css';
 
 
 
+
 const ComponentesIndex = () => {
   return (
 
