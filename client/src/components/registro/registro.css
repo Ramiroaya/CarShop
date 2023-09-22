@@ -13,7 +13,7 @@
   }
   
   .contenedor-form-registro {
-    width: 90%;
+    width: 80%;
     max-width: 400px;
     height: auto;
     margin-top: 20vh;
@@ -26,7 +26,8 @@
   }
   
   .contenedor-input-registro {
-    height: 8vh;
+    width: 60%;
+    height: 5vh;
     border-radius: 20px;
     text-align: center;
   }
