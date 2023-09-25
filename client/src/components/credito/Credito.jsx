@@ -51,7 +51,7 @@ const Credito = () => {
         </button>
       </form>
       <div className="resultado-credito">
-        <p>Valor de cuota mensual: $ {resultado}</p>
+        <p className="resultado">Valor de cuota mensual: $ {resultado}</p>
       </div>
     </div>
   );

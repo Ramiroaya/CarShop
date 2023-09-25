@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 20vh auto;
     width: 80%;
-    height: 90vh;
+    height: 80vh;
     flex-direction: column;
     background-image: url(../../images/creditoimg.webp);
     background-size: cover;
@@ -19,7 +19,7 @@
   .ingreso-credito {
     display: flex;
     width: 40%;
-    height: 50%;
+    height: 200vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -32,10 +32,15 @@
     margin: 40px;
   }
   .boton-credito{
-   background-color:rgb(170, 138, 138);
+   background-color:rgb(133, 139, 139);
    border-radius: 25px;
-   width: 20%;
+   width: 30%;
    height: 20%;
+  }
+
+  .boton-credito:hover {
+    transform: scale(1.1);
+  
   }
   .resultado-credito{
     background-color:rgba(191, 204, 204, 0.8);
@@ -44,8 +49,8 @@
     justify-content: center;
     margin-top: 10px;
     width: 40%;
-    height: 50%;
-    border-radius: 20px;
+    height: 60%;
+    border-radius: 15px;
 
   }
   
