@@ -5,14 +5,14 @@
   
 
   box-shadow: 2px 2px 5px #3333;
-  background-color: #d2d2d0;
+  background-color:white;
     
     box-shadow: 2px 2px 5px #3333;
-    background-color: #d2d2d0;
+    background-color: white;
       
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: column;
   
   }
   
@@ -20,7 +20,7 @@
     min-width: 30vh;
     min-height: 30vh; 
     box-shadow: 2px 2px 5px #3333;
-    background-color: #b2b3ab;
+    background-color: white;
     display:flex;
     flex-direction: column;
     justify-content: center; 
@@ -41,18 +41,18 @@
     padding: 100px 2%;
    
     box-shadow: 2px 2px 5px #e0dbdb33;
-    background-color: #9898a0;
+    background-color: white;
     display: flex;
     justify-content: center;
   }
   
-  .DatosDeAutos {
+  .datos-autos {
     min-width: 57vh;;
     min-height: 57vh;
   
    
     box-shadow: 2px 2px 5px #57545433;
-    background-color: #a7a9ab;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -66,7 +66,7 @@
     padding: 30px ;
     
     box-shadow: 2px 2px 5px #3333;
-    background-color: #d2d2cd;
+    background-color: white;
       
     display:flex;
     flex-direction: row;
@@ -75,16 +75,6 @@
   }
 
 
-  .descripcion {
-    min-width: 60vh;
-    min-height: 60vh;
-  
-    box-shadow: 2px 2px 5px #3333;
-    background-color: #a6a6a0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
   
 
 
@@ -95,11 +85,11 @@
     }
 
   .Descripcion {
-    min-width: 60vh;
-    min-height: 60vh;
+    min-width: 60px;
+    min-height: 60px;
   
     box-shadow: 2px 2px 5px #3333;
-    background-color: #a6a6a0;
+    background-color:white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,7 +127,81 @@
      justify-content: center;
      align-items: center;
   }
-  
+  /* Estilos para el contenedor del carrusel */
+.image-carrusel {
+  max-width: 600px; /* Define el ancho máximo del carrusel */
+  margin: 0 auto; /* Centra el carrusel en la página */
+}
 
-  
-  
+/* Estilos para las imágenes dentro del carrusel */
+.image-carrusel img {
+  width: 300px; /* Establece un ancho fijo para todas las imágenes */
+  height: 200px; /* Establece una altura fija para todas las imágenes */
+  object-fit: cover; /* Escala las imágenes para llenar el espacio sin distorsión */
+  border: 2px solid #ccc; /* Agrega un borde a las imágenes */
+}
+/* Estilos para los botones de anterior y siguiente */
+.button-container {
+  text-align: center; /* Centra los botones */
+  margin-top: 10px; /* Espacio superior entre el carrusel y los botones */
+}
+
+.button-container button {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px; /* Espacio interno del botón */
+  border: none; /* Quita el borde del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  margin: 0 5px; /* Margen entre los botones */
+}
+
+.button-container button:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+}
+/* Estilos para ocultar los botones */
+.hidden {
+  display: none; /* Oculta el elemento */
+}
+
+
+
+.datos-autos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.autos-arriba,
+.autos-abajo {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* Ancho deseado para las filas */
+  margin-top: 20px; /* Espacio entre las filas */
+}
+
+.car-item {
+  text-align: center;
+  width: 30%; /* Ancho deseado para cada elemento */
+  border: 1px solid #ccc; /* Borde para cada elemento (opcional) */
+  padding: 10px; /* Espacio interno para cada elemento */
+}
+
+.car-item img {
+  max-width: 100%; /* Hacer que todas las imágenes tengan el mismo ancho máximo */
+  height: auto;
+  width: 80%; /* Reducir el ancho al 80% para hacer que las imágenes sean más pequeñas */
+}
+
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas, si es necesario */
+  .autos-arriba,
+  .autos-abajo {
+    flex-direction: column;
+  }
+
+  .car-item {
+    width: 80%; /* Ancho completo en pantallas pequeñas */
+    margin: 10px auto; /* Espaciado vertical en pantallas pequeñas */
+  }
+}
