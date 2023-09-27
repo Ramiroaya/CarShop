@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import GoogleLoginButton from '../googleLogin/GoogleLoginButton';
 import { NavLink } from 'react-router-dom';
 import Title from './Title';
 import Label from './Label';
@@ -59,7 +60,7 @@ if (isLogin) {
     <div className='contenedor-index-login'>
       <div className='login-container'>
         <div className='login-content'>
-          <Title text='CAR SHOP' />
+          <Title text='BIENVENIDO' />
           { hasError &&
             <label className='label-alert'>
               Su contraseña o usuario son incorrectos,
@@ -92,10 +93,10 @@ if (isLogin) {
             </button>
           </div> 
           <NavLink exact to='./registro' className='registro'>
-            <h3 className="text-registro">Crear Cuenta</h3>  
+            <h4 className="text-registro">Crear Cuenta</h4>  
           </NavLink>    
         </div> 
-        
+        <GoogleLoginButton />
       </div>
       
     </div>

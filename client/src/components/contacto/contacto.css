@@ -1,38 +1,63 @@
 
 .contenedor-contacto {
-    width: 50%;
-    height: auto;
+    width: 90%;
+    height: 100vh;
     padding: 10px ;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 6vh auto;
     
   }
 
 .contenedor-input-contacto {
     background:#d9e2e6;
-     padding: 2px;
-     width: 80%;
+     padding: 2vh;
+     width: 30%;
      height: 80%;
      display: flex;
-     margin-top: 30px;
+     margin-top: 20vh;
      align-items: center;
      flex-direction: column;
+     border-radius: 25px;
   }
 
+.contenedor-form-contacto {
+    display:flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
 .input-consulta {
- 
-  width: 120%;
-  height: 120%;
+    width: 100%; /* Limita el ancho */
+    height: 150px;
+    resize: vertical;
+    
 }
 
 .boton-submit {
-  
-  width: 25%;
-  height: 8%;
-  border-radius: 35px;
-  margin-top: 20px;
-
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.boton-submit:hover {
+    background-color: #0056b3;
+}
+
   
