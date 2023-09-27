@@ -1,27 +1,35 @@
+@font-face {
+    font-family: avenirRegular;
+    src: url("../../fonts/Avenir\ Regular.ttf");
+}
+
 .parrafo{
     text-align: left;
-    font-family: Poppins,sans-serif;
+    font-family: avenirRegular;
     line-height: 1.8;
-    font-size: 14px;
-    color: #cccccc;
-    padding: 1%;
+    font-size: 15px;
+    color: #727272;
+    border: #0281ba solid;
 }
 .titulo{
-    color: #fafafa;
-    padding: 1%;
+    font-family: avenirRegular;
+    color: #0281ba;
+    padding-left: 1%;
+    margin-top: 15vh;
 }
 .contenedorNosotros{
     display: flex;
     width: 98%;
     align-items: center;
     justify-content: center;
+    border: #fc96ff solid;
 }
 .body{
-    padding-top: 20vh;
+    padding-top: 8vh;
     padding-bottom: 25vh;
-    background-image: linear-gradient(rgba(181, 187, 202, 0.75), rgba(5, 7, 12, 0.75)), url(../../images/imagef.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    border: #727272 solid;
 }
