@@ -5,31 +5,35 @@
 
 .parrafo{
     text-align: left;
+    width: 80%;
+    margin-left: 10%;    
     font-family: avenirRegular;
     line-height: 1.8;
-    font-size: 15px;
+    font-size: 16px;
     color: #727272;
-    border: #0281ba solid;
 }
 .titulo{
     font-family: avenirRegular;
     color: #0281ba;
-    padding-left: 1%;
+    margin-left: 10%;
     margin-top: 15vh;
 }
 .contenedorNosotros{
     display: flex;
-    width: 98%;
+    width: auto;
     align-items: center;
-    justify-content: center;
-    border: #fc96ff solid;
 }
 .body{
-    padding-top: 8vh;
-    padding-bottom: 25vh;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    border: #727272 solid;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+.espacioimg{
+    margin-right: 5%;
+}
+.sobreNosotrosimg{
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(5px 5px 10px rgb(207, 207, 207));
 }
