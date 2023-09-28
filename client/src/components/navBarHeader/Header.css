@@ -25,7 +25,7 @@
   
   /* Estilos para el logotipo */
   .logo-image {
-    width: 150px; /* Ancho deseado para el logotipo */
+    width: 250px; /* Ancho deseado para el logotipo */
     height: auto; /* Altura automática para mantener la proporción */
     margin-right: 20px; /* Espaciado a la derecha del logotipo */
   }
@@ -50,6 +50,6 @@
   }
   
   .nav-link:hover {
-    color: #f00; /* Color de texto al pasar el mouse por encima */
-
+    color: #ffd201; /* Color de texto al pasar el mouse por encima */
   }
+

@@ -1,5 +1,17 @@
-.loginGoogle {
-    background-color: black;
-    
 
-}
+
+.loginGoogle {
+    background-color: #4285f4 !important; /* Color de fondo del botón */
+    color: #ffffff !important; /* Color del texto del botón */
+    border: black  !important; /* Elimina el borde del botón */
+    padding: 10px 20px!important; /* Espaciado interno del botón */
+    font-size: 16px !important; /* Tamaño de fuente del botón */
+    cursor: pointer !important; /* Cambia el cursor al pasar por encima del botón */
+    border-radius: 15px !important; /* Redondea las esquinas del botón */
+    outline: none !important; /* Elimina el borde resaltado al hacer clic */
+  }
+  
+  .loginGoogle:hover {
+    background-color: #2772eb !important; /* Cambia el color de fondo al pasar el mouse por encima */
+  }
+  
