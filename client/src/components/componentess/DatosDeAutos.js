@@ -12,7 +12,7 @@ const carData = [
     id: 1,
     name: 'Auto 1',
     image: muestraImagen1,
-    characteristics: 'Características del Auto 1',
+    characteristics: 'ford',
   },
   {
     id: 2,

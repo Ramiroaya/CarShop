@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/index.css';
 import Banner from '../components/banner';
 import ComponentesIndex from '../components/componentesIndex';
-import Footer from '../components/navBarFooter/Footer';
+
 
 
 
@@ -16,7 +16,7 @@ const Home = () => {
       <div className='index' >        
         <Banner />
         <ComponentesIndex />
-        <Footer/>
+        
       </div>
     
   )
