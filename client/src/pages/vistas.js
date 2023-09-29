@@ -3,6 +3,7 @@ import '../css/autosIndex.css';
 
 import AutosIndex from '../components/componentess/autosIndex';
 
+
 const vistas = () => {
     return (
       <div className='vistas' >       

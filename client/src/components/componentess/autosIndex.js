@@ -3,9 +3,9 @@ import React from 'react'
 import Banner from '../banner';
 import Descripcion from './descripcion';
 import DatosDeAutos from './DatosDeAutos';
-import ImagenPrincipal from './ImagenPrincipal';
-import ImagenesDiferentes from './ImagenesDiferentes';
-import Contactos from './contactos';
+
+
+import ImageCarrusel from './ImageCarrusel';
 import Segurosyfinanciacion from './segurosyfinanciaciones';
 
 import '../../css/autosIndex.css';
@@ -19,9 +19,13 @@ function AutosIndex  ()  {
         <Banner/>
 
       <div className='prueba' >
-        <ImagenesDiferentes/>
-        <ImagenPrincipal/>
-        <DatosDeAutos/>
+        
+        <ImageCarrusel/>
+        
+      </div>
+      <div>
+      <DatosDeAutos/>
+
       </div>
 
       <div className='prueba2'>
@@ -29,10 +33,7 @@ function AutosIndex  ()  {
         <Segurosyfinanciacion/>
       </div>
 
-      <div>
-        <Contactos/>
-
-      </div>
+     
     </div>
   )
 }
