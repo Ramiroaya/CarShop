@@ -14,10 +14,6 @@ import IndexRegistro from './pages/IndexRegistro';
 import IndexCredito from './pages/IndexCredito';
 import Legales from './components/navBarFooter/Legales';
 import Footer from './components/navBarFooter/Footer';
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 
 
 function App() {
@@ -26,11 +22,7 @@ function App() {
       <div>
         <Router>      
           <Routes>
-<<<<<<< HEAD
-          <Route path="/" element={<><NavBarHeader /><Footer /></> } >
-=======
             <Route path="/" element={<><NavBarHeader /><Footer/></> } >
->>>>>>> main
               <Route index element={<Home />} />
               <Route path="credito" element={<IndexCredito />} />
               <Route path="ofertas" element={<Ofertas />} />
