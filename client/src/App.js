@@ -13,6 +13,7 @@ import NoPage from './components/NoPage';
 import IndexRegistro from './pages/IndexRegistro';
 import IndexCredito from './pages/IndexCredito';
 import Legales from './components/navBarFooter/Legales';
+import Footer from './components/navBarFooter/Footer';
 
 
 
@@ -22,7 +23,7 @@ function App() {
       <div>
         <Router>      
           <Routes>
-            <Route path="/" element={<NavBarHeader/> } >
+            <Route path="/" element={<><NavBarHeader /><Footer /></> } >
               <Route index element={<Home />} />
               <Route path="credito" element={<IndexCredito />} />
               <Route path="ofertas" element={<Ofertas />} />
