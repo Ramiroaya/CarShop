@@ -1,12 +1,11 @@
 export class CreateVehiculoDto {
-    dominio: string;
-    marca: string;
-    modelo: string;
-    version: string;
+    idVehiculo: number;
+    version_id: number;
     año: number;
     kilometros: number;
     tipoVehiculo: string;
     transmision: string;
     precio: number;
-    fotos: string[]
+    fotos: string[];
+    usuario_id: number
 }

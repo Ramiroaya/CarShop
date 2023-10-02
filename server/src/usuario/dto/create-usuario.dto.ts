@@ -3,8 +3,7 @@ export class CreateUsuarioDto {
     apellido: string;
     email: string;
     telefono: string;
-    provincia: string;
-    localidad: string;
-    direccion: string;
-    administrador: boolean
+    provincia_id: number;
+    administrador: boolean;
+    password: string
 }
