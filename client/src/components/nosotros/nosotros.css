@@ -1,27 +1,39 @@
+@font-face {
+    font-family: avenirRegular;
+    src: url("../../fonts/Avenir\ Regular.ttf");
+}
+
 .parrafo{
     text-align: left;
-    font-family: Poppins,sans-serif;
+    width: 80%;
+    margin-left: 10%;    
+    font-family: avenirRegular;
     line-height: 1.8;
-    font-size: 14px;
-    color: #cccccc;
-    padding: 1%;
+    font-size: 16px;
+    color: #727272;
 }
 .titulo{
-    color: #fafafa;
-    padding: 1%;
+    font-family: avenirRegular;
+    color: #0281ba;
+    margin-left: 10%;
+    margin-top: 15vh;
 }
 .contenedorNosotros{
     display: flex;
-    width: 98%;
+    width: auto;
     align-items: center;
-    justify-content: center;
 }
 .body{
-    padding-top: 20vh;
-    padding-bottom: 25vh;
-    background-image: linear-gradient(rgba(181, 187, 202, 0.75), rgba(5, 7, 12, 0.75)), url(../../images/imagef.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+.espacioimg{
+    margin-right: 5%;
+}
+.sobreNosotrosimg{
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(5px 5px 10px rgb(207, 207, 207));
 }

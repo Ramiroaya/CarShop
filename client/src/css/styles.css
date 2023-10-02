@@ -34,7 +34,7 @@
  
   /* Efecto al pasar el mouse por encima */
   .icon-button:hover {
-    background-color: #0281ba; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #ffd201; /* Cambia el color de fondo al pasar el mouse */
     transform: scale(1.1); /* Agranda la imagen al pasar el mouse */
     cursor: pointer; /* Cambia el cursor a una mano al pasar el mouse */
   }
