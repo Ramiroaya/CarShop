@@ -1,63 +1,64 @@
+/* Modificación de estilos para el componente Contacto */
 
 .contenedor-contacto {
-    width: 90%;
-    height: 100vh;
-    padding: 10px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 6vh auto;
-    
-  }
+  width: 100%;
+  height: 100vh;
+  position: relative; /* Añade una posición relativa para poder superponer el video y el formulario */
+  overflow: hidden;
+}
+
+/* Estilo para el video de fondo */
+.banner-video-contacto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta el tamaño del video para cubrir todo el contenedor */
+  z-index: -1; /* Coloca el video detrás de los demás elementos */
+}
 
 .contenedor-input-contacto {
-    background:#d9e2e6;
-     padding: 2vh;
-     width: 30%;
-     height: 80%;
-     display: flex;
-     margin-top: 20vh;
-     align-items: center;
-     flex-direction: column;
-     border-radius: 25px;
-  }
+  background: rgba(255, 255, 255, 0.6); /* Cambia el fondo del formulario y ajusta la opacidad según tus preferencias */
+  padding: 20px;
+  width: 30%;
+  max-width: 400px; /* Limita el ancho del formulario */
+  margin: 20vh auto;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra para mejorar la legibilidad */
+  text-align: center; /* Centra el contenido del formulario */
+}
 
-.contenedor-form-contacto {
-    display:flex;
-    margin: auto;
-    align-items: center;
-    flex-direction: column;
-  }
+/* Resto de estilos sin cambios */
 
-
-  input[type="text"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 25px;
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 25px;
 }
 
 .input-consulta {
-    width: 100%; /* Limita el ancho */
-    height: 150px;
-    resize: vertical;
-    
+  width: 100%;
+  height: 150px;
+  resize: vertical;
 }
 
 .boton-submit {
-    width: 80%;
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 80%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .boton-submit:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
   

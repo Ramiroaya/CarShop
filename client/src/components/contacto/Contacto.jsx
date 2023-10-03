@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from 'react-hook-form';
 import './contacto.css';
+import videoBack from '../../images/aventure.mp4';
 
 const Contacto = () => {
     const {register, formState: { errors }, handleSubmit} = useForm();
@@ -11,6 +12,9 @@ const Contacto = () => {
   
     return (
         <div className="contenedor-contacto">
+            <video autoPlay muted loop playsInline className="banner-video-contacto">
+                <source src={videoBack} type="video/mp4" />  
+            </video>      
             <div className="contenedor-input-contacto">
                 <h2>Formulario de Contacto</h2>
                 <form className="contenedor-form-contacto" onSubmit={handleSubmit(onSubmit)}>
