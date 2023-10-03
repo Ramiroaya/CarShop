@@ -7,12 +7,8 @@ export class Vehiculo {
     idVehiculo: number;
     @Column("varchar",{ length :10 ,unique:true })
     dominio: string;
-    @Column("varchar",{ length :10 })
-    marca: string;
-    @Column("varchar",{ length :10 })
-    modelo: string ;
-    @Column("varchar",{ length :10 } )
-    version: string;
+    @Column({type:"number"})
+    version_id: number;
     @Column({type:"number"})
     año: number;
     @Column({type:"number"})
@@ -29,11 +25,9 @@ export class Vehiculo {
     @JoinColumn()
     public usuario: Usuario;
 
-    constructor(dominio: string, marca: string, modelo: string, version: string, año: number, kilometros: number, tipoVehiculo: string, transmision: string, precio: number, fotos: []){
-        this.dominio = dominio;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.version = version;
+    constructor( version_id: number, año: number, kilometros: number, tipoVehiculo: string, transmision: string, precio: number, fotos: []){
+
+        this.version_id = version_id;
         this.año = año;
         this.kilometros = kilometros;
         this.tipoVehiculo = tipoVehiculo;

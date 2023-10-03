@@ -25,14 +25,14 @@ export class VehiculoService {
   }
 
   async findOne(id: number): Promise<Vehiculo> {
-    let criterio : FindOneOptions = { relations: [ 'usuario' ], where: { idVehiculo: id } }
+    let criterio : FindOneOptions = { relations: [ 'usuario' ], where: { idVehiculo: id } };
     let vehiculo : Vehiculo = await this.vehiculoRepository.findOne( criterio );
     return vehiculo ;
 
     throw new HttpException(
-      'No existe una ciudad con ese id',
-      HttpStatus.I_AM_A_TEAPOT,
-    );;
+      'No existe un Vehiculo con ese id',
+      HttpStatus.I_AM_A_TEAPOT
+    );
   }
 
   async update(id: number, updateUsuarioDto: UpdateVehiculoDto) {
@@ -41,7 +41,7 @@ export class VehiculoService {
     try {
       const result = await this.vehiculoRepository.update(
         { idVehiculo: id},
-        {...UpdateVehiculoDto, idVehiculo: id},
+        {...UpdateVehiculoDto, idVehiculo: id}
       );
 
       console.log(`Update, id: ${id}, result: ${result}`);
@@ -58,13 +58,13 @@ export class VehiculoService {
     const r = await this.vehiculoRepository.delete(id);
 
     console.log(
-      `Remove, id: ${id}, result: ${r.affected ? 'Eliminado' : 'No eliminado'}`,
+      `Remove, id: ${id}, result: ${r.affected ? 'Eliminado' : 'No eliminado'}`
     );
-    if (r.affected)
+    if (r.affected) {
       return new HttpException(`Remove, id: ${id}`, HttpStatus.OK);
-    throw new HttpException(
-      'No existe una ciudad con ese id',
-      HttpStatus.I_AM_A_TEAPOT,
+    } throw new HttpException(
+      'No existe un Vehiculo con ese id',
+      HttpStatus.I_AM_A_TEAPOT
     );
   }
 }

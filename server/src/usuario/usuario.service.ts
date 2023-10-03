@@ -30,9 +30,9 @@ constructor(
     return usuario ;
 
     throw new HttpException(
-      'No existe una ciudad con ese id',
+      'No existe un Usuario con ese id',
       HttpStatus.I_AM_A_TEAPOT,
-    );;
+    );
   }
 
   async update(id: number, updateUsuarioDto: UpdateUsuarioDto) {
@@ -58,13 +58,13 @@ constructor(
     const r = await this.usuarioRepository.delete(id);
 
     console.log(
-      `Remove, id: ${id}, result: ${r.affected ? 'Eliminado' : 'No eliminado'}`,
+      `Remove, id: ${id}, result: ${r.affected ? 'Eliminado' : 'No eliminado'}`
     );
-    if (r.affected)
+    if (r.affected) {
       return new HttpException(`Remove, id: ${id}`, HttpStatus.OK);
-    throw new HttpException(
-      'No existe una ciudad con ese id',
-      HttpStatus.I_AM_A_TEAPOT,
+    } throw new HttpException(
+      'No existe un Usuario con ese id',
+      HttpStatus.I_AM_A_TEAPOT
     );
   }
 }
