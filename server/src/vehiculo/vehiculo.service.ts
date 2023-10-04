@@ -31,7 +31,7 @@ export class VehiculoService {
 
     throw new HttpException(
       'No existe un Vehiculo con ese id',
-      HttpStatus.I_AM_A_TEAPOT
+      HttpStatus.NOT_FOUND
     );
   }
 
@@ -49,7 +49,7 @@ export class VehiculoService {
       return result;
     } catch (error){
       console.log(error);
-      throw new HttpException('no te voy a dar cafe', HttpStatus.I_AM_A_TEAPOT);
+      throw new HttpException('no se pudo realizar la accion', HttpStatus.NOT_FOUND);
       }
     }
   
@@ -64,7 +64,7 @@ export class VehiculoService {
       return new HttpException(`Remove, id: ${id}`, HttpStatus.OK);
     } throw new HttpException(
       'No existe un Vehiculo con ese id',
-      HttpStatus.I_AM_A_TEAPOT
+      HttpStatus.NOT_FOUND
     );
   }
 }

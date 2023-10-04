@@ -12,14 +12,15 @@ export class AuthService {
 
     async login(email: string, pass: string): Promise<any> {
 
-        const user = await this.usuarioService.findOne(email);
+        const user = await this.usuarioService.findEmail(email);
         if (user?.password !== pass) {
-            throw new UnauthorizedException();
+            throw new UnauthorizedException('Credenciales Incorrectas');
         }
 
         const payload = { sub: user.idUsuario, name: user.nombre, email: user.email};
+        const token = this.jwtService.sign(payload, { expiresIn: '1h' });
         return  {
-            acces_token: await this.jwtService.signAsync(payload)
+            access_token: await this.jwtService.signAsync(payload)
         };
     }
 }

@@ -31,9 +31,15 @@ constructor(
 
     throw new HttpException(
       'No existe un Usuario con ese id',
-      HttpStatus.I_AM_A_TEAPOT,
+      HttpStatus.NOT_FOUND
     );
   }
+
+  async findEmail(email: string): Promise<Usuario | null> {
+    const usuario = await this.usuarioRepository.findOne({ where: { email } });
+    return usuario || null; 
+  }
+  
 
   async update(id: number, updateUsuarioDto: UpdateUsuarioDto) {
     await this.findOne(id);
@@ -49,7 +55,7 @@ constructor(
       return result;
     } catch (error){
       console.log(error);
-      throw new HttpException('no te voy a dar cafe', HttpStatus.I_AM_A_TEAPOT);
+      throw new HttpException('no se encontro el Usuario', HttpStatus.NOT_FOUND);
       }
     }
   
@@ -64,7 +70,7 @@ constructor(
       return new HttpException(`Remove, id: ${id}`, HttpStatus.OK);
     } throw new HttpException(
       'No existe un Usuario con ese id',
-      HttpStatus.I_AM_A_TEAPOT
+      HttpStatus.NOT_FOUND
     );
   }
 }
