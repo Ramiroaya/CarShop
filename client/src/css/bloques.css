@@ -1,5 +1,7 @@
 /* En tu archivo bloques.css */
-
+.bloques-cerrado {
+  border: solid 1px grey;
+}
 /* Estilo para el contenedor principal */
 .bloques {
   display: flex;
