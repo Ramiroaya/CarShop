@@ -9,6 +9,7 @@ import { Provincia } from 'src/provincia/entities/provincia.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([Usuario, Vehiculo, Provincia])],
   controllers: [UsuarioController],
-  providers: [UsuarioService]
+  providers: [UsuarioService],
+  exports: [TypeOrmModule, UsuarioService],
 })
 export class UsuarioModule {}
