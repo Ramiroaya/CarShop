@@ -6,11 +6,11 @@ import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColum
 export class Modelo {
     @PrimaryGeneratedColumn()
     idModelo: number;
-    @Column()
+    @Column('varchar', {length:45})
     nombre: string;
     @ManyToOne( type => Marca, marca => marca.modelo)
     @JoinColumn()
-    public marca: Marca[];
+    public marca: Marca;
     @OneToMany( type => Version, version => version.modelo)
     @JoinColumn()
     public version: Version[];

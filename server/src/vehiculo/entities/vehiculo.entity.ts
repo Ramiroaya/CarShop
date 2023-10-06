@@ -1,33 +1,33 @@
 import { Usuario } from "src/usuario/entities/usuario.entity";
+import { Version } from "src/version/entities/version.entity";
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('vehiculo')
 export class Vehiculo {
     @PrimaryGeneratedColumn()
     idVehiculo: number;
-    @Column("varchar",{ length :10 ,unique:true })
-    dominio: string;
-    @Column({type:"number"})
-    version_id: number;
-    @Column({type:"number"})
+    @Column({type:"int"})
     año: number;
-    @Column({type:"number"})
+    @Column({type:"int"})
     kilometros: number;
     @Column("varchar",{ length :10 })
     tipoVehiculo: string;
     @Column("varchar",{ length :10 })
     transmision: string;
-    @Column({type:"number"})
+    @Column({type:"int"})
     precio: number;
-    @Column()
-    fotos: string[];
+    @Column( {type: 'varchar', length: 255, array: false, default: '' })
+    fotos: string;
     @ManyToOne( type => Usuario, usuario => usuario.vehiculo)
     @JoinColumn()
     public usuario: Usuario;
+    @ManyToOne( type => Version, version => version.vehiculo)
+    @JoinColumn()
+    public version: Version;
+    
 
-    constructor( version_id: number, año: number, kilometros: number, tipoVehiculo: string, transmision: string, precio: number, fotos: []){
-
-        this.version_id = version_id;
+    constructor(  año: number, kilometros: number, tipoVehiculo: string, transmision: string, precio: number, fotos: string) {
+        
         this.año = año;
         this.kilometros = kilometros;
         this.tipoVehiculo = tipoVehiculo;
