@@ -11,10 +11,10 @@ export class Provincia {
     nombre: string;
     @OneToMany( type => Usuario, usuario => usuario.provincia)
     @JoinColumn()
-    public usuario: Usuario;
+    public usuario: Usuario[];
 
-    constructor(idProvincia: number, nombre: string){
-        this.idProvincia = idProvincia;
+    constructor( nombre: string){
+        
         this.nombre= nombre;
     }
 }

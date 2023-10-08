@@ -30,7 +30,7 @@ constructor(
 
     throw new HttpException(
       'No existe una Provincia con ese id',
-      HttpStatus.I_AM_A_TEAPOT,
+      HttpStatus.NOT_FOUND
     );;
   }
 
@@ -47,7 +47,7 @@ constructor(
     return result;
    } catch (error) {
     console.log(error);
-    throw new HttpException('no se pudo actuazlizar la provincia', HttpStatus.ACCEPTED);
+    throw new HttpException('no se pudo actuazlizar la provincia', HttpStatus.NOT_FOUND);
     }
   }
 
@@ -63,7 +63,7 @@ constructor(
     }
       throw new HttpException(
         'No existe una Provincia con ese id',
-        HttpStatus.I_AM_A_TEAPOT
+        HttpStatus.NOT_FOUND
     );
   }
 }

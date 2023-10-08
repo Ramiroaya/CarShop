@@ -1,15 +1,19 @@
 import { Modelo } from "src/modelo/entities/modelo.entity";
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Vehiculo } from "src/vehiculo/entities/vehiculo.entity";
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('version')
 export class Version {
     @PrimaryGeneratedColumn()
     idVersion: number;
-    @Column()
+    @Column("varchar", {length:255})
     nombre: string;
     @ManyToOne( type => Modelo, modelo => modelo.version)
     @JoinColumn()
-    public modelo: Modelo[];
+    public modelo: Modelo;
+    @OneToMany( type => Vehiculo, vehiculo => vehiculo.version)
+    @JoinColumn()
+    public vehiculo: Vehiculo[];
 
     constructor(nombre: string) {
         this.nombre = nombre;

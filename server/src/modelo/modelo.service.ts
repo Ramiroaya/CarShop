@@ -29,7 +29,7 @@ export class ModeloService {
 
     throw new HttpException(
       'No existe una Modelo con ese Id',
-      HttpStatus.I_AM_A_TEAPOT,
+      HttpStatus.NOT_FOUND
     );
   }
 
@@ -45,7 +45,7 @@ export class ModeloService {
       return result;
     }catch (error) {
       console.log(error);
-      throw new HttpException('no te voy a poder generar el tramite', HttpStatus.I_AM_A_TEAPOT);
+      throw new HttpException('no se pudo realizar la accion', HttpStatus.NOT_FOUND);
     }
   }
 
