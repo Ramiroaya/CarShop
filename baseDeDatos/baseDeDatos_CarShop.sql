@@ -2,6 +2,7 @@
 -- Creacion de la base de datos CarShop.
 
 create database `carshop`; 
+
 use carshop;
 
 -- Creacion de la tabla Usuarios.
@@ -123,3 +124,50 @@ alter table vehiculo
 
 alter table vehiculo
 change version version_id int;
+
+use carshop;
+alter table vehiculo
+	drop version;
+    
+alter table vehiculo
+	modify fotos varchar(255);
+    
+alter table vehiculo
+	add column fotos varchar(255);
+    
+ALTER TABLE marca
+ADD COLUMN `modelo_id` INT not NULL;
+ALTER TABLE marca
+ADD CONSTRAINT `modelo_id`
+  FOREIGN KEY (`modelo_id`)
+  REFERENCES modelo (`idModelo`);
+
+alter table usuario
+	drop column provincia;
+    
+alter table usuario
+	add column provincia_id int not null;
+    
+alter table usuario
+	add constraint provincia_id
+    foreign key (provincia_id)
+    references provincia(idProvincia);
+    
+alter table marca
+	drop column modelo_id;
+alter table modelo
+	drop column version_id;
+    
+alter table modelo
+	add column marca_id int not null;
+alter table modelo
+	add constraint marca_id
+    foreign key (marca_id)
+    references marca(idMarca);
+    
+alter table version
+	add column modelo_id int not null;
+alter table version
+	add constraint modelo_id
+	foreign key (modelo_id)
+    references modelo(idModelo);
