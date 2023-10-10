@@ -1,8 +1,8 @@
-.footer-container  {
-    
+/* Estilos base para .footer-container */
+.footer-container {
     width: 100%;
     height: 20vh;
-    background-color:#0281ba ;
+    background-color: #0281ba;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -10,22 +10,42 @@
     font-size: 1.2rem;
     border-color: gray;
     text-decoration: none;
-
-}
-.iconos-footer {
+  }
+  
+  /* Estilos para .iconos-footer */
+  .iconos-footer {
     width: 15vw;
     height: 5vh;
     display: flex;
     flex-direction: row;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
-}
-
-.icon {
+  }
+  
+  /* Estilos para .icon */
+  .icon {
     width: 5vh;
     height: 5vh;
-    color: rgb(148, 22, 22); 
-    margin: 5px;  
-}
-
-
+    color: rgb(148, 22, 22);
+    margin: 5px;
+  }
+  
+  /* Estilos para pantallas más pequeñas (ejemplo: celulares) */
+  @media (max-width: 768px) {
+    .footer-container {
+      height: 15vh; /* Cambia la altura en pantallas más pequeñas */
+    }
+  
+    .iconos-footer {
+      width: 30vw; /* Cambia el ancho en pantallas más pequeñas */
+    }
+  }
+  
+  /* Puedes agregar más estilos responsivos para pantallas medianas y grandes si es necesario */
+  @media (min-width: 769px) and (max-width: 1200px) {
+    /* Estilos para pantallas medianas */
+  }
+  
+  @media (min-width: 1201px) {
+    /* Estilos para pantallas grandes */
+  }
