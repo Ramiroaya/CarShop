@@ -1,4 +1,4 @@
 export class CreateProvinciaDto {
-    idProvinci: number;
-    nombre: string
+    idProvincia: number;
+    nombre: string;
 }
