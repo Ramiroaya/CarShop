@@ -11,7 +11,11 @@ const Segurosyfinanciacion = () => {
         <div className="custom-row">
           <div className="custom-col" style={{ padding: '3vw' }}>
             <div className="custom-card">
-              <img src={seguroimg} className="custom-card-img-top" alt="Asegura tu auto" />
+              <img
+                src={seguroimg}
+                className="custom-card-img-top centered-img" // Agregamos la clase "centered-img"
+                alt="Asegura tu auto"
+              />
               <div className="custom-card-body">
                 <h5 className="custom-card-title">ASEGURÁ TU AUTO</h5>
               </div>
@@ -20,7 +24,11 @@ const Segurosyfinanciacion = () => {
           <div className="custom-col" style={{ padding: '3vw' }}>
             <div className="custom-card">
               <Link to="/credito">
-                <img src={creditoimg} className="custom-card-img-top" alt="Simulá tu crédito" />
+                <img
+                  src={creditoimg}
+                  className="custom-card-img-top centered-img" // Agregamos la clase "centered-img"
+                  alt="Simulá tu crédito"
+                />
               </Link>
               <div className="custom-card-body">
                 <h5 className="custom-card-title">SIMULÁ TU CRÉDITO</h5>

@@ -1,12 +1,14 @@
-/* En tu archivo bloques.css */
-.bloques-cerrado {
-  border: solid 1px grey;
-}
-/* Estilo para el contenedor principal */
+/* Estilo base para el contenedor principal */
 .bloques {
   display: flex;
   justify-content: center;
   padding: 20px;
+}
+
+/* CSS en bloques.css */
+.centered-img {
+  display: block;
+  margin: 0 auto; /* Centra horizontalmente la imagen */
 }
 
 /* Estilo para la fila personalizada */
@@ -35,8 +37,9 @@
 /* Estilo para las imágenes en las tarjetas */
 .custom-card-img-top {
   width: 100%;
-  max-height: 200px;
+  max-height: 150px;
   object-fit: cover;
+  margin: 0 auto; /* Centrar horizontalmente */
 }
 
 /* Estilo para el título en las tarjetas */
@@ -51,25 +54,39 @@
 .custom-card-body {
   padding: 10px;
 }
-/* styles.css (o cualquier otro nombre que elijas) */
-.marcas-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+
+/* Estilo para pantallas más pequeñas (ejemplo: celulares) */
+@media (max-width: 768px) {
+  .custom-col {
+    flex: 1;
+    padding: 5%;
+    max-width: 100%;
+  }
+  
+  .custom-card-img-top {
+    max-height: 150px;
+  }
+  
+  .custom-card-title {
+    font-size: 16px;
+    padding: 5px;
+  }
 }
 
-.icon-button {
-  width: 100px; /* Ajusta el ancho según tus necesidades */
-  height: 100px; /* Ajusta la altura según tus necesidades */
-  margin: 10px; /* Espacio entre las imágenes de las marcas */
-  border: 1px solid #0281ba; /* Borde opcional */
-  border-radius: 50%; /* Hace que las imágenes sean circulares */
+/* Estilo para pantallas medianas (ejemplo: pantallas comunes) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .custom-col {
+    flex: 1;
+    padding: 2%;
+    max-width: calc(33.33% - 20px);
+  }
 }
 
-.icon-button img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+/* Estilo para pantallas grandes (ejemplo: pantallas de escritorio) */
+@media (min-width: 1201px) {
+  .custom-col {
+    flex: 1;
+    padding: 1%;
+    max-width: calc(25% - 20px);
+  }
 }
