@@ -39,7 +39,7 @@ export class ModeloService {
     try {
       const result = await this.modelorRepository.update(
         { idModelo : id},
-        {...UpdateModeloDto, idModelo: id}
+        {...updateModeloDto, idModelo: id}
       );
       console.log(`Update, id: ${id}, result: ${result}`);
       return result;

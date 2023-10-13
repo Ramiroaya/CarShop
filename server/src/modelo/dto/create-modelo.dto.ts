@@ -1,4 +1,7 @@
+import { IsNotEmpty, IsString } from "class-validator";
+
 export class CreateModeloDto {
-    idModelo: number;
+    @IsNotEmpty()
+    @IsString()
     nombre: string;
 }

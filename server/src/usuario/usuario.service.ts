@@ -47,7 +47,7 @@ constructor(
     try {
       const result = await this.usuarioRepository.update(
         { idUsuario: id},
-        {...UpdateUsuarioDto, idUsuario: id},
+        {...updateUsuarioDto, idUsuario: id}
       );
 
       console.log(`Update, id: ${id}, result: ${result}`);

@@ -24,7 +24,7 @@ constructor(
   }
 
   async findOne(id: number): Promise<Provincia> {
-    let criterio : FindOneOptions = { relations : [ 'usuario']};
+    let criterio : FindOneOptions = { relations : [ 'usuario'], where :  { idProvincia: id } };
     let provincia :  Provincia = await this.provinciaRepository.findOne(criterio);
     return provincia;
 
@@ -40,7 +40,7 @@ constructor(
    try {
     const result = await this.provinciaRepository.update(
       { idProvincia : id },
-      {...UpdateProvinciaDto, idProvincia: id},
+      {...updateProvinciaDto, idProvincia: id},
     );
 
     console.log(`Update, id: ${id}, result: ${result}`);

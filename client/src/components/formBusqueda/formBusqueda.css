@@ -1,0 +1,42 @@
+.searchContainer {
+    width: 80%;
+    height: auto;
+    background-color:rgb(4, 4, 80);
+    padding-top: 2vh;
+    margin-top:3vh;
+    border-radius: 10px;
+    
+    
+}
+
+.form-row {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-content: center;
+    margin: 2vh;
+    padding-top:4vh;
+    
+   
+  }
+
+
+  .form-field {
+    flex: 0.5; /* El campo se expandirá para ocupar todo el espacio disponible */
+  }
+
+  .logo-buscador {
+    width: 50%;
+    height:auto ;
+    color:white;
+    margin: auto;
+  }
+
+  .button-info {
+    background-color: #0281ba;
+    width: 20%;
+    color: white;
+    height:auto;
+    border-radius: 20px;
+  }
+  

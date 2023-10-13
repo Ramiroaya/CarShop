@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 
-import FormBusqueda   from './index-formBusqueda';
+import FormBusqueda   from './formBusqueda/index-formBusqueda';
 import Tiposvehiculos from './index-tiposvehiculos';
 import Segurosyfinanciacion  from './index-segurosyfinanciacionacceso';
 import Marcas  from './index-marcas';

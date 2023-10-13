@@ -171,3 +171,6 @@ alter table version
 	add constraint modelo_id
 	foreign key (modelo_id)
     references modelo(idModelo);
+
+
+select * from usuario;

@@ -40,7 +40,7 @@ export class MarcaService {
     try {
       const result = await this.marcaRepository.update(
         { idMarca : id},
-        {...UpdateMarcaDto, idMarca: id}
+        {...updateMarcaDto, idMarca: id}
       );
 
       console.log(`Update, id: ${id}, result: ${result}`);
