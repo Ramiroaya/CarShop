@@ -1,4 +1,7 @@
+import { IsNotEmpty, IsString } from "class-validator";
+
 export class CreateMarcaDto {
-    idMarca: number;
+    @IsNotEmpty()
+    @IsString()
     nombre: string
 }

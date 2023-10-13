@@ -1,4 +1,7 @@
+import { IsNotEmpty, IsString } from "class-validator";
+
 export class CreateProvinciaDto {
-    idProvincia: number;
+    @IsNotEmpty()
+    @IsString()
     nombre: string;
 }

@@ -40,7 +40,7 @@ export class VersionService {
     try {
       const result = await this.versionRepository.update(
         { idVersion : id },
-        {...UpdateVersionDto, idVersion : id});
+        {...updateVersionDto, idVersion : id});
 
         console.log(`Update, id: ${id}, result: ${result}`);
         return result;

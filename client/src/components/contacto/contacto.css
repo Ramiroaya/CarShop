@@ -39,6 +39,12 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 25px;
 }
+/* textarea {
+  resize:none;
+  min-heigth: 36px;
+  whith: 250px;
+  form-sizing:content;
+}*/cd client
 
 .input-consulta {
   width: 100%;
