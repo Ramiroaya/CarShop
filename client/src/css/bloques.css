@@ -5,21 +5,18 @@
   padding: 20px;
 }
 
-/* CSS en bloques.css */
-.centered-img {
-  display: block;
-  margin: 0 auto; /* Centra horizontalmente la imagen */
-}
 
 /* Estilo para la fila personalizada */
 .custom-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
 /* Estilo para las columnas personalizadas */
 .custom-col {
+  margin-right: 300px; /* Agrega un margen derecho para separar las columnas horizontalmente */
   flex: 1;
   padding: 3vw;
   max-width: calc(50% - 20px);
@@ -28,16 +25,16 @@
 
 /* Estilo para las tarjetas personalizadas */
 .custom-card {
-  border: 1px solid #e0e0e0;
+  width: 100%; /* Estirar la imagen para ajustarse al ancho del contenedor */
+  max-height: 300px; /* Establecer una altura máxima si lo deseas */
+  border: 10px solid #e0e0e0;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para las imágenes en las tarjetas */
 .custom-card-img-top {
-  width: 100%;
-  max-height: 150px;
+  width: 100%; /* Estirar la imagen para ajustarse al ancho del contenedor */
+  max-height: 300px; /* Establecer una altura máxima si lo deseas */
   object-fit: cover;
   margin: 0 auto; /* Centrar horizontalmente */
 }
@@ -45,14 +42,18 @@
 /* Estilo para el título en las tarjetas */
 .custom-card-title {
   font-size: 18px;
-  font-weight: bold;
+  
   padding: 10px;
   text-align: center;
 }
 
 /* Estilo para el cuerpo en las tarjetas */
 .custom-card-body {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
   padding: 10px;
+  
 }
 
 /* Estilo para pantallas más pequeñas (ejemplo: celulares) */
@@ -64,7 +65,11 @@
   }
   
   .custom-card-img-top {
-    max-height: 150px;
+   
+    width: 400px; /* Ancho deseado en píxeles */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    /* O puedes establecer una altura específica si lo prefieres: height: 150px; */
+  
   }
   
   .custom-card-title {

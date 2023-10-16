@@ -1,13 +1,16 @@
+
+
 .searchContainer {
-    width: 80%;
+    width: 30%;
     height: auto;
-    background-color:rgb(4, 4, 80);
+    background-color: #0281ba;
     padding-top: 2vh;
     margin-top:3vh;
     border-radius: 10px;
     
     
 }
+
 
 .form-row {
     display: flex;
