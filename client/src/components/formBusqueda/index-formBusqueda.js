@@ -25,7 +25,7 @@ const FormBusqueda = () => {
   useEffect(() => {
     // Realiza una búsqueda inicial cuando el componente se carga
     handleSearch();
-  }, []);
+  }, [handleSearch]);
 
   return (
     <div className='searchContainer'>

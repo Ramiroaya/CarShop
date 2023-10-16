@@ -7,7 +7,7 @@
 .banner-container {
   width: 100vw; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
 
-  height: 70vh; /* Establece la altura del contenedor al 70% de la altura de la ventana */
+  height: 65vh; /* Establece la altura del contenedor al 65% de la altura de la ventana */
 
   overflow: hidden;
   display: flex;
@@ -24,6 +24,7 @@
 }
 
 .banner-video {
+ 
   width: 100vw; /* Establece el ancho del video al 100% del ancho de la ventana */
   height: 70vh; /* Establece la altura del video al 70% de la altura de la ventana */
   object-fit: cover;
@@ -31,3 +32,7 @@
 .scrollable-content {
   overflow: auto; /* Habilitar el scroll en este contenedor */
 }
+
+
+
+
