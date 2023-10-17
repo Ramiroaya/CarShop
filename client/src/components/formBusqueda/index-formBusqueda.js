@@ -16,6 +16,7 @@ const FormBusqueda = () => {
         params: { tipoVehiculo, marca, modelo, año },
       });
       setResultados(response.data);
+      console.log(response.data);
     } catch (error) {
       console.error('Error al buscar vehículos:', error);
     }
@@ -65,7 +66,7 @@ const FormBusqueda = () => {
         <ul>
           {resultados.map((vehiculo) => (
             <li key={vehiculo.id}>
-              {vehiculo.marca} {vehiculo.modelo} - Año: {vehiculo.año}
+              {vehiculo.marca} {vehiculo.modelo} Año: {vehiculo.año}
             </li>
           ))}
         </ul>
