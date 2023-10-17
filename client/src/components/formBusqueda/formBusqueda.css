@@ -10,11 +10,14 @@
     
     
 }
+.searchContainer h1 {
+    color: #041f2a;
+}
 
 
 .form-row {
     display: flex;
-    width: 50%;
+    width: 90%;
     justify-content: center;
     align-content: center;
     margin: 2vh;
@@ -36,10 +39,15 @@
   }
 
   .button-info {
-    background-color: #0281ba;
-    width: 20%;
+    background-color: #041f2a;
+    width: 30%;
     color: white;
     height:auto;
     border-radius: 20px;
+  }
+
+  .button-info:hover  {
+    transform: scale(1.2);
+
   }
   

@@ -62,7 +62,6 @@ const FormBusqueda = () => {
         </div>
       </div>
       <div>
-        <h2>Resultados:</h2>
         <ul>
           {resultados.map((vehiculo) => (
             <li key={vehiculo.id}>
