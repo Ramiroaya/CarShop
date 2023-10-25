@@ -14,6 +14,7 @@ import IndexRegistro from './pages/IndexRegistro';
 import IndexCredito from './pages/IndexCredito';
 import Legales from './components/navBarFooter/Legales';
 import Footer from './components/navBarFooter/Footer';
+import Detalles from './components/Detalles/Deetalles';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               <Route path="nosotros" element={<IndexNosotros />} />
               <Route path="contacto" element={<ContactoIndex />} /> 
               <Route path="vistas" element={<Vistas/>}/>  
+              <Route path="/detalles" element={<Detalles/>}/> 
               <Route path="/legales" element={<Legales/>}/>           
               <Route path="*" element={<NoPage />} />
             </Route>
