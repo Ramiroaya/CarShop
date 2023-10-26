@@ -2,11 +2,11 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom'; // Asumiendo que estás usando react-router-dom para la navegación.
 
 import muestraImagen1 from '../../images/fiestaImag/images2.jpg';
-import muestraImagen2 from '../../images/fiestaImag/images1.jpg';
-import muestraImagen3 from '../../images/fiestaImag/images3.jpg';
-import muestraImagen4 from '../../images/fiestaImag/focus.webp';
-import muestraImagen5 from '../../images/fiestaImag/peugeop308.webp';
-import muestraImagen6 from '../../images/fiestaImag/volswaguen.webp';
+import muestraImagen2 from '../../images/fiestaImag/ferrarif8.jpg';
+import muestraImagen3 from '../../images/fiestaImag/fiat duna.jpg';
+import muestraImagen4 from '../../images/fiestaImag/peugeot 307.jpg';
+import muestraImagen5 from '../../images/fiestaImag/bmw explore.jpg';
+import muestraImagen6 from '../../images/fiestaImag/honda civic.webp';
 
 import '../../css/detalles.css';
 
@@ -22,7 +22,7 @@ import '../../css/detalles.css';
   {
     id: 2,
     marca: 'Ferrari',
-    modelo: 'F1',
+    modelo: 'F8',
     combustible: 'Gasolina',
     ano: 2023,
     image: muestraImagen2,
@@ -71,7 +71,7 @@ const DatosDeAutos = () => {
       <div className="autos-arriba">
         {carsArriba.map((car) => (
           <div key={car.id} className="car-item">
-            <NavLink exact to={`/detalles/${car.id}`}>
+            <NavLink  to={`/Deetalles/${car.id}`}>
               <img src={car.image} alt={car.marca} />
               <h3>{car.marca}</h3>
               <p>Modelo: {car.modelo}</p>
@@ -82,7 +82,7 @@ const DatosDeAutos = () => {
       <div className="autos-abajo">
         {carsAbajo.map((car) => (
           <div key={car.id} className="car-item">
-            <NavLink exact to={`/detalles/${car.id}`}>
+            <NavLink  to={`/Deetalles/${car.id}`}>
               <img src={car.image} alt={car.marca} />
               <h3>{car.marca}</h3>
               <p>Modelo: {car.modelo}</p>

@@ -14,7 +14,7 @@ import IndexRegistro from './pages/IndexRegistro';
 import IndexCredito from './pages/IndexCredito';
 import Legales from './components/navBarFooter/Legales';
 import Footer from './components/navBarFooter/Footer';
-import Detalles from './components/Detalles/Deetalles';
+import Detalles from './pages/indexdetalles';
 
 
 function App() {

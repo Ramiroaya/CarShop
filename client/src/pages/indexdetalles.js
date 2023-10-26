@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Detalles from '../components/Detalles/Deetalles';
+import Detalles from '../components/Deetalles';
 
 
 const indexdetalles = () => {
