@@ -14,8 +14,14 @@ import IndexRegistro from './pages/IndexRegistro';
 import IndexCredito from './pages/IndexCredito';
 import Legales from './components/navBarFooter/Legales';
 import Footer from './components/navBarFooter/Footer';
+<<<<<<< HEAD
 import Detalles from './components/Detalles/Deetalles';
 import VentaVehiculo from './components/ventaVehiculo/VentaVehiculo';
+=======
+import VentaVehiculo from './components/ventaVehiculo/VentaVehiculo';
+import Detalles from './components/Detalles/Deetalles';
+
+>>>>>>> 92075d46a41c8e04f05bff7628500bed8d82ce67
 
 
 function App() {
@@ -32,10 +38,16 @@ function App() {
               <Route path="/usuario/registro" element={<IndexRegistro />} />
               <Route path="nosotros" element={<IndexNosotros />} />
               <Route path="contacto" element={<ContactoIndex />} /> 
+<<<<<<< HEAD
               <Route path="vistas" element={<Vistas/>}/>  
               <Route path="/detalles" element={<Detalles/>}/> 
               <Route path="vistas" element={<Vistas/>}/> 
               <Route path="vender-auto" element={<VentaVehiculo />} />
+=======
+              <Route path="vender-auto" element={<VentaVehiculo />} />
+              <Route path="vistas" element={<Vistas/>}/>  
+              <Route path="/detalles" element={<Detalles/>}/> 
+>>>>>>> 92075d46a41c8e04f05bff7628500bed8d82ce67
               <Route path="/legales" element={<Legales/>}/>           
               <Route path="*" element={<NoPage />} />
             </Route>
