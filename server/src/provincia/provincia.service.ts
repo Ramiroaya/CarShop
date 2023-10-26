@@ -14,13 +14,21 @@ constructor(
 ){}
 
   create(provinciaDto: CreateProvinciaDto) {
-    const c = this.provinciaRepository.create(provinciaDto);
-    return this.provinciaRepository.save(c);
+    const provincia = this.provinciaRepository.create(provinciaDto);
+    return this.provinciaRepository.save(provincia);
   }
 
   async findAll(): Promise<Provincia[]> {
     return await this.provinciaRepository.find();
       
+  }
+
+  async findOneByNombre(nombre: string): Promise<Provincia | undefined> {
+    const provincia = await this.provinciaRepository.findOne({ where: { nombre } });
+    if (!provincia) {
+      throw new HttpException('Provincia no encontrada', HttpStatus.NOT_FOUND);
+    }
+    return provincia;
   }
 
   async findOne(id: number): Promise<Provincia> {

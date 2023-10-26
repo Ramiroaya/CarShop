@@ -24,9 +24,8 @@ const FormBusqueda = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    // Realiza una búsqueda inicial cuando el componente se carga
     handleSearch();
-  }, [handleSearch]);
+  }, []);
 
   return (
     <div className='searchContainer'>

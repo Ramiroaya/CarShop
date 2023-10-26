@@ -18,7 +18,7 @@ export class VersionService {
   }
 
   async findAll(): Promise<Version[]> {
-    let criterio : FindManyOptions = { relations: [ '']};
+    let criterio : FindManyOptions = { relations: [ 'modelo']};
     let versiones: Version[] = await this.versionRepository.find(criterio);
     return versiones;
   }
