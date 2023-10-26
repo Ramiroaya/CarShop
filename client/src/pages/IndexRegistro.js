@@ -1,5 +1,5 @@
-import React from 'react'
-import Registro from '../components/registro/Registro'
+import React from 'react';
+import Registro from '../components/registro/Registro';
 
 const IndexRegistro = () => {
   return (
@@ -9,4 +9,4 @@ const IndexRegistro = () => {
   )
 }
 
-export default IndexRegistro
+export default IndexRegistro;

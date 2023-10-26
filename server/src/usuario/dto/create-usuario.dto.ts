@@ -1,4 +1,5 @@
 import { IsEmail, IsNotEmpty, IsString } from "class-validator";
+import { Provincia } from "src/provincia/entities/provincia.entity";
 
 export class CreateUsuarioDto {
     @IsNotEmpty()
@@ -14,8 +15,8 @@ export class CreateUsuarioDto {
     @IsNotEmpty()
     @IsString()
     telefono: string;
-    administrador: boolean;
     @IsNotEmpty()
     @IsString()
-    password: string
+    password: string;
+    provincia_id: number;
 }

@@ -7,13 +7,13 @@ export class AuthService {
     constructor(
         private usuarioService: UsuarioService,
         private jwtService: JwtService
-        ) {}
+    ) {}
 
 
     async login(email: string, pass: string): Promise<any> {
-
         const user = await this.usuarioService.findEmail(email);
-        if (user?.password !== pass) {
+
+        if (!user || user?.password !== pass) {
             throw new UnauthorizedException('Credenciales Incorrectas');
         }
 

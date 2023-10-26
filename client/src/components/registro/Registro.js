@@ -1,101 +1,89 @@
 import React from 'react';
-import { useState } from 'react';
+import { Formik, Field, Form } from 'formik';
+import { useNavigate } from 'react-router-dom';
+import * as Yup from 'yup';
+import axios from 'axios';
 
 import './registro.css';
 import Title from '../login/Title';
 
-
 const Registro = () => {
-    const [ nombre, setNombre ] = useState('');
-    const [apellido, setApellido ] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const errorMessage= validate(nombre, apellido, email, password);
-    
+  const navigate = useNavigate();
+  const initialValues = {
+    nombre: '',
+    apellido: '',
+    email: '',
+    telefono: '',
+    password: '',
+    provincia: '',
+  };
 
+  const validationSchema = Yup.object().shape({
+    nombre: Yup.string().required('El nombre es obligatorio'),
+    apellido: Yup.string().required('El apellido es obligatorio'),
+    email: Yup.string().email('El email no es válido').required('El email es obligatorio'),
+    telefono: Yup.string(),
+    password: Yup.string().min(6, 'La contraseña debe tener al menos 6 caracteres').required('La contraseña es obligatoria'),
+    provincia: Yup.string(),
+  });
+
+  const onSubmit = async (values) => {
+    try {
+      const response = await axios.post('http://localhost:3001/usuario', values);
+
+      if (response.status === 200) {
+        console.log('Registro exitoso');
+        navigate('/usuario');
+      } else {
+        console.error('Error en el registro:', response.data);
+      }
+    } catch (error) {
+      console.error('Error de red:', error);
+    }
+  };
+  
   return (
     <div className="contenedor-registro">
-        <form className='contenedor-form-registro'
-            onSubmit={ev => {
-                ev.preventDefault()
-                registrarUsuario(nombre, apellido, email, password);
-            }}>
-            <Title text='Registro'/>
-            <input className='contenedor-input-registro'
-                type='text'
-                name='nombre'
-                placeholder='Nombre'
-                autoComplete='off'
-                value={nombre}
-                onChange={ev => setNombre(ev.target.value)} 
-            ></input>
-            <input className='contenedor-input-registro'
-                type='text'
-                name='apellido'
-                placeholder='Apellido'
-                autoComplete='off'
-                value={apellido}
-                onChange={ev => setApellido(ev.target.value)} 
-            ></input>
-            <input className='contenedor-input-registro'
-                type='text'
-                name='email'
-                placeholder='Email'
-                autoComplete='off'
-                value={email}
-                onChange={ev => setEmail(ev.target.value)} 
-            ></input>
-            <input className='contenedor-input-registro'
-                type='password'
-                name='password'
-                placeholder='Contraseña'
-                autoComplete='off'
-                value={password}
-                onChange={ev => setPassword(ev.target.value)} 
-            ></input>
-            
-            <div className='contenedor-boton-registro'>
-                <button  className='boton-registro'type='submit' disabled={errorMessage}>
-                    Registrar
-                </button>
-            </div>
-        </form>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+      >
+        <Form className="contenedor-form-registro">
+          <Title text="Registro" />
+          <div className="contenedor-input-registro">
+            <label htmlFor="nombre"></label>
+            <Field type="text" name="nombre" placeholder="Nombre" autoComplete="off" />
+          </div>
+          <div className="contenedor-input-registro">
+            <label htmlFor="apellido"></label>
+            <Field type="text" name="apellido" placeholder="Apellido" autoComplete="off" />
+          </div>
+          <div className="contenedor-input-registro">
+            <label htmlFor="email"></label>
+            <Field type="email" name="email" placeholder="Email" autoComplete="off" />
+          </div>
+          <div className="contenedor-input-registro">
+            <label htmlFor="telefono"></label>
+            <Field type="text" name="telefono" placeholder="Telefono" autoComplete="off" />
+          </div>
+          <div className="contenedor-input-registro">
+            <label htmlFor="password"></label>
+            <Field type="password" name="password" placeholder="Contraseña" autoComplete="off" />
+          </div>
+          <div className="contenedor-input-registro">
+            <label htmlFor="provincia"></label>
+            <Field type="text" name="provincia" placeholder="Provincia" autoComplete="off" />
+          </div>
+          <div className="contenedor-boton-registro">
+            <button className="boton-registro" type="submit">
+              Registrar
+            </button>
+          </div>
+        </Form>
+      </Formik>
     </div>
-  )
+  );
 };
-
-const validate = ( nombre, apellido, email, password ) => {
-    
-    if(!email.includes('@')) return 'Email incorrecto'
-    if(password.length < 4) return 'Password vulnerable';
-};
-
-
-
-const registrarUsuario = (nombre, apellido, email, password) => {
-  
-  }
-
-  // Verificar si el usuario ya está registrado por su email
-  /*const usuarioExistente = usuarios.find(usuario => usuario.email === email);
-  if (usuarioExistente) {
-    alert('El usuario ya está registrado.');
-    
-  }*/
-
-  // Crear un nuevo objeto de usuario
-  /*const nuevoUsuario = {
-    nombre,
-    apellido,
-    email,
-    password
-  };  
-  usuarios.push(nuevoUsuario);
-  const usuariosData = JSON.stringify(usuarios, null, 2);
-  fs.writeFileSync('usuarios.json', usuariosData);
-
-  alert('Registro exitoso!');*/
-
-
 
 export default Registro;
