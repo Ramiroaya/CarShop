@@ -4,10 +4,19 @@ import { LoginDto } from './DTO/login.dto';
 
 @Controller('auth')
 export class AuthController {
-    constructor(private authService: AuthService) {}
-    @HttpCode(HttpStatus.OK)
-    @Post('login')
-    login(@Body() loginDto: LoginDto) {
-        return this.authService.login(loginDto.email, loginDto.password);
+  constructor(private readonly authService: AuthService) {}
+
+  @HttpCode(HttpStatus.OK)
+  @Post('login')
+  async login(@Body() loginDto: LoginDto) {
+    try {
+      const token = await this.authService.login(loginDto.email, loginDto.password);
+      return { access_token: token };
+    } catch (error) {
+      return {
+        statusCode: HttpStatus.UNAUTHORIZED,
+        message: 'Credenciales incorrectas',
+      };
     }
+  }
 }

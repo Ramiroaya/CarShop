@@ -5,6 +5,7 @@ import { Usuario } from './entities/usuario.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { FindManyOptions, FindOneOptions, Repository } from 'typeorm';
 
+
 @Injectable()
 export class UsuarioService {
 constructor(
@@ -12,9 +13,17 @@ constructor(
   private readonly usuarioRepository: Repository<Usuario>
 ){}
 
-  create(usuarioDto: CreateUsuarioDto) {
-    const c = this.usuarioRepository.create(usuarioDto);
-    return this.usuarioRepository.save(c);
+ async  create(usuarioDto: CreateUsuarioDto) {
+    /*const {provinciaNombre, ...userData } = usuarioDto;
+    const provincia = await this.provinciaService.findOneByNombre(provinciaNombre);
+    if (!provincia) {
+      throw new HttpException('Provincia no encontrada', HttpStatus.NOT_FOUND);
+    }
+    userData.provincia = provincia.idProvincia;*/
+    const usuario = this.usuarioRepository.create(usuarioDto);
+    
+
+    return this.usuarioRepository.save(usuario);
   }
 
   

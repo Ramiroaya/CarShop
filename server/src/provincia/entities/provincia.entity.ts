@@ -10,7 +10,7 @@ export class Provincia {
     @Column("varchar", {length: 45})
     nombre: string;
     @OneToMany( type => Usuario, usuario => usuario.provincia)
-    @JoinColumn()
+    @JoinColumn({ name: 'provincia_id' })
     public usuario: Usuario[];
 
     constructor( nombre: string){
