@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import GoogleLoginButton from '../googleLogin/GoogleLoginButton';
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Title from './Title';
 import Label from './Label';
 import Input from './Input';
@@ -11,51 +13,45 @@ import './Login.css';
 
 const Login = () => {
 
-  const [user, setUser] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLogin, setIsLogin] = useState(false);
-  
-// Después (usar la variable)
-if (isLogin) {
-  // Hacer algo si el usuario está logueado
-} else {
-  // Hacer algo si el usuario no está logueado
-}
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');  
   const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
 
-  const handleChange = (name, value) =>{
-      if(name === 'usuario'){
-        setUser(value)
+  const handleChange = (field, value) =>{
+      if(field === 'email'){
+        setEmail(value)
       } else {
         setPassword(value);
       }
   };
 
-  function ifMatch(param) {
-    if(param.user.length > 0 && param.password.length > 0){
-      if(param.user === 'usuario base de datos' && param.password === 'password usuario'){
-        let ac = {user, password};
-        let account = JSON.stringify(ac);
-        localStorage.setItem('account',account);
-        setIsLogin(true);
-      }else {
-        setIsLogin(false);
+
+
+  async function handleSubmit() {
+    try {
+      const response = await axios.post('http://localhost:3001/auth/login', {
+        email,
+        password,
+      });
+  
+      if (response.status === 200) {
+        const { token } = response.data;
+        localStorage.setItem('token', token);
+        alert('Sesion Iniciada');
+        navigate('/');
+      } else {
         setHasError(true);
+        setErrorMessage('Credenciales incorrectas');
       }
-    } else {
-      setIsLogin(false);
+    } catch (error) {
+      console.error('Error de red:', error);
+      setErrorMessage('Error de red: ' + error.message);
       setHasError(true);
     }
-  };
-
-  function handleSubmit() {
-    let account = {user, password};
-    if(account) {
-        ifMatch(account);
-    }
-  };
-
+  }
   return (
     <div className='contenedor-index-login'>
       <div className='login-container'>
@@ -63,25 +59,24 @@ if (isLogin) {
           <Title text='BIENVENIDO' />
           { hasError &&
             <label className='label-alert'>
-              Su contraseña o usuario son incorrectos,
-              o inexistentes en nuestra plataforma.
+             {errorMessage}
             </label>
           }
           <Label text='Usuario'/>
           <Input className='input-login'
             atributo={{
-              id: 'usuario',
-              name: ' usuario',
-              type:'text',
-              placeholder: 'Ingrese su Usuario'
+              id: 'email',
+              name: ' email',
+              type:'email',
+              placeholder: 'Ingrese su Email'
             }}
             handleChange={handleChange}
           />
           <Label text='Contraseña'/>
           <Input className="input-login"
             atributo={{
-              id: 'contraseña',
-              name: ' contraseña',
+              id: 'password',
+              name: ' password',
               type:'password',
               placeholder: 'Ingrese su Contraseña'
             }}

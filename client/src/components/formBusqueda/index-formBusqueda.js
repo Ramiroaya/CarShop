@@ -16,6 +16,7 @@ const FormBusqueda = () => {
         params: { tipoVehiculo, marca, modelo, año },
       });
       setResultados(response.data);
+      console.log(response.data);
     } catch (error) {
       console.error('Error al buscar vehículos:', error);
     }
@@ -23,9 +24,8 @@ const FormBusqueda = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    // Realiza una búsqueda inicial cuando el componente se carga
     handleSearch();
-  }, [handleSearch]);
+  }, []);
 
   return (
     <div className='searchContainer'>
@@ -61,11 +61,10 @@ const FormBusqueda = () => {
         </div>
       </div>
       <div>
-        <h2>Resultados:</h2>
         <ul>
           {resultados.map((vehiculo) => (
             <li key={vehiculo.id}>
-              {vehiculo.marca} {vehiculo.modelo} - Año: {vehiculo.año}
+              {vehiculo.marca} {vehiculo.modelo} Año: {vehiculo.año}
             </li>
           ))}
         </ul>

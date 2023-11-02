@@ -1,0 +1,27 @@
+/* detalles.css */
+
+.detalle-auto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .detalle-auto img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  .detalle-auto h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .detalle-auto p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
