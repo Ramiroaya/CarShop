@@ -4,27 +4,38 @@ import { UpdateUsuarioDto } from './dto/update-usuario.dto';
 import { Usuario } from './entities/usuario.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { FindManyOptions, FindOneOptions, Repository } from 'typeorm';
+import * as bcrypt from 'bcrypt';
+import { response } from 'express';
+
+
 
 
 @Injectable()
 export class UsuarioService {
-constructor(
-  @InjectRepository(Usuario)
-  private readonly usuarioRepository: Repository<Usuario>
-){}
+  constructor(
+    @InjectRepository(Usuario)
+    private readonly usuarioRepository: Repository<Usuario>
+  ) {}
 
- async  create(usuarioDto: CreateUsuarioDto) {
-    /*const {provinciaNombre, ...userData } = usuarioDto;
-    const provincia = await this.provinciaService.findOneByNombre(provinciaNombre);
-    if (!provincia) {
-      throw new HttpException('Provincia no encontrada', HttpStatus.NOT_FOUND);
+  async create(usuarioDto: CreateUsuarioDto) {
+    const existingUser = await this.usuarioRepository.findOne({ where: { email: usuarioDto.email } });
+  
+    if (existingUser) {
+      throw new HttpException('El correo electrónico ya está en uso.', HttpStatus.BAD_REQUEST);
     }
-    userData.provincia = provincia.idProvincia;*/
-    const usuario = this.usuarioRepository.create(usuarioDto);
     
-
-    return this.usuarioRepository.save(usuario);
+    const hashedPassword = await bcrypt.hash(usuarioDto.password, 10);
+    const newUser = await this.usuarioRepository.create({
+      email: usuarioDto.email,
+      password: hashedPassword, 
+    });
+    await this.usuarioRepository.save(newUser);
+    return newUser;
+  } catch (error) {
+    throw new HttpException('Error en el servidor al crear el usuario.', HttpStatus.INTERNAL_SERVER_ERROR);
   }
+
+
 
   
   async findAll(): Promise<Usuario[]> {
@@ -36,12 +47,16 @@ constructor(
   async findOne(id: number): Promise<Usuario> {
     let criterio : FindOneOptions = { relations: [ 'vehiculo' ], where: { idUsuario: id } }
     let usuario : Usuario = await this.usuarioRepository.findOne( criterio );
+    
+    if(!usuario){
+      throw new HttpException(
+        'No existe un Usuario con ese id',
+        HttpStatus.NOT_FOUND
+      );
+    }
     return usuario ;
 
-    throw new HttpException(
-      'No existe un Usuario con ese id',
-      HttpStatus.NOT_FOUND
-    );
+  
   }
 
   async findEmail(email: string): Promise<Usuario | null> {

@@ -1,10 +1,10 @@
 import React from 'react';
-import Registro from '../components/registro/Registro';
+import RegistroUser from '../components/registro/RegistroUser';
 
 const IndexRegistro = () => {
   return (
     <div>
-        <Registro />
+        <RegistroUser />
     </div>
   )
 }

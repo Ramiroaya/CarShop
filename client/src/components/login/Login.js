@@ -32,13 +32,18 @@ const Login = () => {
 
   async function handleSubmit() {
     try {
+      if (!email || !password) {
+        setHasError(true);
+        setErrorMessage('Por favor, ingresa correo y contraseña válidos');
+        return;
+      }
       const response = await axios.post('http://localhost:3001/auth/login', {
         email,
         password,
       });
   
-      if (response.status === 200) {
-        const { token } = response.data;
+      if (response.data.access_token) {
+        const  token  = response.data.access_token;
         localStorage.setItem('token', token);
         alert('Sesion Iniciada');
         navigate('/');
@@ -47,11 +52,20 @@ const Login = () => {
         setErrorMessage('Credenciales incorrectas');
       }
     } catch (error) {
-      console.error('Error de red:', error);
-      setErrorMessage('Error de red: ' + error.message);
-      setHasError(true);
+      if (error.response) {
+        if (error.response.status === 401) {
+          setErrorMessage('Credenciales incorrectas. Verifica tu correo y contraseña.');
+        } else {
+          setErrorMessage('Hubo un error en el servidor. Inténtalo de nuevo más tarde.');
+        }
+        setHasError(true);
+      } else {
+        setErrorMessage('Error de red: ' + error.message);
+        setHasError(true);
+      }
     }
   }
+
   return (
     <div className='contenedor-index-login'>
       <div className='login-container'>
@@ -66,9 +80,10 @@ const Login = () => {
           <Input className='input-login'
             atributo={{
               id: 'email',
-              name: ' email',
+              name: 'email',
               type:'email',
-              placeholder: 'Ingrese su Email'
+              placeholder: 'Ingrese su Email',
+              value: email,
             }}
             handleChange={handleChange}
           />
@@ -76,9 +91,10 @@ const Login = () => {
           <Input className="input-login"
             atributo={{
               id: 'password',
-              name: ' password',
+              name: 'password',
               type:'password',
-              placeholder: 'Ingrese su Contraseña'
+              placeholder: 'Ingrese su Contraseña',
+              value: password,
             }}
             handleChange={handleChange}
           />
