@@ -173,4 +173,44 @@ alter table version
     references modelo(idModelo);
 
 
-select * from usuario;
+alter table usuario
+	drop column nombre;
+    
+alter table usuario
+	drop column apellido;
+    
+alter table usuario
+	drop column telefono;
+    
+alter table usuario
+	drop column administrador;
+
+alter table usuario
+	drop foreign key FK_9ef4d9c8f7609bda238f2952350;
+    
+alter table usuario
+	drop column provinciaIdProvincia;
+    
+-- Creacion de Entidad Perfil.
+
+create table perfil (
+	idPerfil int primary key auto_increment not null,
+    nombre varchar(255) not null,
+    apellido varchar(255) not null,
+    telefono varchar(20) not null,
+    provincia_id int not null);
+    
+alter table perfil
+	add constraint provincia_id
+	foreign key (provincia_id)
+    references provincia(idProvincia);
+    
+alter table usuario
+add column perfil_id int not null;
+    
+alter table usuario
+	add constraint perfilIdPerfil
+    foreign key (perfilIdPerfil)
+    references perfil(idPerfil);
+    
+

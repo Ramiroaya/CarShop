@@ -2,8 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, Put, NotFoundExcepti
 import { UsuarioService } from './usuario.service';
 import { CreateUsuarioDto } from './dto/create-usuario.dto';
 import { UpdateUsuarioDto } from './dto/update-usuario.dto';
-import { ProvinciaService } from 'src/provincia/provincia.service';
-import { Provincia } from 'src/provincia/entities/provincia.entity';
+
 
 @Controller('usuario')
 export class UsuarioController {
@@ -11,13 +10,7 @@ export class UsuarioController {
   ){}
 
   @Post()
-  async create(@Body() createUsuarioDto: CreateUsuarioDto) {
-    /*const { provincia_id, ...userData } = createUsuarioDto;
-    const provincia = await this.provinciaService.findOneByNombre(provincia_id);
-
-    if (!provincia) {
-      throw new NotFoundException('Provincia no encontrada');
-    }*/
+  async create(@Body() createUsuarioDto: CreateUsuarioDto) {    
     const usuario = await this.usuarioService.create(createUsuarioDto);
     return usuario;
   }

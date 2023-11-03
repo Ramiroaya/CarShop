@@ -10,6 +10,7 @@ import { ProvinciaModule } from './provincia/provincia.module';
 import { MarcaModule } from './marca/marca.module';
 import { ModeloModule } from './modelo/modelo.module';
 import { VersionModule } from './version/version.module';
+import { PerfilModule } from './perfil/perfil.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot(
@@ -23,7 +24,7 @@ import { VersionModule } from './version/version.module';
       entities: ['dist/**/**.entity{.ts,.js}'],
       synchronize: true,
     }
-  ), UsuarioModule, VehiculoModule, UserModule, AuthModule, ProvinciaModule, MarcaModule, ModeloModule, VersionModule ],
+  ), UsuarioModule, VehiculoModule, UserModule, AuthModule, ProvinciaModule, MarcaModule, ModeloModule, VersionModule, PerfilModule ],
   controllers: [AppController],
   providers: [AppService],
 })
