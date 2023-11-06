@@ -27,7 +27,7 @@
 .contenedor-registro {
   display: flex;
   width: 80%;
-  height: 60%;
+  height: 40%;
   align-items: center;
   justify-content: center;
   background-image: url(../../images/5008_1.avif);

@@ -1,5 +1,5 @@
 import { type } from "os";
-import { Usuario } from "src/usuario/entities/usuario.entity";
+import { Perfil } from "src/perfil/entities/perfil.entity";
 import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
@@ -9,9 +9,9 @@ export class Provincia {
     idProvincia: number;
     @Column("varchar", {length: 45})
     nombre: string;
-    @OneToMany( type => Usuario, usuario => usuario.provincia)
+    @OneToMany( type => Perfil, perfil => perfil.provincia)
     @JoinColumn({ name: 'provincia_id' })
-    public usuario: Usuario[];
+    public perfil: Perfil[];
 
     constructor( nombre: string){
         
