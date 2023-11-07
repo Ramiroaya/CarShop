@@ -24,16 +24,20 @@ export class AuthService {
         }
         
         const isPasswordCorrect = await bcrypt.compare(pass, user.password);
+        console.log(isPasswordCorrect);
         
         if (!isPasswordCorrect) {
             console.log('Contraseña incorrecta');
             throw new UnauthorizedException('Credenciales Incorrectas');
-        }
-        
-        const payload = { sub: user.idUsuario, email: user.email };
-        const token = this.jwtService.sign(payload, { expiresIn: '1h' });
-        return {
-            access_token: await this.jwtService.signAsync(payload)
+        } else {
+            const payload = { sub: user.idUsuario, email: user.email };
+            console.log(payload);
+            const token = this.jwtService.sign(payload);
+            console.log(token);
+            return {
+            access_token: token            
         };
+        
+    }       
     }
 }
