@@ -1,0 +1,57 @@
+/* Estilos para el contenedor principal */
+.detalle-container {
+    text-align: center;
+    padding: 100px;
+    background-color: #f4f4f4; /* Cambia el color de fondo según tus preferencias */
+  }
+  
+  /* Estilos para el botón de Regresar */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para los elementos de detalles del automóvil */
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  /* Estilos para la imagen del automóvil */
+  .detalle-container img {
+    display: block;
+    margin: 0 auto; /* Esto centrará la imagen horizontalmente */
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+    height: auto;
+  }
+  
+  .detalle-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 20px 0; /* Espacio entre el botón y otros elementos */
+  }
+  
+  .detalle-container button:hover {
+    background-color: #0056b3;
+  }
+  .car-item img {
+    width: 200px; /* Establece el ancho deseado para las imágenes */
+    height: 150px; /* Establece la altura deseada para las imágenes */
+  }

@@ -1,27 +1,58 @@
-/* detalles.css */
+/* Estilos para el contenedor principal */
+.datos-autos {
+  text-align: center;
+}
 
-.detalle-auto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .detalle-auto img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px 0;
-  }
-  
-  .detalle-auto h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-  }
-  
-  .detalle-auto p {
-    font-size: 1rem;
-    margin: 5px 0;
-  }
+/* Estilos para el botón de Regresar */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Alinea el botón en el centro de la página */
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilos para los elementos de automóviles */
+.car-item {
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.car-item img {
+  width: 200px; /* Establece el ancho deseado para las imágenes */
+  height: 150px; /* Establece la altura deseada para las imágenes */
+}
+
+.car-item h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.car-item p {
+  font-size: 1rem;
+}
+
+/* Estilos para los enlaces de los automóviles */
+.car-item a {
+  text-decoration: none;
+  color: #000; /* Cambia el color del enlace según tus preferencias */
+}
+
+.car-item a:hover {
+  color: #007bff; /* Cambia el color al pasar el ratón sobre el enlace */
+}
