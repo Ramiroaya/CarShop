@@ -24,13 +24,19 @@ const Tiposvehiculos = () => {
             </Link>
           </div>
           <div className="col-xs-3 col-md-3">
-            <img src={motocicleta} className='icon-button' alt="Motocicleta" />
+            <Link to="/vistas">
+              <img src={motocicleta} className='icon-button' alt="Motocicleta" />
+            </Link>
           </div>
           <div className="col-xs-3 col-md-3">
-            <img src={camioneta} className='icon-button' alt="Camioneta" />
+            <Link to="/vistas">
+              <img src={camioneta} className='icon-button' alt="Camioneta" />
+            </Link>
           </div>
           <div className="col-xs-3 col-md-3">
-            <img src={camion} className='icon-button' alt="Camión" />
+            <Link to="/vistas">
+              <img src={camion} className='icon-button' alt="Camión" />
+            </Link>
           </div>
         </div>
       </div>

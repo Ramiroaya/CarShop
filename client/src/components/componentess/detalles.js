@@ -9,13 +9,13 @@ const Detalles = () => {
   const carData = useCarData();
 
   if (!carData || carData.length === 0) {
-    return <p>Los datos del automóvil no están disponibles.</p>;
+    return <p>Los datos del vehiculo no están disponibles.</p>;
   }
 
   const car = carData.find((car) => car.id === parseInt(id));
 
   if (!car) {
-    return <p>No se encontró un automóvil con el ID especificado.</p>;
+    return <p>No se encontró un vehiculo con el ID especificado.</p>;
   }
 
   const goBack = () => {
@@ -25,7 +25,7 @@ const Detalles = () => {
   return (
     <div className="detalle-container"> {/* Agrega la clase CSS aquí */}
       <button onClick={goBack}>Regresar</button>
-      <h2>Detalles del automóvil</h2>
+      <h2>Detalles del Vehiculo</h2>
       <p>Marca: {car.marca}</p>
       <p>Modelo: {car.modelo}</p>
       <p>Combustible: {car.combustible}</p>
