@@ -9,8 +9,12 @@ export class PerfilController {
 
   @Post()
   async create(@Body() createPerfilDto: CreatePerfilDto) {
-    const perfil = await this.perfilService.create(createPerfilDto);
-    return perfil;
+    try {
+      const perfil = await this.perfilService.create(createPerfilDto);
+      return perfil;
+    } catch (error) {
+      return { error: error.message };
+    }
   }
 
   @Get()

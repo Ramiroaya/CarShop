@@ -16,7 +16,8 @@ const VentaVehiculo = () => {
   const [año, setAño] = useState('');
   const [tipoVehiculo, setTipoVehiculo] = useState('');
   const [precio, setPrecio] = useState('');
-
+  const [imagen, setImagen] = useState('null');
+ 
     // funcion para manejar validacion de datos en el formulario
   const validationSchema = Yup.object().shape({
     marca: Yup.string().required('La marca es requerida'),
@@ -53,6 +54,7 @@ const VentaVehiculo = () => {
         tipoVehiculo,
         precio,
         usuario_id,
+        imagen
       };
   
       console.log(vehiculo);
@@ -74,10 +76,15 @@ const VentaVehiculo = () => {
   
   
 
-  // Función para obtener el usuario_id (debes implementarla según tu lógica de autenticación)
-  const obtenerUsuarioId = () => {
-    // Implementa aquí la lógica para obtener el usuario_id
-    return 'ID_DEL_USUARIO'; // Reemplaza esto con la lógica real
+ 
+  const obtenerUsuarioId = () => {  
+    return 'ID_DEL_USUARIO'; 
+  };
+  
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setImagen(file);
   };
 
   return (
@@ -148,6 +155,24 @@ const VentaVehiculo = () => {
             placeholder='Precio'
             onChange={(e) => setPrecio(e.target.value)}
             required
+          />
+        </div>
+        <div>
+          <label htmlFor="imagen"></label>
+          <input
+            type="file"
+            id="imagen"
+            accept="image/*" 
+            onChange={handleImageChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="imagen"></label>
+          <input
+            type="file"
+            id="imagen"
+            accept="image/*" 
+            onChange={handleImageChange}
           />
         </div>
         <button className="boton-registro" type="submit">Cargar Vehículo</button>

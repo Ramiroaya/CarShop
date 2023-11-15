@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+
 import axios from 'axios';
+import { useState} from 'react';
+
 import GoogleLoginButton from '../googleLogin/GoogleLoginButton';
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -17,6 +19,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');  
   const [hasError, setHasError] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
 
@@ -43,10 +46,16 @@ const Login = () => {
       });
   
       if (response.data.access_token) {
-        const  token  = response.data.access_token;
+        const token = response.data.access_token;      
+        const storedEmail = email;
+        const storedUserName = response.data.perfil.nombre;
         localStorage.setItem('token', token);
-        alert('Sesion Iniciada');
-        navigate('/');
+        localStorage.setItem('email', storedEmail); 
+        localStorage.setItem('nombre', storedUserName);
+        alert(`Hola ${storedUserName}`);
+        setIsLoggedIn(true);
+        navigate('/');     
+      
       } else {
         setHasError(true);
         setErrorMessage('Credenciales incorrectas');

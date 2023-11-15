@@ -27,19 +27,23 @@ constructor(
     const provincia = await this.provinciaRepository.findOne({ where: { nombre } });
     if (!provincia) {
       throw new HttpException('Provincia no encontrada', HttpStatus.NOT_FOUND);
+    }else{
+      return provincia;
     }
-    return provincia;
+    
   }
 
   async findOne(id: number): Promise<Provincia> {
-    let criterio : FindOneOptions = { relations : [ 'usuario'], where :  { idProvincia: id } };
+    let criterio : FindOneOptions = { relations : [ 'user'], where :  { idProvincia: id } };
     let provincia :  Provincia = await this.provinciaRepository.findOne(criterio);
-    return provincia;
-
+    if(!provincia) {
     throw new HttpException(
       'No existe una Provincia con ese id',
       HttpStatus.NOT_FOUND
-    );;
+    );
+  }else {
+    return provincia;
+  }
   }
 
   async update(id: number, updateProvinciaDto: UpdateProvinciaDto) {
