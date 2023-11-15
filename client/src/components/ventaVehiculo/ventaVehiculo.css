@@ -1,8 +1,8 @@
-/* Estilos para el contenedor del formulario de venta de vehículo */
+
 .container-form-venta {
     display: flex;
     flex-direction: column;
-    width: 80%; /* Ajusta el ancho según tus preferencias */
+    width: 80%; 
     height: 60%;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,7 @@
     border-radius: 10px;
   }
   
-  /* Estilos para el formulario de venta de vehículo */
+  
   .form-venta {
     width: 80%; 
     max-width: 400px; 
@@ -20,15 +20,15 @@
     justify-content: space-evenly;
     align-items: center;
     border-radius: 20px;
-    padding: 20px; /* Agregado para dar espacio al contenido del formulario */
-    background-color: rgba(191, 204, 204, 0.8); /* Ajusta el color de fondo */
+    padding: 20px;
+    background-color: rgba(191, 204, 204, 0.8); 
   }
   
-  /* Estilos para los contenedores de input en el formulario de venta de vehículo */
+  
   .form-venta  {
-    width: 100%; /* Cambiado para llenar el ancho del contenedor del formulario */
+    width: 100%; 
     margin: 10px;
-    text-align: center; /* Agregado para centrar el contenido del input */
+    text-align: center;
   }
   
   .form-venta  label {
@@ -44,7 +44,7 @@
     font-size: 16px;
   }
   
-  /* Estilos para el botón en el formulario de venta de vehículo */
+  
   .form-venta .boton-registro {
     display: flex;
     justify-content: center;
@@ -60,17 +60,17 @@
     color: white;
     font-size: 14px;
     font-weight: bold;
-    cursor: pointer; /* Agregado para indicar que es un botón interactivo */
+    cursor: pointer; 
   }
   
   .form-venta .boton-.boton-registro {
     transform: scale(1.1);
   }
   
-  /* Media queries para tamaños de pantalla más pequeños */
+  
   @media screen and (max-width: 768px) {
     .form-venta {
-      height: auto; /* Cambia a altura automática en pantallas más pequeñas */
+      height: auto;
     }
   }
   

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
@@ -8,6 +8,10 @@ import logoImage from '../../images/LogoCarShop.png';
 
 
 const NavBarHeader = () => {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState('');
+
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector('.custom-navbar');
@@ -16,7 +20,17 @@ const NavBarHeader = () => {
         isTop ? navbar.classList.remove('scrolled') : navbar.classList.add('scrolled');
       }
     };
+    const storedToken = localStorage.getItem('token');
+    console.log(storedToken);
 
+    if (storedToken) {
+      setIsLoggedIn(true);
+    const storedUserName = localStorage.getItem('nombre');
+    console.log(storedUserName);
+    if (storedUserName) {
+      setUserName(storedUserName);
+    }
+  }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -55,6 +69,15 @@ const NavBarHeader = () => {
                   <span className="fs-5 me-4">Contacto</span>
                 </NavLink>
               </li>
+              {isLoggedIn && (
+                <li className='nav-item'>
+                  <div className="fs-5 me-1">
+                    <p>Hola</p>
+                    <p>{userName}</p>
+                  </div>
+                </li>
+              )}
+                           
             </ul>
           </div>
         </div>
