@@ -1,28 +1,40 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreatePerfilDto } from './dto/create-perfil.dto';
 import { UpdatePerfilDto } from './dto/update-perfil.dto';
-import { FindManyOptions, FindOneOptions, Repository } from 'typeorm';
+import { DeepPartial, FindManyOptions, FindOneOptions, Repository } from 'typeorm';
 import { Perfil } from './entities/perfil.entity';
 import { InjectRepository } from '@nestjs/typeorm';
+import { ProvinciaService } from 'src/provincia/provincia.service';
+
+
 
 @Injectable()
 export class PerfilService {
   constructor(
     @InjectRepository(Perfil) 
-    private readonly perfilRepository: Repository<Perfil>
+    private readonly perfilRepository: Repository<Perfil>,
+    private readonly provinciaService: ProvinciaService,
   ) {}
 
 
-  async create(perfilDto: CreatePerfilDto): Promise<Perfil> {
-       /*const {provinciaNombre, ...userData } = usuarioDto;
+  async create(createPerfilDto: CreatePerfilDto): Promise<Perfil> {
+
+    const { provinciaNombre, ...userData } = createPerfilDto;
+
     const provincia = await this.provinciaService.findOneByNombre(provinciaNombre);
+
     if (!provincia) {
-      throw new HttpException('Provincia no encontrada', HttpStatus.NOT_FOUND);
+      throw new Error(`La provincia ${provinciaNombre} no fue encontrada.`);
     }
-    userData.provincia = provincia.idProvincia;*/
-    const newPerfil = this.perfilRepository.create(perfilDto);
-    return await this.perfilRepository.save(newPerfil);
-    }
+
+    const newProfile = this.perfilRepository.create({
+      ...userData,
+      provincia: provincia,
+    } as DeepPartial<Perfil>);
+
+    return await this.perfilRepository.save(newProfile);
+  }
+
 
 
 async findAll(): Promise<Perfil[]> {

@@ -12,6 +12,7 @@ import ContactoIndex from './pages/ContactoIndex';
 import NoPage from './components/NoPage';
 import IndexRegistro from './pages/IndexRegistro';
 import IndexCredito from './pages/IndexCredito';
+import RegistroPerfil from './components/registro/RegistroPerfil';
 import Legales from './components/navBarFooter/Legales';
 import Footer from './components/navBarFooter/Footer';
 import Detalles from './components/Detalles/Deetalles';
@@ -30,6 +31,7 @@ function App() {
               <Route path="ofertas" element={<Ofertas />} />
               <Route path="usuario" element={<IndexLogin />} />
               <Route path="/usuario/registro" element={<IndexRegistro />} />
+              <Route path="/usuario/registroPerfil" element={<RegistroPerfil />} />
               <Route path="nosotros" element={<IndexNosotros />} />
               <Route path="contacto" element={<ContactoIndex />} /> 
               <Route path="vender-auto" element={<VentaVehiculo />} />

@@ -37,7 +37,7 @@ const RegistroUser = () => {
         } else {
               alert(`Usuario ${values.email} creado correctamente`);
               console.log('Registro exitoso');
-              navigate('/usuario');
+              navigate('/usuario/registroPerfil');
           }
       } else if (response.status === 400) {
         alert('El correo electrónico ya está en uso.');

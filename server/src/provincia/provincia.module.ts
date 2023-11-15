@@ -8,6 +8,7 @@ import { Perfil } from 'src/perfil/entities/perfil.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([Provincia, Perfil])],
   controllers: [ProvinciaController],
-  providers: [ProvinciaService]
+  providers: [ProvinciaService],
+  exports: [ProvinciaService],
 })
 export class ProvinciaModule {}

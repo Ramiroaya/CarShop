@@ -11,4 +11,6 @@ export class CreatePerfilDto {
     @IsNotEmpty()
     @IsString()
     telefono: string;
+    @IsString()
+    provinciaNombre: string;
 }
