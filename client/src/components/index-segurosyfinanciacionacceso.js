@@ -11,12 +11,14 @@ const Segurosyfinanciacion = () => {
         <div className="custom-row">
           <div className="custom-col" >
             <div className="custom-card">
+            <Link to="/seguro">
               <img
                 src={seguroimg}
                 className="custom-card-img-top"
                 alt="Asegura tu auto"
-                style={{ width: '300%', height: 'auto' }}
+                style={{ width: '300%', height: 'auto' }}               
               />
+            </Link>
               <div className="custom-card-body">
                 <h5 className="custom-card-title">ASEGURÁ TU AUTO</h5>
               </div>

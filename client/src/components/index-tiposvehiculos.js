@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/bloques.css';
 
-import motocicleta from '../images/icons/motocicleta64.png';
-import coche from '../images/icons/coche64.png';
-import camion from '../images/icons/camion64.png';
-import camioneta from '../images/icons/camioneta64.png';
+import motocicleta from '../images/icons/motito.png';
+import coche from '../images/icons/autito.png';
+import camion from '../images/icons/camioncito.png';
+import camioneta from '../images/icons/camionetita.png';
 
 const Tiposvehiculos = () => {
   return (

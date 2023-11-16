@@ -12,6 +12,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 20px;
+  border-radius: 15px; /* Ajusta el valor según tus preferencias para obtener esquinas redondeadas */
 }
 
 button:hover {
@@ -34,8 +35,9 @@ button {
 }
 
 .car-item img {
-  width: 500px; /* Establece el ancho deseado para las imágenes */
-  height: 200px; /* Establece la altura deseada para las imágenes */
+  max-width: 500px; /* Establece el ancho deseado para las imágenes */
+  max-height: 200px; /* Establece la altura deseada para las imágenes */
+  border-radius: 15px; /* Ajusta el valor según tus preferencias para obtener esquinas redondeadas */
 }
 
 .car-item h3 {
