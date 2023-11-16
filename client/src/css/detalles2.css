@@ -1,0 +1,46 @@
+/* Estilos compartidos para el contenedor principal */
+.detalle-container {
+  text-align: center;
+  padding: 100px;
+  background-color: #f4f4f4; /* Cambia el color de fondo según tus preferencias */
+
+}
+
+
+
+
+/* Estilos compartidos para los elementos de detalles del automóvil */
+.detalle-container h2,
+.detalle-container p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Estilos compartidos para la imagen del automóvil */
+.detalle-container img,
+.car-item img {
+  display: block;
+  margin: 0 auto; /* Esto centrará la imagen horizontalmente */
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+  height: auto; /* Hace que la altura sea automática para mantener la proporción */
+  max-height: 100%; /* Establece una altura máxima para las imágenes */
+  border-radius: 15px; /* Ajusta el valor según tus preferencias para obtener esquinas redondeadas */
+}
+
+/* Estilos compartidos para el botón */
+.detalle-container button,
+.car-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 20px 0; /* Espacio entre el botón y otros elementos */
+  border-radius: 15px; /* Ajusta el valor según tus preferencias para obtener esquinas redondeadas */
+}
+
+/* Estilo adicional para el botón de detalles específicos del automóvil */
+.detalle-container button:hover {
+  background-color: #0056b3;
+}

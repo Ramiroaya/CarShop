@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CarDataProvider } from './components/componentess/carData'; 
 import Home from './pages/Home';
 import Ofertas from './components/oferta/Ofertas';
 import IndexNosotros from './pages/IndexNosotros';
@@ -15,13 +16,12 @@ import IndexCredito from './pages/IndexCredito';
 import RegistroPerfil from './components/registro/RegistroPerfil';
 import Legales from './components/navBarFooter/Legales';
 import Footer from './components/navBarFooter/Footer';
-import Detalles from './components/Detalles/Deetalles';
 import VentaVehiculo from './components/ventaVehiculo/VentaVehiculo';
-
+import Detalles from './components/componentess/detalles';
 
 function App() {
   return (
-    <>
+    <CarDataProvider> {/* Envuelve la aplicación con el proveedor de datos */}
       <div>
         <Router>      
           <Routes>
@@ -35,17 +35,16 @@ function App() {
               <Route path="nosotros" element={<IndexNosotros />} />
               <Route path="contacto" element={<ContactoIndex />} /> 
               <Route path="vender-auto" element={<VentaVehiculo />} />
-              <Route path="vistas" element={<Vistas/>}/>  
-              <Route path="/detalles" element={<Detalles/>}/> 
+              <Route path="vistas" element={<Vistas/>}/>               
+              <Route path="/detalles/:id" element={<Detalles />} />
               <Route path="/legales" element={<Legales/>}/>           
               <Route path="*" element={<NoPage />} />
             </Route>
           </Routes>          
         </Router>
       </div>
-      </>
+    </CarDataProvider>
   );
 }
-
 
 export default App;
