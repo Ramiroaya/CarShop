@@ -1,8 +1,4 @@
-/*body {
-  margin: 0;
-  padding: 0;
- 
-}*/
+
 
 .banner-container {
   width: 100vw; /* Establece el ancho del contenedor al 100% del ancho de la ventana */
@@ -15,7 +11,7 @@
   justify-content: center;
   position: relative;
 
-  padding-top: 25vh; /* Esto ajusta la posición vertical del video */
+  padding-top: 35vh; /* Esto ajusta la posición vertical del video */
 
 }
 
