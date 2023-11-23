@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     margin: 20vh;
-    border-radius: 10px;
+    border-radius: 20px;
   }
   
   
@@ -29,18 +29,20 @@
     width: 100%; 
     margin: 10px;
     text-align: center;
+    border-radius: 20px;
   }
   
   .form-venta  label {
     display: block;
     margin-bottom: 5px;
+    border-radius: 20px;
   }
   
   .form-venta  input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 16px;
   }
   
@@ -50,6 +52,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    border-radius: 20px;
   }
   
   .form-venta .boton-registro {
@@ -65,6 +68,7 @@
   
   .form-venta .boton-.boton-registro {
     transform: scale(1.1);
+    border-radius: 20px;
   }
   
   
