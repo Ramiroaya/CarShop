@@ -29,6 +29,7 @@
 
   .form-field {
     flex: 0.5; /* El campo se expandirá para ocupar todo el espacio disponible */
+    border-radius: 20px;
   }
 
   .logo-buscador {
