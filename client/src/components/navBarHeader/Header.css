@@ -29,6 +29,11 @@
     height: auto; /* Altura automática para mantener la proporción */
     margin-right: 20px; /* Espaciado a la derecha del logotipo */
   }
+
+  .logo-image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
   
   /* Estilos para los enlaces de navegación */
   .navbar-nav {

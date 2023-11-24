@@ -40,7 +40,9 @@ const NavBarHeader = () => {
       <nav className="custom-navbar">
         <div className="container">
           <div className="logo-container">
-            <img src={logoImage} alt="Logo" className="logo-image" />
+            <NavLink exact to="/" className="nav-link">
+              <img src={logoImage} alt="Logo" className="logo-image" />
+            </NavLink>
           </div>
           <div className="navbar-nav">
             <ul className="list-unstyled d-flex">

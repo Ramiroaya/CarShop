@@ -5,7 +5,7 @@
   margin: 5px;
   padding: 2px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   color: rgb(49, 46, 46);
@@ -20,7 +20,16 @@
 
 /* Estilos para quitar la decoración de enlace */
 .nav-footer .item-footer a {
-  text-decoration: none;
+  text-decoration: none;/* Quitar subrayado de los enlaces */
+
+  color: #fff;/* Color de texto para los enlaces */
+  font-size: 18px;/* Tamaño de fuente deseado */
+  transition: color 0.3s;
+}
+
+.nav-footer .item-footer a:hover {
+      color: #ffd201;
+      /* Color de texto al pasar el mouse por encima */
 }
 
 /* Estilos para pantallas más pequeñas (ejemplo: celulares) */

@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: avenirRegular;
+  src: url("../../fonts/Avenir\ Regular.ttf");
+}
 
 .searchContainer {
     width: 30%;
@@ -7,11 +10,14 @@
     padding-top: 2vh;
     margin-top:3vh;
     border-radius: 10px;
-    
-    
+    filter: drop-shadow(5px 5px 10px rgb(116, 116, 116));
 }
 .searchContainer h1 {
-    color: #041f2a;
+    text-align: center;
+    margin-top: 10%;
+    color: #ffffff;
+    font-family: avenirRegular;
+    font-size: 25px;
 }
 
 

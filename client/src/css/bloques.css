@@ -40,6 +40,11 @@
   border-radius: 8px;
 }
 
+.custom-card-img-top:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 /* Estilo para el título en las tarjetas */
 .custom-card-title {
   font-size: 20px;
