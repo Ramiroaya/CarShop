@@ -18,6 +18,7 @@ import Legales from './components/navBarFooter/Legales';
 import Footer from './components/navBarFooter/Footer';
 import VentaVehiculo from './components/ventaVehiculo/VentaVehiculo';
 import Detalles from './components/componentess/detalles';
+import IndexSeguro from './pages/IndexSeguro';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<><NavBarHeader /><Footer/></> } >
               <Route index element={<Home />} />
               <Route path="credito" element={<IndexCredito />} />
+              <Route path="seguro" element={<IndexSeguro />} />
               <Route path="ofertas" element={<Ofertas />} />
               <Route path="usuario" element={<IndexLogin />} />
               <Route path="/usuario/registro" element={<IndexRegistro />} />
