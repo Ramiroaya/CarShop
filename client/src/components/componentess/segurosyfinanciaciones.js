@@ -10,8 +10,11 @@ function Segurosyfinanciacion() {
   return (
     
       <div className='bloques'>
-        <img src={seguroimg} alt="card shop" width="300" height="200" />                
+        <Link to="/seguro">
+           <img src={seguroimg} alt="card shop" width="300" height="200" />    
+        </Link>            
         <h2>ASEGURÁ TU AUTO</h2>
+
         <Link to="/credito">          
            <img src={creditoimg}  alt="card shop"  width="300" height="200"/>
         </Link>
