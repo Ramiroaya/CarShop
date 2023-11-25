@@ -1,0 +1,32 @@
+/* Ajustes para las marcas más buscadas */
+h6 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.marcas-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.marcas-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon-button {
+    width: 200px; /* Ajusta el ancho de las imágenes según tus preferencias */
+    height: auto; /* Esto mantendrá la proporción original de la imagen */
+    margin: 0 20px; /* Ajusta el margen entre las imágenes según tus preferencias */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-button:hover {
+    transform: scale(1.2); /* Ajusta el factor de escala al pasar el ratón por encima */
+}

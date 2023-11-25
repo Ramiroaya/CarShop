@@ -1,6 +1,12 @@
-// Seguro.js
+
 import React, { useState } from 'react';
+
+import mapfre from '../../images/logos/mapfre.png';
+import rivadavia1 from '../../images/logos/rivadavia1.png';
+import segunda from '../../images/logos/segunda.png';
+
 import './seguro.css';
+import '../../css/logos.css';
 
 const Seguro = () => {
   const [carValue, setCarValue] = useState(0);
@@ -19,23 +25,21 @@ const Seguro = () => {
   };
 
   return (
-    <div className="insurance-container">
+    <><div className="insurance-container">
       <h2>SILULADOR DE SEGURO</h2>
       <label>
         VALOR DEL VEHICULO:
         <input
           type="number"
           value={carValue}
-          onChange={(e) => setCarValue(Number(e.target.value))}
-        />
+          onChange={(e) => setCarValue(Number(e.target.value))} />
       </label>
       <label>
         AÑOS DEL VEHICULO:
         <input
           type="number"
           value={age}
-          onChange={(e) => setAge(Number(e.target.value))}
-        />
+          onChange={(e) => setAge(Number(e.target.value))} />
       </label>
       <label>
         TIPO DE COBERTURA:
@@ -53,7 +57,13 @@ const Seguro = () => {
           Su cotización de seguro es: ${insuranceQuote.toFixed(2)}
         </p>
       )}
-    </div>
+    </div><h6>EMPRESAS SUGERIDAS</h6><div className="marcas-container">
+        <div className="marcas-column">
+          <img src={mapfre} className='icon-button' alt="mapfre" />
+          <img src={rivadavia1} className='icon-button' alt="rivadavia1" />
+          <img src={segunda} className='icon-button' alt="segunda" />
+        </div>
+      </div></>
   );
 };
 
