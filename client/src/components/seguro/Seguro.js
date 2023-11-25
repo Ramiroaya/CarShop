@@ -1,58 +1,58 @@
+// Seguro.js
 import React, { useState } from 'react';
-
 import './seguro.css';
 
-
 const Seguro = () => {
-  const [monto, setMonto] = useState('');
-  const [cuotas, setCuotas] = useState('');
-  const [resultado, setResultado] = useState('');
+  const [carValue, setCarValue] = useState(0);
+  const [age, setAge] = useState(0);
+  const [coverageType, setCoverageType] = useState('basic');
+  const [insuranceQuote, setInsuranceQuote] = useState(null);
 
-  const handleChange = (e) => {
-    e.preventDefault();
-    const calcular = () => {
-      const interes = (parseFloat(monto) * 3 * cuotas) / 100;
-      const valorCuota = (parseFloat(monto) + interes) / cuotas;
-      setResultado(valorCuota.toLocaleString());
-    };
-    calcular();
-  };
+  const calculateQuote = () => {
+    const baseRate = 0.02;
+    const ageFactor = age < 25 ? 1.5 : 1;
+    const coverageFactor = coverageType === 'premium' ? 1.2 : 1;
 
-  const handleMontoChange = (e) => {
-    setMonto(e.target.value);
-  };
+    const quote = carValue * baseRate * ageFactor * coverageFactor;
 
-  const handleCuotasChange = (e) => {
-    setCuotas(e.target.value);
+    setInsuranceQuote(quote);
   };
 
   return (
-    <div className="contenedor-credito">
-      <h1>Simula tu Seguro en Pesos</h1>
-      <form className="ingreso-credito" onSubmit={handleChange}>
+    <div className="insurance-container">
+      <h2>SILULADOR DE SEGURO</h2>
+      <label>
+        VALOR DEL VEHICULO:
         <input
           type="number"
-          className="input-credito"
-          value={monto}
-          onChange={handleMontoChange}
-          placeholder="Monto del Préstamo"
+          value={carValue}
+          onChange={(e) => setCarValue(Number(e.target.value))}
         />
-        <label htmlFor="cuotas">Cuotas</label>
-        <select name="Cuotas" id="cuotas" value={cuotas} onChange={handleCuotasChange}>
-          <option value="6">6</option>
-          <option value="12">12</option>
-          <option value="18">18</option>
-          <option value="24">24</option>
-          <option value="30">30</option>
-          <option value="36">36</option>
+      </label>
+      <label>
+        AÑOS DEL VEHICULO:
+        <input
+          type="number"
+          value={age}
+          onChange={(e) => setAge(Number(e.target.value))}
+        />
+      </label>
+      <label>
+        TIPO DE COBERTURA:
+        <select
+          value={coverageType}
+          onChange={(e) => setCoverageType(e.target.value)}
+        >
+          <option value="basic">Basic</option>
+          <option value="premium">Premium</option>
         </select>
-        <button className="boton-credito" type="submit">
-          Simular
-        </button>
-      </form>
-      <div className="resultado-credito">
-        <p className="resultado">Valor de cuota mensual: $ {resultado}</p>
-      </div>
+      </label>
+      <button onClick={calculateQuote}>CALCULAR CUOTA</button>
+      {insuranceQuote !== null && (
+        <p>
+          Su cotización de seguro es: ${insuranceQuote.toFixed(2)}
+        </p>
+      )}
     </div>
   );
 };
