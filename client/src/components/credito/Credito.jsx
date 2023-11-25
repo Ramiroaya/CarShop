@@ -28,7 +28,7 @@ const Credito = () => {
 
   return (
     <div className="contenedor-credito">
-      <h1>Simula tu Préstamo en Pesos</h1>
+      <h2>SIMULADOR DE CREDITO</h2>
       <form className="ingreso-credito" onSubmit={handleChange}>
         <input
           type="number"

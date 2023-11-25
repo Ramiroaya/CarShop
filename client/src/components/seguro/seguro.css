@@ -1,56 +1,56 @@
-.contenedor-credito {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20vh auto;
-    width: 80%;
-    height: 80vh;
-    flex-direction: column;
-    background-image: url(../../images/creditoimg.webp);
-    background-size: cover;
-    padding: 6rem;
-  }
+/* Seguro.css */
+.insurance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20vh auto;
+  width: 80%;
+  max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+  height: 80vh;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #007bff;
+  flex-direction: column;
+  background-image: url(../../images/seguro1.jpg);
+  background-size: cover;
+}
 
-  h1{
-    color: gray;
-    
-  }
-  
-  .ingreso-credito {
-    display: flex;
-    width: 40%;
-    height: 200vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(191, 204, 204, 0.8);
-    border-radius:  20px;
-  }
-  
-  .ingreso-credito input,
-  .ingreso-credito button {
-    margin: 40px;
-  }
-  .boton-credito{
-   background-color:rgb(133, 139, 139);
-   border-radius: 25px;
-   width: 30%;
-   height: 20%;
-  }
+label {
+  display: block;
+  margin-bottom: 10px;
+}
 
-  .boton-credito:hover {
-    transform: scale(1.1);
+h2{
+   
+  color:#007bff ;
   
-  }
-  .resultado-credito{
-    background-color:rgba(191, 204, 204, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    width: 40%;
-    height: 60%;
-    border-radius: 15px;
+}
 
-  }
-  
+
+input,
+select,
+button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
