@@ -26,7 +26,7 @@ const Seguro = () => {
 
   return (
     <><div className="insurance-container">
-      <h2>SILULADOR DE SEGURO</h2>
+      <h2>SIMULADOR DE SEGURO</h2>
       <label>
         VALOR DEL VEHICULO:
         <input

@@ -24,7 +24,7 @@ const Tiposvehiculos = () => {
             </Link>
           </div>
           <div className="col-xs-3 col-md-3">
-            <Link to="/vistas">
+            <Link to="/vistasMotos">
               <img src={motocicleta} className='icon-button' alt="Motocicleta" />
             </Link>
           </div>
