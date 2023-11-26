@@ -7,7 +7,11 @@ const NavBarFooter = () => {
   return (
     <div className="container-navBar">
       <ul className="nav-footer">
-        <p className="item-footer">Enlaces de interés</p>
+        <p className="item-footer">
+          <strong>Enlaces de interés</strong>
+          <br />
+          <br />
+        </p>
         <li className="item-footer">
           <Link to="/nosotros">Nosotros</Link>
         </li>

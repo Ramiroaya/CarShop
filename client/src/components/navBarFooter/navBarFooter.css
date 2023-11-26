@@ -1,3 +1,8 @@
+@font-face {
+  font-family: avenirRegular;
+  src: url("../../fonts/Avenir\ Regular.ttf");
+}
+
 /* Estilos para .nav-footer */
 .nav-footer {
   width: 60vw;
@@ -6,10 +11,11 @@
   padding: 2px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  color: rgb(49, 46, 46);
+  color: rgb(255, 255, 255);
   list-style-type: none;
+  font-family: avenirRegular;
 }
 
 /* Estilos para .item-footer */
