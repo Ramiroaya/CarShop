@@ -12,8 +12,21 @@
   border-radius: 20px;
   box-shadow: 0 0 10px #007bff;
   flex-direction: column;
-  background-image: url(../../images/seguro1.jpg);
+  background-image: linear-gradient(rgba(232, 252, 255, 0.63), rgba(232, 252, 255, 0.63)) , url(../../images/seguro1.jpg);
   background-size: cover;
+  background-position: center center;
+}
+
+.contenedor-seguro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid #fafafa10;
+  background-color: #fafafa10;
+  backdrop-filter: blur(0.4rem);
+  border-radius: 20px;
+  margin: 5%;
 }
 
 label {
@@ -46,8 +59,20 @@ button {
   cursor: pointer;
 }
 
+
 button:hover {
   background-color: #0056b3;
+}
+
+.resultado-seguro {
+  border: 3px solid #fafafa10;
+  background-color: #fafafa10;
+  backdrop-filter: blur(0.4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 80%;
 }
 
 p {

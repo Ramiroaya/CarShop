@@ -5,13 +5,16 @@ import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import logoImage from '../../images/LogoCarShop.png';
 
 import './Footer.css';
+import { NavLink } from "react-router-dom";
 
 const Footer = () =>{
     return(
-        <div className="footer-container">
-            <div className="logo-container">
+      <div className="footer-container">
+        <div className="logo-container">
+          <NavLink exact to="/" className="nav-link">
             <img src={logoImage} alt="Logo" className="logo-image" />
-          </div>
+          </NavLink>
+            </div>
             <NavBarFooter/>
             <div className = 'iconos-footer'>
               <h2 ><a className='icon' href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram}/></a></h2>

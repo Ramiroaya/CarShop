@@ -6,6 +6,7 @@
     justify-content: center;
     background-image: url(../../images/5008_1.avif);
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
     margin: auto;
     border-radius: 20px;

@@ -1,13 +1,33 @@
-.contenedor-legal {
+@font-face {
+    font-family: avenirRegular;
+    src: url("../../fonts/Avenir\ Regular.ttf");
+}
+
+.contenedor-legal{
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.titulo-legales{
+    font-family: avenirRegular;
+    color: #0281ba;
+    margin-left: 10%;
+    margin-top: 15vh;
+}
+
+.parrafo-legales {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 50px;
-    width: 70%;
-    margin: auto;
-    
-
+    width: 100%;
 }
-.texto {
-    color: gray;
+.texto-legales {
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+    font-family: avenirRegular;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #727272;
 }
