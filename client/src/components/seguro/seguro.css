@@ -1,0 +1,56 @@
+/* Seguro.css */
+.insurance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20vh auto;
+  width: 80%;
+  max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+  height: 80vh;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #007bff;
+  flex-direction: column;
+  background-image: url(../../images/seguro1.jpg);
+  background-size: cover;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+h2{
+   
+  color:#007bff ;
+  
+}
+
+
+input,
+select,
+button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}

@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 
-import './credito.css';
+import santander from '../../images/logos/santander.png';
+import bbva from '../../images/logos/bbva.jpg';
+import provincia from '../../images/logos/provincia.png';
 
+import './credito.css';
+import '../../css/logos.css';
 
 const Credito = () => {
   const [monto, setMonto] = useState('');
@@ -27,16 +31,15 @@ const Credito = () => {
   };
 
   return (
-    <div className="contenedor-credito">
-      <h1>Simula tu Préstamo en Pesos</h1>
+    <><div className="contenedor-credito">
+      <h2>SIMULADOR DE CREDITO</h2>
       <form className="ingreso-credito" onSubmit={handleChange}>
         <input
           type="number"
           className="input-credito"
           value={monto}
           onChange={handleMontoChange}
-          placeholder="Monto del Préstamo"
-        />
+          placeholder="Monto del Préstamo" />
         <label htmlFor="cuotas">Cuotas</label>
         <select name="Cuotas" id="cuotas" value={cuotas} onChange={handleCuotasChange}>
           <option value="6">6</option>
@@ -53,7 +56,13 @@ const Credito = () => {
       <div className="resultado-credito">
         <p className="resultado">Valor de cuota mensual: $ {resultado}</p>
       </div>
-    </div>
+    </div><h6>EMPRESAS SUGERIDAS</h6><div className="marcas-container">
+        <div className="marcas-column">
+          <img src={santander} className='icon-button' alt="santander" />
+          <img src={bbva} className='icon-button' alt="bbva" />
+          <img src={provincia} className='icon-button' alt="provincia" />
+        </div>
+      </div></>
   );
 };
 
