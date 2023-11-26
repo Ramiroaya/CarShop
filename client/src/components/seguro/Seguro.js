@@ -23,9 +23,14 @@ const Seguro = () => {
     setInsuranceQuote(quote);
   };
 
+  const goBack = () => {
+    window.history.back();
+  };
+
   return (
     <>
       <div className="insurance-container">
+        <button onClick={goBack}>Regresar</button>
         <h2>SILULADOR DE SEGURO</h2>
         <form className="contenedor-seguro">
           <label>
