@@ -11,6 +11,7 @@ import NavBarHeader from './components/navBarHeader/NavBarHeader';
 import Vistas from './pages/vistas'; 
 import VistasMotos from './pages/vistasMotos'; 
 import VistasCamionetas from './pages/vistasCamionetas'; 
+import VistasCamiones from './pages/vistasCamiones'; 
 import ContactoIndex from './pages/ContactoIndex';
 import NoPage from './components/NoPage';
 import IndexRegistro from './pages/IndexRegistro';
@@ -42,7 +43,8 @@ function App() {
               <Route path="vender-auto" element={<VentaVehiculo />} />
               <Route path="vistas" element={<Vistas/>}/>  
               <Route path="vistasMotos" element={<VistasMotos/>}/> 
-              <Route path="vistasCamionetas" element={<VistasCamionetas/>}/>           
+              <Route path="vistasCamionetas" element={<VistasCamionetas/>}/>
+              <Route path="vistasCamiones" element={<VistasCamiones/>}/>         
               <Route path="/detalles/:id" element={<Detalles />} />
               <Route path="/legales" element={<Legales/>}/>           
               <Route path="*" element={<NoPage />} />

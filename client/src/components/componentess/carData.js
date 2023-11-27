@@ -14,11 +14,17 @@ import muestraImagen10 from '../../images/motos/corven.jpg';
 import muestraImagen11 from '../../images/motos/bmw.jpg';
 import muestraImagen12 from '../../images/motos/zanella.jpg';
 import muestraImagen13 from '../../images/camionetas/toro.jpg';
-import muestraImagen14 from '../../images/motos/honda.jpg';
-import muestraImagen15 from '../../images/motos/harley-davidson.jpg';
-import muestraImagen16 from '../../images/motos/corven.jpg';
-import muestraImagen17 from '../../images/motos/bmw.jpg';
-import muestraImagen18 from '../../images/motos/zanella.jpg';
+import muestraImagen14 from '../../images/camionetas/chevrolet.jpg';
+import muestraImagen15 from '../../images/camionetas/ford.jpg';
+import muestraImagen16 from '../../images/camionetas/hilux.jpg';
+import muestraImagen17 from '../../images/camionetas/ram.jpg';
+import muestraImagen18 from '../../images/camionetas/volkswagen.jpg';
+import muestraImagen19 from '../../images/camiones/volkswagen.jpg';
+import muestraImagen20 from '../../images/camiones/fiat.webp';
+import muestraImagen21 from '../../images/camiones/mercedes.webp';
+import muestraImagen22 from '../../images/camiones/escania.jpg';
+import muestraImagen23 from '../../images/camiones/ford.jpg';
+import muestraImagen24 from '../../images/camiones/volvo.jpg';
 const carData = [
   {
     id: 1,
@@ -99,8 +105,7 @@ const carData = [
     combustible: 'Gasolina',
     ano: 2020,
     image: muestraImagen10,
-  },
-  
+  }, 
   {
     id: 11,
     marca: 'BMW',
@@ -108,8 +113,7 @@ const carData = [
     combustible: 'Gasolina',
     ano: 2025,
     image: muestraImagen11,
-  },
-  
+  }, 
   {
     id: 12,
     marca: 'zanella',
@@ -118,7 +122,6 @@ const carData = [
     ano: 2023,
     image: muestraImagen12,
   },
-
   {
     id: 13,
     marca: 'toro',
@@ -127,51 +130,94 @@ const carData = [
     ano: 2023,
     image: muestraImagen13,
   },
-
   {
     id: 14,
-    marca: 'Honda',
-    modelo: 'xr-150',
+    marca: 'chevrolet',
+    modelo: 's10',
     combustible: 'Gasolina',
     ano: 2023,
     image: muestraImagen14,
   },
   {
     id: 15,
-    marca: 'harley-davidson',
+    marca: 'ford',
     modelo: 'custon',
     combustible: 'Gasolina',
     ano: 2023,
     image: muestraImagen15,
   },
-  
   {
     id: 16,
-    marca: 'corven',
-    modelo: '110',
+    marca: 'toyota',
+    modelo: 'hilux',
     combustible: 'Gasolina',
     ano: 2020,
     image: muestraImagen16,
   },
-  
   {
     id: 17,
-    marca: 'BMW',
-    modelo: '1250',
+    marca: 'dodge',
+    modelo: 'ram',
     combustible: 'Gasolina',
     ano: 2025,
     image: muestraImagen17,
   },
-  
   {
     id: 18,
-    marca: 'zanella',
-    modelo: '90',
+    marca: 'volkswagen',
+    modelo: 'amarok',
     combustible: 'Gasolina',
     ano: 2023,
     image: muestraImagen18,
   },
-  
+  {
+    id: 19,
+    marca: 'volkswagen',
+    modelo: '2215',
+    combustible: 'Gasoil',
+    ano: 2023,
+    image: muestraImagen19,
+  },
+  {
+    id: 20,
+    marca: 'fiat',
+    modelo: 'ducato',
+    combustible: 'Gasolina',
+    ano: 2023,
+    image: muestraImagen20,
+  },
+  {
+    id: 21,
+    marca: 'mercedes',
+    modelo: 'actros',
+    combustible: 'Gasolina',
+    ano: 2023,
+    image: muestraImagen21,
+  },
+  {
+    id: 22,
+    marca: 'escania',
+    modelo: 't112',
+    combustible: 'Gasolina',
+    ano: 2020,
+    image: muestraImagen22,
+  },
+  {
+    id: 23,
+    marca: 'ford',
+    modelo: 'cargo',
+    combustible: 'Gasolina',
+    ano: 2025,
+    image: muestraImagen23,
+  },
+  {
+    id: 24,
+    marca: 'volvo',
+    modelo: 'carretero',
+    combustible: 'Gasolina',
+    ano: 2023,
+    image: muestraImagen24,
+  }
 ];
 
 const CarDataContext = createContext();

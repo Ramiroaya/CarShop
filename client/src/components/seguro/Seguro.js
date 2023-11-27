@@ -24,45 +24,6 @@ const Seguro = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <><div className="insurance-container">
-      <h2>SIMULADOR DE SEGURO</h2>
-      <label>
-        VALOR DEL VEHICULO:
-        <input
-          type="number"
-          value={carValue}
-          onChange={(e) => setCarValue(Number(e.target.value))} />
-      </label>
-      <label>
-        AÑOS DEL VEHICULO:
-        <input
-          type="number"
-          value={age}
-          onChange={(e) => setAge(Number(e.target.value))} />
-      </label>
-      <label>
-        TIPO DE COBERTURA:
-        <select
-          value={coverageType}
-          onChange={(e) => setCoverageType(e.target.value)}
-        >
-          <option value="basic">Basic</option>
-          <option value="premium">Premium</option>
-        </select>
-      </label>
-      <button onClick={calculateQuote}>CALCULAR CUOTA</button>
-      {insuranceQuote !== null && (
-        <p>
-          Su cotización de seguro es: ${insuranceQuote.toFixed(2)}
-        </p>
-      )}
-    </div><h6>EMPRESAS SUGERIDAS</h6><div className="marcas-container">
-        <div className="marcas-column">
-          <img src={mapfre} className='icon-button' alt="mapfre" />
-          <img src={rivadavia1} className='icon-button' alt="rivadavia1" />
-          <img src={segunda} className='icon-button' alt="segunda" />
-=======
     <>
       <div className="insurance-container">
         <h2>SILULADOR DE SEGURO</h2>
@@ -99,7 +60,6 @@ const Seguro = () => {
           {insuranceQuote !== null && (
             <p>Su cotización de seguro es: ${insuranceQuote.toFixed(2)}</p>
           )}
->>>>>>> e5df7af4d560a1246e26c8df69b1768ac779ed3e
         </div>
       </div>
       <h6>EMPRESAS SUGERIDAS</h6>
