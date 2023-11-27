@@ -8,12 +8,12 @@ export class Modelo {
     idModelo: number;
     @Column('varchar', {length:45})
     nombre: string;
-    @ManyToOne( type => Marca, marca => marca.modelo)
+    @ManyToOne( type => Marca, marca => marca.modelos)
     @JoinColumn()
     public marca: Marca;
     @OneToMany( type => Version, version => version.modelo)
     @JoinColumn()
-    public version: Version[];
+    public versiones: Version[];
     
     
     constructor(nombre: string) {

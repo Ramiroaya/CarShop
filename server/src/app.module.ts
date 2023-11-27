@@ -24,7 +24,7 @@ import { PerfilModule } from './perfil/perfil.module';
       entities: ['dist/**/**.entity{.ts,.js}'],
       synchronize: true,
     }
-  ), UsuarioModule, VehiculoModule, UserModule, AuthModule, ProvinciaModule, MarcaModule, ModeloModule, VersionModule, PerfilModule ],
+  ), UsuarioModule, PerfilModule, VehiculoModule, UserModule, AuthModule, ProvinciaModule, MarcaModule, ModeloModule, VersionModule ],
   controllers: [AppController],
   providers: [AppService],
 })

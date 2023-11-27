@@ -1,15 +1,26 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Req, HttpException, HttpStatus } from '@nestjs/common';
 import { VehiculoService } from './vehiculo.service';
 import { CreateVehiculoDto } from './dto/create-vehiculo.dto';
 import { UpdateVehiculoDto } from './dto/update-vehiculo.dto';
+import { Vehiculo } from './entities/vehiculo.entity';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 @Controller('vehiculo')
+@UseGuards(JwtAuthGuard)
 export class VehiculoController {
   constructor(private readonly vehiculoService: VehiculoService) {}
 
-  @Post()
-  create(@Body() createVehiculoDto: CreateVehiculoDto) {
-    return this.vehiculoService.create(createVehiculoDto);
+  @Post('cargar')
+  async cargarVehiculo(@Body() vehiculoDto: CreateVehiculoDto, @Req() req): Promise<Vehiculo> {
+    try {
+      const idUsuarioLogueado = req.usuario.idUsuario;
+      const vehiculoCreado = await this.vehiculoService.cargarVehiculo(vehiculoDto, idUsuarioLogueado);
+
+      return vehiculoCreado;
+    } catch (error) {
+      console.error('Error al cargar el vehículo:', error);
+      throw new HttpException('Error al cargar el vehículo', HttpStatus.INTERNAL_SERVER_ERROR);
+    }
   }
 
   @Get()

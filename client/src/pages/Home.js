@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/index.css';
 import Banner from '../components/banner';
 import ComponentesIndex from '../components/componentesIndex';
+import BlackFriday from '../components/blackFriday/BlackFriday';
 
 
 
@@ -11,7 +12,8 @@ import ComponentesIndex from '../components/componentesIndex';
 const Home = () => {
   return (
     
-      <div className='index' >        
+      <div className='index' >   
+        <BlackFriday/>
         <Banner />
         <ComponentesIndex />
       </div>

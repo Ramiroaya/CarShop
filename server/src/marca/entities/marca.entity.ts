@@ -9,7 +9,7 @@ export class Marca {
    nombre: string;
    @OneToMany(type => Modelo, modelo=> modelo.marca)
    @JoinColumn()
-   public modelo: Modelo[];
+   public modelos: Modelo[];
    
 
    constructor(nombre: string) {

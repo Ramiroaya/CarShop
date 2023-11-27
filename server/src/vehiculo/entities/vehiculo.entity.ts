@@ -18,11 +18,11 @@ export class Vehiculo {
     precio: number;
     @Column( {type: 'varchar', length: 255, array: false, default: '' })
     fotos: string;
-    @ManyToOne( type => Usuario, usuario => usuario.vehiculo)
-    @JoinColumn()
+    @ManyToOne( type => Usuario, usuario => usuario.vehiculos)
+    @JoinColumn({ name: 'idUsuario'})
     public usuario: Usuario;
-    @ManyToOne( type => Version, version => version.vehiculo)
-    @JoinColumn()
+    @ManyToOne( type => Version, version => version.vehiculos)
+    @JoinColumn( { name: 'IdVersion'})
     public version: Version;
     
 

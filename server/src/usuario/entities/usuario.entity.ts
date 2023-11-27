@@ -12,8 +12,7 @@ export class Usuario {
     @Column("varchar", {length : 255})
     password: string;
     @OneToMany( type => Vehiculo, vehiculo => vehiculo.usuario)
-    @JoinColumn()
-    public vehiculo: Vehiculo[];
+    public vehiculos: Vehiculo[];
     @OneToOne( type => Perfil, perfil => perfil.usuario)
     @JoinColumn()
     public perfil : Perfil;

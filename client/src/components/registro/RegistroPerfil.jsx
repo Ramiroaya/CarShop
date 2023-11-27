@@ -16,7 +16,7 @@ const RegistroPerfil = () => {
     nombre: '',
     apellido: '',
     telefono: '',
-    provincia:'',
+    provinciaNombre:'',
   };
 
   const validationSchema = Yup.object().shape({
@@ -26,7 +26,7 @@ const RegistroPerfil = () => {
       .required('El Apellido es obligatorio'),
     telefono: Yup.string()
       .required('Confirma tu contraseña'),
-    provincia: Yup.string()
+    provinciaNombre: Yup.string()
       .required('La Provincia es obligatoria'),
   });
 
@@ -80,7 +80,7 @@ const RegistroPerfil = () => {
           </div>
           <div className="contenedor-input-registro">
             <label htmlFor="provincia"></label>
-            <Field type="provincia" name="provincia" placeholder="Provincia" autoComplete="off" />
+            <Field type="provincia" name="provinciaNombre" placeholder="Provincia" autoComplete="off" />
             <ErrorMessage name="provincia" component="div" className="error-message" />
           </div>
           <div className="contenedor-boton-registro">

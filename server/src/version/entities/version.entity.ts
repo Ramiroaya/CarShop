@@ -8,12 +8,12 @@ export class Version {
     idVersion: number;
     @Column("varchar", {length:255})
     nombre: string;
-    @ManyToOne( type => Modelo, modelo => modelo.version)
+    @ManyToOne( type => Modelo, modelo => modelo.versiones)
     @JoinColumn()
     public modelo: Modelo;
     @OneToMany( type => Vehiculo, vehiculo => vehiculo.version)
     @JoinColumn()
-    public vehiculo: Vehiculo[];
+    public vehiculos: Vehiculo[];
 
     constructor(nombre: string) {
         this.nombre = nombre;
