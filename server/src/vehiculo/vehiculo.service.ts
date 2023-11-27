@@ -1,21 +1,48 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable, Version } from '@nestjs/common';
 import { CreateVehiculoDto } from './dto/create-vehiculo.dto';
 import { UpdateVehiculoDto } from './dto/update-vehiculo.dto';
 import { FindManyOptions, FindOneOptions, Repository } from 'typeorm';
 import { Vehiculo } from './entities/vehiculo.entity';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Usuario } from 'src/usuario/entities/usuario.entity';
+import { UsuarioService } from 'src/usuario/usuario.service';
+
+
 
 @Injectable()
 export class VehiculoService {
   constructor(
     @InjectRepository(Vehiculo)
-     private readonly vehiculoRepository: Repository<Vehiculo>
-  ){}
+    private readonly vehiculoRepository: Repository<Vehiculo>,
+    @InjectRepository(Usuario)
+    private readonly usuarioRepository: Repository<Usuario>,  
+  ) {}
 
-  create(vehiculoDto: CreateVehiculoDto) {
-    const c = this.vehiculoRepository.create(vehiculoDto);
-    return this.vehiculoRepository.save(c);
+  async cargarVehiculo(vehiculoDto: CreateVehiculoDto, idUsuario: number): Promise<Vehiculo> {
+    const usuario = await this.usuarioRepository.findOne({
+      where: { idUsuario },
+      relations: ['vehiculos'],
+    });
+
+    if (!usuario) {
+        throw new HttpException('Usuario no encontrado', HttpStatus.NOT_FOUND);
+    }
+
+    const vehiculo = this.vehiculoRepository.create(vehiculoDto);
+    console.log('vehiculo');
+    usuario.vehiculos.push(vehiculo);
+
+    const usuarioActualizado = await this.usuarioRepository.save(usuario);
+    console.log('usuarioActualizado');
+    return vehiculo;
   }
+
+
+
+
+
+  
+  
 
   
   async findAll(): Promise<Vehiculo[]> {
@@ -27,12 +54,14 @@ export class VehiculoService {
   async findOne(id: number): Promise<Vehiculo> {
     let criterio : FindOneOptions = { relations: [ 'usuario' ], where: { idVehiculo: id } };
     let vehiculo : Vehiculo = await this.vehiculoRepository.findOne( criterio );
-    return vehiculo ;
-
-    throw new HttpException(
-      'No existe un Vehiculo con ese id',
-      HttpStatus.NOT_FOUND
-    );
+    if (!vehiculo) {
+      throw new HttpException(
+        'No existe un Vehiculo con ese id',
+        HttpStatus.NOT_FOUND
+      );
+    } else {
+      return vehiculo ;
+    }
   }
 
   async update(id: number, updateUsuarioDto: UpdateVehiculoDto) {

@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Usuario } from './entities/usuario.entity';
 import { Vehiculo } from 'src/vehiculo/entities/vehiculo.entity';
 import { Perfil } from 'src/perfil/entities/perfil.entity';
+import { PerfilModule } from 'src/perfil/perfil.module';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Usuario, Vehiculo, Perfil])],

@@ -39,13 +39,13 @@ export class UsuarioService {
 
   
   async findAll(): Promise<Usuario[]> {
-    let criterio : FindManyOptions = { relations: [ 'vehiculo' ] }
+    let criterio : FindManyOptions = { relations: [ 'vehiculos' ] }
     let usuarios : Usuario[] = await this.usuarioRepository.find( criterio );
     return usuarios ;
   }
 
   async findOne(id: number): Promise<Usuario> {
-    let criterio : FindOneOptions = { relations: [ 'vehiculo' ], where: { idUsuario: id } }
+    let criterio : FindOneOptions = { relations: [ 'vehiculos' ], where: { idUsuario: id } }
     let usuario : Usuario = await this.usuarioRepository.findOne( criterio );
     
     if(!usuario){

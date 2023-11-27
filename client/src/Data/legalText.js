@@ -13,7 +13,7 @@ El uso por parte del Usuario de este sitio constituye un acuerdo a todos los té
 
 Registración
 
-Si para acceder a algún producto o servicio, información, o cualquier otro material proporcionado por El Sitio se requiere de una registración o bien consignar cierta información, el Usuario queda obligado a cumplimentar dichos procesos, suministrando a Autocosmos información verdadera, actualizada, completa y exacta Car Shop no se responsabiliza por la información (en adelante “Datos Personales”) suministrados en estos procesos por el Usuario. El Usuario, en cualquier caso, se responsabiliza y garantiza, la vigencia, veracidad, integridad y exactitud de los Datos Personales ingresados.
+Si para acceder a algún producto o servicio, información, o cualquier otro material proporcionado por El Sitio se requiere de una registración o bien consignar cierta información, el Usuario queda obligado a cumplimentar dichos procesos, suministrando a CarShop información verdadera, actualizada, completa y exacta CarShop no se responsabiliza por la información (en adelante “Datos Personales”) suministrados en estos procesos por el Usuario. El Usuario, en cualquier caso, se responsabiliza y garantiza, la vigencia, veracidad, integridad y exactitud de los Datos Personales ingresados.
 
 CarShop no es responsable por errores o retrasos en la respuesta a cualquier pedido de cotización, información o solicitud de servicio que derive de información anticuada, falsa, incompleta o inexacta proporcionada por el Usuario.
 
@@ -27,5 +27,5 @@ El Usuario reconoce que la información, productos y servicios ofrecidos en el S
 
 CarShop no recomienda ni revende productos de automotrices, concesionarias, importadores, financistas o proveedores de servicios. El Usuario confía en su propio juicio al seleccionar cualquier producto o servicio ofrecido a través del Sitio.
 
-CarShop no garantiza la exactitud, confiabilidad o integridad de ninguna información proporcionada por los Proveedores de Productos o Servicios. Autocosmos no asume ninguna obligación de verificar la exactitud o veracidad de cualquier información proporcionada por los Proveedores de Productos o Servicios. Autocosmos no asume ninguna obligación respecto del Usuario y se limita a publicar los Datos de los Proveedores proporcionados por los mismos sin verificar su veracidad.`
+CarShop no garantiza la exactitud, confiabilidad o integridad de ninguna información proporcionada por los Proveedores de Productos o Servicios. CarShop no asume ninguna obligación de verificar la exactitud o veracidad de cualquier información proporcionada por los Proveedores de Productos o Servicios. CarShop no asume ninguna obligación respecto del Usuario y se limita a publicar los Datos de los Proveedores proporcionados por los mismos sin verificar su veracidad.`
 }

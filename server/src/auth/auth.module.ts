@@ -16,6 +16,7 @@ import { ProvinciaModule } from 'src/provincia/provincia.module';
       secret: 'tu_clave_secreta', 
       signOptions: { expiresIn: '1h' }, 
     }),],
+  exports: [JwtModule, UsuarioService, PerfilService],
   providers: [AuthService, UsuarioService, PerfilService],
   controllers: [AuthController]
 })

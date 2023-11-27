@@ -22,7 +22,7 @@ export class PerfilService {
     const { provinciaNombre, ...userData } = createPerfilDto;
 
     const provincia = await this.provinciaService.findOneByNombre(provinciaNombre);
-
+    console.log(provincia);
     if (!provincia) {
       throw new Error(`La provincia ${provinciaNombre} no fue encontrada.`);
     }
@@ -31,6 +31,7 @@ export class PerfilService {
       ...userData,
       provincia: provincia,
     } as DeepPartial<Perfil>);
+    console.log(newProfile);
 
     return await this.perfilRepository.save(newProfile);
   }

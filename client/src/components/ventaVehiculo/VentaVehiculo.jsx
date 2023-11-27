@@ -58,7 +58,7 @@ const VentaVehiculo = () => {
       };
   
       console.log(vehiculo);
-      const response = await axios.post('http://localhost:3001/vehiculo', vehiculo);
+      const response = await axios.post('http://localhost:3001/vehiculo/cargar', vehiculo);
   
       
     } catch (error) {
