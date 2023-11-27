@@ -8,6 +8,7 @@
     justify-content: center;
     margin: 20vh;
     border-radius: 20px;
+    background-image: url(../../images/01.webp);
   }
   
   
@@ -64,6 +65,7 @@
     font-size: 14px;
     font-weight: bold;
     cursor: pointer; 
+   
   }
   
   .form-venta .boton-.boton-registro {

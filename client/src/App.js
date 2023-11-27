@@ -2,13 +2,15 @@ import React from 'react';
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { CarDataProvider } from './components/componentess/carData'; 
+import { CarDataProvider } from './components/componentess/carData';
 import Home from './pages/Home';
 import Ofertas from './components/oferta/Ofertas';
 import IndexNosotros from './pages/IndexNosotros';
 import IndexLogin from './pages/IndexLogin';
 import NavBarHeader from './components/navBarHeader/NavBarHeader'; 
 import Vistas from './pages/vistas'; 
+import VistasMotos from './pages/vistasMotos'; 
+import VistasCamionetas from './pages/vistasCamionetas'; 
 import ContactoIndex from './pages/ContactoIndex';
 import NoPage from './components/NoPage';
 import IndexRegistro from './pages/IndexRegistro';
@@ -37,14 +39,16 @@ function App() {
               <Route path="nosotros" element={<IndexNosotros />} />
               <Route path="contacto" element={<ContactoIndex />} /> 
               <Route path="vender-auto" element={<VentaVehiculo />} />
-              <Route path="vistas" element={<Vistas/>}/>               
+              <Route path="vistas" element={<Vistas/>}/>  
+              <Route path="vistasMotos" element={<VistasMotos/>}/> 
+              <Route path="vistasCamionetas" element={<VistasCamionetas/>}/>           
               <Route path="/detalles/:id" element={<Detalles />} />
               <Route path="/legales" element={<Legales/>}/>           
               <Route path="*" element={<NoPage />} />
             </Route>
           </Routes>          
         </Router>
-      </div>
+      </div> 
     </CarDataProvider>
   );
 }
