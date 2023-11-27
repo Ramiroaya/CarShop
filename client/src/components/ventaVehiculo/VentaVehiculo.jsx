@@ -89,7 +89,7 @@ const VentaVehiculo = () => {
 
   return (
     <div className="container-form-venta">
-      <h2>Ingresa tu vehículo</h2>
+      <h2 className='titulo-ventaVehiculo'>Ingresa tu vehículo</h2>
       <form className="form-venta" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="marca"></label>
