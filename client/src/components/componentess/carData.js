@@ -124,8 +124,8 @@ const carData = [
   },
   {
     id: 13,
-    marca: 'toro',
-    modelo: 'ninja',
+    marca: 'fiat',
+    modelo: 'toro',
     combustible: 'Gasolina',
     ano: 2023,
     image: muestraImagen13,

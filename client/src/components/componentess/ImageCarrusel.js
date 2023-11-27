@@ -3,11 +3,13 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import muestraImagen1 from '../../images/fiestaImag/images2.jpg';
+import muestraImagen1 from '../../images/camionetas/hilux.jpg';
 import muestraImagen2 from '../../images/fiestaImag/focus.webp';
 import muestraImagen3 from '../../images/fiestaImag/peugeop308.webp';
 import muestraImagen4 from '../../images/fiestaImag/images3.jpg';
 import muestraImagen5 from '../../images/fiestaImag/volswaguen.webp';
+import muestraImagen6 from '../../images/motos/ninja.jpg';
+import muestraImagen7 from '../../images/camiones/mercedes.webp';
 
 import '../../css/autosIndex.css';
 
@@ -54,6 +56,12 @@ const ImageCarrusel = () => {
         </div>
         <div>
           <img src={muestraImagen5} alt="Imagen 5" style={imageStyle} />
+        </div>
+        <div>
+          <img src={muestraImagen6} alt="Imagen 6" style={imageStyle} />
+        </div>
+        <div>
+          <img src={muestraImagen7} alt="Imagen 7" style={imageStyle} />
         </div>
       </Slider>
       <div className="button-container">
