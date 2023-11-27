@@ -41,15 +41,19 @@
     font-size: 20px;
 }
 
-.contenedor-blackF, p {
+.contenedor-blackF p {
     color: #fff;
     font-size: 20px;
 }
 
-.contenedor-blackF, h1 {
+.contenedor-blackF h1 {
     font-size: 30px;
     color: #0281ba !important;
     animation: textoAnimado 2s infinite alternate; 
+}
+
+.botonBlack {
+    width: 15%;
 }
 
 @keyframes textoAnimado {
