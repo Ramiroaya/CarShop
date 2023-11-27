@@ -29,12 +29,12 @@ const Tiposvehiculos = () => {
             </Link>
           </div>
           <div className="col-xs-3 col-md-3">
-            <Link to="/vistas">
+            <Link to="/vistasCamionetas">
               <img src={camioneta} className='icon-button' alt="Camioneta" />
             </Link>
           </div>
           <div className="col-xs-3 col-md-3">
-            <Link to="/vistas">
+            <Link to="/vistasCamiones">
               <img src={camion} className='icon-button' alt="Camión" />
             </Link>
           </div>
