@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -19,6 +19,7 @@ import Footer from './components/navBarFooter/Footer';
 import VentaVehiculo from './components/ventaVehiculo/VentaVehiculo';
 import Detalles from './components/componentess/detalles';
 import IndexSeguro from './pages/IndexSeguro';
+
 
 function App() {
   return (
