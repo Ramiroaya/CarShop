@@ -56,11 +56,11 @@ const Credito = () => {
       <div className="resultado-credito">
         <p className="resultado">Valor de cuota mensual: $ {resultado}</p>
       </div>
-    </div><h6>EMPRESAS SUGERIDAS</h6><div className="marcas-container">
-        <div className="marcas-column">
-          <img src={santander} className='icon-button' alt="santander" />
-          <img src={bbva} className='icon-button' alt="bbva" />
-          <img src={provincia} className='icon-button' alt="provincia" />
+    </div><h6>EMPRESAS SUGERIDAS</h6><div className="marcasseguro-container">
+        <div className="marcasSeguro-column">
+          <img src={santander} className='iconSeg-button' alt="santander" />
+          <img src={bbva} className='iconSeg-button' alt="bbva" />
+          <img src={provincia} className='iconSeg-button' alt="provincia" />
         </div>
       </div></>
   );

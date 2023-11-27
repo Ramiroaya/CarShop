@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './blackFriday.css';
 
-const BlackFriday = () => {
+function BlackFriday ()  {
   const navigate = useNavigate(); 
   const [mostrarBanner, setMostrarBanner] = useState(true);
+  useEffect(() => {
+    const fechaFinBlackFriday = new Date('2023-11-28T23:59:59'); 
+    const ahora = new Date();
+
+    if (ahora > fechaFinBlackFriday) {
+      setMostrarBanner(false);
+    } else {
+      const tiempoRestante = fechaFinBlackFriday - ahora;
+
+      const temporizador = setTimeout(() => {
+        setMostrarBanner(false);
+      }, tiempoRestante);
+      return () => clearTimeout(temporizador);
+    }
+  }, []);
 
   const cerrarBanner = () => {
     setMostrarBanner(false);

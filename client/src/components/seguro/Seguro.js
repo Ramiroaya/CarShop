@@ -103,11 +103,11 @@ const Seguro = () => {
         </div>
       </div>
       <h6>EMPRESAS SUGERIDAS</h6>
-      <div className="marcas-container">
-        <div className="marcas-column">
-          <img src={mapfre} className="icon-button" alt="mapfre" />
-          <img src={rivadavia1} className="icon-button" alt="rivadavia1" />
-          <img src={segunda} className="icon-button" alt="segunda" />
+      <div className="marcasSeguro-container">
+        <div className="marcasSeguro-column">
+          <img src={mapfre} className="iconSeg-button" alt="mapfre" />
+          <img src={rivadavia1} className="iconSeg-button" alt="rivadavia1" />
+          <img src={segunda} className="iconSeg-button" alt="segunda" />
         </div>
       </div>
     </>

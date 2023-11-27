@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { RiCameraLine } from 'react-icons/ri';
 
 
@@ -90,6 +90,11 @@ const cards = [
 ];
 
 const Ofertas = () => {
+  useEffect(() => {
+    console.log('desplazamiento a la parte superior');
+    window.scrollTo(0, 0);
+    
+  }, []);
   const [active, setActive] = useState(0);
 
 

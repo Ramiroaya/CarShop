@@ -7,26 +7,27 @@ h6 {
     justify-content: center;
 }
 
-.marcas-container {
+.marcasSeguros-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.marcas-column {
+.marcasSeguros-column {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.icon-button {
+.iconSeg-button {
     width: 200px; /* Ajusta el ancho de las imágenes según tus preferencias */
     height: auto; /* Esto mantendrá la proporción original de la imagen */
     margin: 0 20px; /* Ajusta el margen entre las imágenes según tus preferencias */
     cursor: pointer;
+    border-radius: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
-.icon-button:hover {
+.iconSeg-button:hover {
     transform: scale(1.2); /* Ajusta el factor de escala al pasar el ratón por encima */
 }
