@@ -11,6 +11,8 @@ import { MarcaModule } from './marca/marca.module';
 import { ModeloModule } from './modelo/modelo.module';
 import { VersionModule } from './version/version.module';
 import { PerfilModule } from './perfil/perfil.module';
+import { RutaProtegidaController } from './ruta-protegida/ruta-protegida.controller';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [TypeOrmModule.forRoot(
@@ -24,8 +26,17 @@ import { PerfilModule } from './perfil/perfil.module';
       entities: ['dist/**/**.entity{.ts,.js}'],
       synchronize: true,
     }
-  ), UsuarioModule, PerfilModule, VehiculoModule, UserModule, AuthModule, ProvinciaModule, MarcaModule, ModeloModule, VersionModule ],
-  controllers: [AppController],
+  ), ConfigModule.forRoot(),
+  AuthModule,
+  UsuarioModule,
+  PerfilModule,
+  VehiculoModule, 
+  UserModule,
+  ProvinciaModule, 
+  MarcaModule, 
+  ModeloModule, 
+  VersionModule ],
+  controllers: [AppController, RutaProtegidaController],
   providers: [AppService],
 })
 export class AppModule {}
