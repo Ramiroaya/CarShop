@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/autosIndex.css';
 
-import CamionetasIndex from '../components/componentess/camionetasIndex';
+import CamionetasIndex from '../components/componentess/CamionetasIndex';
 
 
 const vistasCamionetas = () => {
