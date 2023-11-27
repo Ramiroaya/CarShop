@@ -3,10 +3,10 @@ import { VehiculoService } from './vehiculo.service';
 import { CreateVehiculoDto } from './dto/create-vehiculo.dto';
 import { UpdateVehiculoDto } from './dto/update-vehiculo.dto';
 import { Vehiculo } from './entities/vehiculo.entity';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { AuthGuard } from '../auth/auth.guard';
 
 @Controller('vehiculo')
-@UseGuards(JwtAuthGuard)
+@UseGuards(AuthGuard)
 export class VehiculoController {
   constructor(private readonly vehiculoService: VehiculoService) {}
 
@@ -26,6 +26,13 @@ export class VehiculoController {
   @Get()
   findAll() {
     return this.vehiculoService.findAll();
+  }
+  @Get('datos-prtotegidos')
+  @UseGuards(AuthGuard)
+  obtenerDatosProtegidos() {
+    return {
+      mensaje: 'Esta es una rtuta protegida, Solo e puede acceder con un token valido,',
+    };
   }
 
   @Get(':id')

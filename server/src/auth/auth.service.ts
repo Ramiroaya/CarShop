@@ -18,26 +18,20 @@ export class AuthService {
         console.log('Contraseña recibida:', pass);
         const user = await this.usuarioService.findEmail(email);
 
-        if (!user) {
+        if (!user || !(await bcrypt.compare(pass, user.password))) {
             console.log('Usuario no encontrado');
             throw new UnauthorizedException('Credenciales Incorrectas');
         }
-        
-        const isPasswordCorrect = await bcrypt.compare(pass, user.password);
-        
-        if (!isPasswordCorrect) {
-            console.log('Contraseña incorrecta');
-            throw new UnauthorizedException('Credenciales Incorrectas');
-        } else {
-            const perfil = await this.perfilService.findOne(user.idUsuario);
-            const payload = { 
-                sub: user.idUsuario,
-                email: user.email,
-                nombre: perfil.nombre,
-             };
+        const perfil = await this.perfilService.findOne(user.idUsuario);
+        const payload = { 
+            sub: user.idUsuario,
+            email: user.email,
+            nombre: perfil.nombre,
+        };
             console.log(payload);
             const token = this.jwtService.sign(payload);
             console.log(token);
+
             return {
             access_token: token,
             perfil: {
@@ -46,5 +40,5 @@ export class AuthService {
         };
         
     }       
-    }
 }
+
