@@ -46,7 +46,7 @@ const Contacto = () => {
                         {errors.email?.type === 'pattern' && <p>El email ingresado no es válido</p>}
                     </div>
                     <div>
-                        <h3 align='center'>Consulta</h3>
+                        <h3 align='center' className="consulta">Consulta</h3>
                         <textarea className="input-consulta" type="text" {...register('consulta', {
                             required: true,
                             maxLength: {
