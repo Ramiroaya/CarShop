@@ -1,50 +1,43 @@
-import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
-import { useCarData } from './carData'; // Asegúrate de tener el hook correcto para las motos
+import React from 'react'
 
-import '../../css/detalles.css';
+import Banner from '../banner';
+import DatosDeCamiones from './DatosDeCamiones';
 
-const DatosDeCamiones = () => {
-  // Obtén los datos de motos usando el hook useMotoData
-  const carData = useCarData();
-  // Función para regresar a la página anterior
+import ImageCarrusel from './ImageCarrusel';
+import Segurosyfinanciacion from './segurosyfinanciaciones';
 
-  const goBack = () => {
-    window.history.back();
-  };
+import '../../css/autosIndex.css';
 
-  // Dividir la lista de motoData en dos sublistas (arriba y abajo)
-  const carsArriba = carData.slice(18, 21);
-  const carsAbajo = carData.slice(21, 24);
 
+
+
+function CamionesIndex  ()  {
   return (
-    <div className="datos-autos">
-    <button onClick={goBack}>Regresar</button>
-   <div className="autos-arriba">
-     {carsArriba.map((car) => (
-       <div key={car.id} className="car-item">
-         <NavLink to={`/Detalles/${car.id}`}>
-           <img src={car.image} alt={car.marca} />
-           <h3>{car.marca}</h3>
-           <p>Modelo: {car.modelo}</p>
-         </NavLink>
-       </div>
-     ))}
-   </div>
-   <div className="autos-abajo">
-     {carsAbajo.map((car) => (
-       <div key={car.id} className="car-item">
-         <NavLink to={`/Detalles/${car.id}`}>
-           <img src={car.image} alt={car.marca} />
-           <h3>{car.marca}</h3>
-           <p>Modelo: {car.modelo}</p>
-         </NavLink>
-       </div>
-     ))}
-   </div>
-   <Outlet />
- </div>
-  );
-};
+    <div className='autosIndex'>
 
-export default DatosDeCamiones;
+        <Banner/>
+
+      <div className='prueba' >
+        
+        <ImageCarrusel/>
+        
+      </div>
+
+      <div>
+        
+        <DatosDeCamiones/>
+
+      </div>
+
+      <div className='prueba2'>
+
+        <Segurosyfinanciacion/>
+
+      </div>
+
+     
+    </div>
+  )
+}
+
+export default CamionesIndex;
