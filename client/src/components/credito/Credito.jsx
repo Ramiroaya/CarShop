@@ -30,8 +30,13 @@ const Credito = () => {
     setCuotas(e.target.value);
   };
 
+  const goBack = () => {
+    window.history.back();
+  };
+
   return (
     <><div className="contenedor-credito">
+      <button onClick={goBack}>Regresar</button>
       <h2>SIMULADOR DE CREDITO</h2>
       <form className="ingreso-credito" onSubmit={handleChange}>
         <input

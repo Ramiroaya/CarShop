@@ -11,8 +11,7 @@ const Legales = () => {
         <p className='texto-legales'>
         <strong>Última actualización: 26/11/2023</strong><br></br>
         <br></br>
-        El presente contrato describe los términos y condiciones aplicables al uso de los servicios ofrecidos por CarShop.com S.A. (en adelante "Car Shop") dentro del sitio www.carshop.com.ar (en adelante "Sitio") a usted (en adelante "Usuario"). Estos términos y condiciones tienen el carácter de obligatorios y vinculantes.
-        Versión vigente: 30/03/2023<br></br>
+        El presente contrato describe los términos y condiciones aplicables al uso de los servicios ofrecidos por CarShop.com S.A. (en adelante "Car Shop") dentro del sitio www.carshop.com.ar (en adelante "Sitio") a usted (en adelante "Usuario"). Estos términos y condiciones tienen el carácter de obligatorios y vinculantes.<br></br>
         <br></br>
         <strong>Acuerdo entre el Usuario y CarShop</strong><br></br>
         <br></br>
